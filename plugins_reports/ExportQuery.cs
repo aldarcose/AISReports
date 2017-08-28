@@ -165,7 +165,10 @@ namespace Reports
             }
         }
 
-        public object ExecuteScalarSQL(params string[] parameterValues)
+        public object ExecuteScalarSQL(
+            List<string> additionalParamNames, 
+            List<object> additionalParamValues, 
+            params string[] parameterValues)
         {
             string innerSql_ = innerSQL;
             if (parameterValues != null)
@@ -184,6 +187,16 @@ namespace Reports
 
                 foreach (KeyValuePair<string, string> pair in pairs)
                     SetParameter(pair.Key, pair.Value, true);
+
+                // Дополнительные параметры из другого запроса O_o
+                if (additionalParamNames != null)
+                    for (int i = 0; i < additionalParamNames.Count; i++)
+                    {
+                        SetParameter(
+                            string.Format(":{0}:", additionalParamNames[i]),
+                            Utils.ToString(additionalParamValues[i]), 
+                            true);
+                    }
             }
             object result;
             using (var db = new DbWorker())

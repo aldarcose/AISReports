@@ -51,6 +51,20 @@ namespace Reports
             cell.Value = result;
         }
 
+        private ExportQuery FindQuery(string text)
+        {
+            return queries.FirstOrDefault(q => text.IndexOf(q.Name) > 0);
+        }
+
+        private string[] ExtractParameterValues(string text)
+        {
+            string paramsText = text.Contains("(") ?
+                            text.Substring(text.IndexOf("(") + 1, 
+                            text.IndexOf(")") - text.IndexOf("(") - 1) 
+                            : null;
+            return paramsText != null ? paramsText.Split(',') : null;
+        }
+
         private void ProcessWorkSheet(IProgressControl pc, IWorksheet sheet)
         {
             int progress = 0;
@@ -64,7 +78,7 @@ namespace Reports
                 IRange cell = sheet.UsedCells[i];
                 if (!string.IsNullOrEmpty(cell.Value) && cell.Value.StartsWith("#"))
                 {
-                    var query = queries.FirstOrDefault(q => cell.Value.IndexOf(q.Name) > 0);
+                    var query = FindQuery(cell.Value);
                     if (query == null)
                     {
                         ReplaceWithParameterValues(cell);
@@ -80,10 +94,7 @@ namespace Reports
                     }
                     else if (query.IsScalar)
                     {
-                        string text = cell.Value;
-                        string paramsText = text.Contains("(") ?
-                            text.Substring(text.IndexOf("(") + 1, text.IndexOf(")") - text.IndexOf("(") - 1) : null;
-                        cell.Value2 = query.ExecuteScalarSQL(paramsText != null ? paramsText.Split(',') : null);
+                        cell.Value2 = query.ExecuteScalarSQL(null, null, ExtractParameterValues(cell.Value));
                     }
                     else
                     {
@@ -123,7 +134,7 @@ namespace Reports
                 }
             }
 
-            string xlFieldName;
+            string xlFieldValue;
             Dictionary<int, string> fieldPositions = new Dictionary<int, string>();
             int j = 0;
             while (j < sheet.Rows[lastRowNum-1].Columns.Length && 
@@ -140,10 +151,20 @@ namespace Reports
 
             Func<DbResult, int, int, object> GetValue = (dbResult, xlRowNum, xlColNum) =>
             {
-                fieldPositions.TryGetValue(xlColNum, out xlFieldName);
+                fieldPositions.TryGetValue(xlColNum, out xlFieldValue);
+
+                if (xlFieldValue.StartsWith("#") && !xlFieldValue.Equals(string.Format("#{0}", query.Name)))
+                {
+                    // В ячейке находится скалярная функция (запрос)
+                    var funcQuery = FindQuery(xlFieldValue);
+                    return funcQuery.ExecuteScalarSQL(
+                        query.FieldNames, 
+                        dbResult.Fields, 
+                        ExtractParameterValues(xlFieldValue));
+                }
                 string searchFormat = xlColNum == 0 ? "#{0}" : "#:{0}:";
                 int index = query.FieldNames.FindIndex(fn =>
-                    xlFieldName.Equals(string.Format(searchFormat, fn)));
+                    xlFieldValue.Equals(string.Format(searchFormat, fn)));
                 if (index < 0 || dbResult.Fields[index].Equals("$id"))
                     return xlRowNum - lastRowNum + 2;
                 return dbResult.Fields[index];

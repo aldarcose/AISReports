@@ -281,20 +281,48 @@ namespace SharedDbWorker
         public bool Open()
         {
             _conn = new NpgsqlConnection(ConnectionString);
+            bool error = false;
             try
             {
                 _conn.Open();
-         
             }
             catch (Exception ex)
             {
                 _logger.Error("Cannot open connection: {0}", ex.Message);
+
                 NpgsqlConnection.ClearAllPools();
-                throw;
+                error = true;
             }
-            
-            
+
+            if (error)
+            {
+                // Делаем 3 попытки реконнекта с интервалом в 10 секунд
+                Thread.Sleep(3000);
+                Exception exception = null;
+                for (int i = 0; i < 3; i++)
+                {
+                    try
+                    {
+                        error = false;
+                        ReConnect();
+                    }
+                    catch(Exception ex)
+                    {
+                        error = true;
+                        Thread.Sleep(10000);
+                        exception = ex;
+                    }
+                }
+                if (error) throw exception;
+            }
             return true;
+        }
+
+        private void ReConnect()
+        {
+            Close();
+            _conn = new NpgsqlConnection(ConnectionString);
+            _conn.Open();
         }
 
         public void Close()
