@@ -55,7 +55,7 @@ namespace Reports
         {
             int progress = 0;
             pc.SetStatus(string.Format("Обработка данных... ({0})", sheet.Name));
-            if (!queries.Any(q => q.FieldNames.Count > 1))
+            if (!queries.Any(q => !q.IsScalar && q.FieldNames.Count > 1))
                 pc.SetMaximum(sheet.UsedCells.Length);
 
             int i = 0;

@@ -708,3 +708,55 @@ and true
 group by 1,2,3,4,5,7,8 
 ORDER BY 2
 2017-08-28 12:21:31.9791 DEBUG Получено записей: 76
+2017-08-28 13:08:28.8658 DEBUG Запрос: with recursive t as (
+               select array[stat_id] as hierarchy
+                     , stat_id
+                     , parent_id
+                     , desk
+                     , period_xml
+                     , 1 as level
+               from  public.stat_tab
+               where parent_id = -1
+               union all
+               select t.hierarchy || a.stat_id
+                     , a.stat_id
+                     , a.parent_id
+                     , a.desk
+                     , a.period_xml
+                     , t.level + 1 as level
+               from public.stat_tab a
+               join t on a.parent_id = t.stat_id
+               )
+            select stat_id
+                  , parent_id
+                  , level
+                  , desk
+                  , period_xml
+            from t
+            order by hierarchy
+2017-08-28 13:08:31.1410 DEBUG Получено записей: 447
+2017-08-28 13:09:28.6433 DEBUG Запрос: select 'true','Все',0 union  SELECT 't.doctor_id ='||full_doctor_id, full_fio,1 FROM full_doctor_view ORDER BY 3,2;
+2017-08-28 13:09:28.9133 DEBUG Получено записей: 935
+2017-08-28 13:09:28.9983 DEBUG Запрос: select 'true','Все',0 union  select 't.cabinet_id='||id, name,1 from codifiers.cabinet_tab order by 3,2
+2017-08-28 13:09:29.0113 DEBUG Получено записей: 193
+2017-08-28 13:09:56.6829 DEBUG Запрос: SELECT t.time_nazn, d.fio FROM talon_doctor_tab t 
+LEFT JOIN dan_tab d ON t.dan_id = d.dan_id 
+WHERE t.date_nazn = '2017-08-28' AND true 
+and true 
+ORDER BY t.time_nazn
+2017-08-28 13:09:56.8309 DEBUG Получено записей: 2620
+2017-08-28 13:11:38.6847 DEBUG Запрос: SELECT full_doctor_id, full_doctor_id::text||' '||fio||' - '||dolg_doctor FROM full_doctor_tab  where dolg_doctor_id!=900 --where dolg_doctor ilike '%педиат%'  ORDER BY full_doctor_id
+2017-08-28 13:11:38.9137 DEBUG Получено записей: 740
+2017-08-28 13:11:38.9897 DEBUG Запрос: select -1, 'По всему ЛПУ' union SELECT uchactok_id, uchactok FROM uchactok_tab ORDER BY 1;
+2017-08-28 13:11:38.9897 DEBUG Получено записей: 78
+2017-08-28 13:11:55.4566 DEBUG Запрос: SELECT to_char('2017-08-20'::date + f.a,'dd.mm.yy'), ('2017-08-20'::date + f.a)::date AS p1 FROM generate_series(0,1000) as f(a) 
+WHERE '2017-08-20'::date + f.a <='2017-08-28'::date ORDER BY ('2017-08-20'::date + f.a)::date
+2017-08-28 13:11:55.7657 DEBUG Получено записей: 9
+2017-08-28 13:21:06.3102 DEBUG Запрос: select 'true','Все',0 union select 'f.otdel::int='||otdel,nam_otdel,1 from otdel_tab order by 3,2
+2017-08-28 13:21:06.3192 DEBUG Получено записей: 31
+2017-08-28 13:21:06.3572 DEBUG Запрос: select 'd.spolref::int4 in (select * from get_all_lpu_numbers())','Да',1 union select 'd.spolref::int4 not in (select * from get_all_lpu_numbers())','Нет',2 union select 'true','Все',3 order by 3,2
+2017-08-28 13:21:06.3622 DEBUG Получено записей: 3
+2017-08-28 13:21:06.3872 DEBUG Запрос: select 'true','Все',0 union select ' d.strcom_region_id !=''7000000000000''','Иногородние',1 union select 'd.strcom_id ='||strcom_id, strcom,2 from strcom_tab where strcom_id<97 or strcom_id=99  order by 3,2
+2017-08-28 13:21:06.3972 DEBUG Получено записей: 18
+2017-08-28 13:21:06.4292 DEBUG Запрос: select 'true','Все',0 union select 'dd.dop_disp_type_id='||id,name,1 from codifiers.dop_disp_type_tab order by 3,2
+2017-08-28 13:21:06.4292 DEBUG Получено записей: 8
