@@ -11,7 +11,6 @@ namespace Reports
         private Dictionary<string, string> globalParameters = new Dictionary<string, string>();
         private Dictionary<string, string> localParameters = new Dictionary<string, string>();
         private List<string> localParameterNames;
-        private List<string> globalParameterNames;
         private string innerSQL;
         private string rawSQL;
         private string name;
