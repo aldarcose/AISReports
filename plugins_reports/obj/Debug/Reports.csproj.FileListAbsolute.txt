@@ -46,3 +46,5 @@ D:\aldar\work\ambulance_1\plugins_reports\plugins_reports\obj\Debug\Reports.cspr
 D:\aldar\work\ambulance_1\plugins_reports\plugins_reports\obj\Debug\plugins_reports.exe.licenses
 D:\aldar\work\ambulance_1\plugins_reports\plugins_reports\obj\Debug\plugins_reports.exe
 D:\aldar\work\ambulance_1\plugins_reports\plugins_reports\obj\Debug\plugins_reports.pdb
+D:\aldar\work\ambulance_1\plugins_reports\plugins_reports\bin\Debug\System.Net.Http.dll
+D:\aldar\work\ambulance_1\plugins_reports\plugins_reports\bin\Debug\System.Net.Http.xml

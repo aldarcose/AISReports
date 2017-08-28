@@ -760,3 +760,156 @@ WHERE '2017-08-20'::date + f.a <='2017-08-28'::date ORDER BY ('2017-08-20'::date
 2017-08-28 13:21:06.3972 DEBUG Получено записей: 18
 2017-08-28 13:21:06.4292 DEBUG Запрос: select 'true','Все',0 union select 'dd.dop_disp_type_id='||id,name,1 from codifiers.dop_disp_type_tab order by 3,2
 2017-08-28 13:21:06.4292 DEBUG Получено записей: 8
+2017-08-28 14:05:04.0780 DEBUG Запрос: with recursive t as (
+               select array[stat_id] as hierarchy
+                     , stat_id
+                     , parent_id
+                     , desk
+                     , period_xml
+                     , 1 as level
+               from  public.stat_tab
+               where parent_id = -1
+               union all
+               select t.hierarchy || a.stat_id
+                     , a.stat_id
+                     , a.parent_id
+                     , a.desk
+                     , a.period_xml
+                     , t.level + 1 as level
+               from public.stat_tab a
+               join t on a.parent_id = t.stat_id
+               )
+            select stat_id
+                  , parent_id
+                  , level
+                  , desk
+                  , period_xml
+            from t
+            order by hierarchy
+2017-08-28 14:05:06.8722 DEBUG Получено записей: 447
+2017-08-28 14:05:18.5629 DEBUG Запрос: select 'true','Все',0 union select 'dd.doctor_id='||full_doctor_id,full_fio,1 from full_doctor_tab  order by 3,2
+2017-08-28 14:05:18.8269 DEBUG Получено записей: 935
+2017-08-28 14:05:18.9409 DEBUG Запрос: select 'true','Все',0 union select 'f.otdel='''||otdel||'''',nam_otdel,1 from otdel_tab  order by 3,2
+2017-08-28 14:05:18.9409 DEBUG Получено записей: 31
+2017-08-28 14:05:18.9779 DEBUG Запрос: select 'd.spolref::int4 in (select * from get_all_lpu_numbers())','Да',1 union select 'd.spolref::int4 not in (select * from get_all_lpu_numbers())','Нет',2 union select 'true','Все',3 order by 3,2
+2017-08-28 14:05:18.9779 DEBUG Получено записей: 3
+2017-08-28 14:05:19.0069 DEBUG Запрос: select 'true','Все',0 union select 'dd.dop_disp_type_id='||id,name,1 from codifiers.dop_disp_type_tab order by 3,2
+2017-08-28 14:05:19.0069 DEBUG Получено записей: 8
+2017-08-28 14:05:19.0379 DEBUG Запрос: select 'true','Все',0 union select 'd.uchactok_id='||id,name,1 from codifiers.uchactok_tab  order by 3,2
+2017-08-28 14:05:19.0379 DEBUG Получено записей: 78
+2017-08-28 14:05:26.8473 DEBUG Запрос: select 'true','Все',0 union select 'coalesce(dd.result_stage_2)='||id, substr(name, 1, 80), id from codifiers.med_help_result_tab where id in (352,353,354,355,356,321,322,323,324,325,317,318,319,332,333,334,335,336,347,348,349,350,351)  order by 3, 2;
+2017-08-28 14:05:26.8553 DEBUG Получено записей: 24
+2017-08-28 14:05:26.8973 DEBUG Запрос: select 'true','Все',0 union select 'coalesce(dd.result_stage_1)='||id, substr(name,1,80), id from codifiers.med_help_result_tab where id in (357,352,353,354,355,356,320,321,322,323,324,325,316,317,318,319,343,344,345,358,332,333,334,335,336,359,347,348,349,350,351,342) order by 3, 2; 
+2017-08-28 14:05:26.8973 DEBUG Получено записей: 33
+2017-08-28 14:05:26.9513 DEBUG Запрос: select 'true','Все',0 union select 'coalesce(dd.dop_disp_type_id)='||id,name,1 from codifiers.dop_disp_type_tab order by 3,2
+2017-08-28 14:05:27.2574 DEBUG Получено записей: 8
+2017-08-28 14:05:36.7609 DEBUG Запрос: SELECT distinct '$id'::text, d.fam||' '||d.nam||' '||d.mid as pac_fio, to_char(d.date_born, 'DD.MM.YYYY') as date_born, full_doc.full_fio as fio, 
+  case when v.visit_id is not null then 'visit' 
+      when h.id is not null then 'hosp' 
+      when r.id is not null then 'research' 
+      --when dd.id is not null then 'disp'||dd.dop_disp_type_id||'_'||case when ok.bur_dd_magic_number >= 2 then 2 else 1 end 
+      when dd.id is not null then 'disp'||dd.dop_disp_type_id||'_'||case when ok.bur_dd_magic_number <= 2 then 'dd_card' else 'dd_measure' end 
+      else 'unknown' 
+  end as uslug_type, 
+ 
+  uc.code as uslug_code, 
+ 
+  ok.reestr_date, 
+ 
+  o.name as otdel, 
+ 
+  --case when ok.paid=true then '+' else '' end as is_opl, 
+ 
+  ok.accept_date, 
+ 
+  trim(both from kat.kateg)||', '||trim(both from soz.sozstatus) as katstat, 
+ 
+  to_char(case when v.visit_id is not null then v.data_pos 
+      when h.id is not null then h.date_begin 
+      when dd.id is not null then dd.date_begin 
+      else ok.date_okaz end, 'DD.MM.YYYY') as date_1, 
+ 
+  to_char(case when v.visit_id is not null then v.data_pos 
+      when h.id is not null then h.date_end 
+      when dd.id is not null then dd.date_end 
+      else ok.date_okaz end, 'DD.MM.YYYY') as date_2, 
+ 
+  case when (r.id is not null and d.spolref = get_main_lpu_code()) then 0 else coalesce((h.id/h.id) * ok.cost / CASE WHEN d.strcom_region_id = GET_OUR_REGION_CODE() THEN 1 ELSE h.duration end, ok.cost * kol_vo) end as cost 
+ 
+ FROM okaz_uslug_tab ok 
+LEFT JOIN dan_tab d ON d.dan_id = ok.dan_id 
+LEFT JOIN sozstatus_tab soz ON soz.sozstatus_id = d.sozstatus_id 
+LEFT JOIN kateg_tab kat ON kat.kateg_id = d.kat 
+LEFT JOIN doctor_tab doc ON doc.id = ok.doctor_id 
+LEFT JOIN full_doctor_view full_doc ON full_doc.full_doctor_id = doc.id 
+LEFT JOIN codifiers.otdel_tab o ON o.id  = doc.sp_otdel_id 
+LEFT JOIN sp_uslug_tab uc ON uc.id = ok.sp_uslug_id 
+LEFT JOIN visit_tab v ON v.visit_id=table_link_id and table_link_name='visit_tab' 
+LEFT JOIN talon_tab t ON t.id  = v.talon_id and table_link_name='visit_tab' 
+LEFT JOIN hosp_tab h ON h.id=table_link_id and table_link_name='hosp_tab' 
+LEFT JOIN researches.main_research_tab r ON r.id=table_link_id and table_link_name ILIKE 'researches.%' and r.researches_types_id=ok.research_id 
+LEFT JOIN dop_disp_main_tab dd ON dd.id=table_link_id and table_link_name ILIKE 'dop_disp_main_tab' 
+WHERE (case when 'enddate'='enddate' then /*bur_sluch_date_end_for_ok(ok.id)*/ ok.sluch_date_end else ok.accept_date end BETWEEN '2017-08-01' AND '2017-08-28') 
+AND ok.sp_uslug_id IS NOT NULL AND ok.kol_vo > 0 
+						AND d.num_pol is not null AND d.policy_type is not null 
+						AND CASE WHEN 'all'='all' THEN 
+							 (table_link_name = 'visit_tab' OR table_link_name = 'hosp_tab' OR 	table_link_name ILIKE 'researches.%' OR table_link_name='dop_disp_main_tab' OR table_link_name ILIKE 'dop_disp_measures_tab') 
+							WHEN 'all'='visit' THEN table_link_name = 'visit_tab' 
+							WHEN 'all'='hosp' THEN table_link_name = 'hosp_tab' 
+							WHEN 'all'='research' THEN table_link_name ILIKE 'researches.%' 
+							WHEN 'all'='disp' THEN (table_link_name ILIKE 'dop_disp_main_tab' OR table_link_name ILIKE 'dop_disp_measures_tab')  END 
+						AND (v.visit_id is not null OR h.id is not null OR r.id is not null OR dd.id is not null) 
+						AND coalesce(ok.paid, false) in (true) 
+						AND case when dd.id is not null and coalesce(ok.paid, false)=false then coalesce(dd.errors_common,'')='' else true end 
+						AND case when dd.id is not null  then true and true and true else true end 
+						AND coalesce(d.date_smerti, '01.01.3000'::date) > ok.sluch_date_end AND coalesce(d.life,0) in (0, 2) 
+						AND d.sex in ('м') 
+						AND true 
+						 
+ORDER BY 6 ASC
+2017-08-28 14:05:37.6119 DEBUG Получено записей: 546
+2017-08-28 14:05:43.4423 DEBUG Запрос: SELECT full_doc.full_doctor_id||' '||full_doc.full_fio , o.name as otdel, 
+  sum(case when (r.id is not null and d.spolref = get_main_lpu_code()) then 0 else coalesce((h.id/h.id) * ok.cost / CASE WHEN d.strcom_region_id = GET_OUR_REGION_CODE() THEN 1 ELSE h.duration end, ok.cost * kol_vo) end) as cost, 
+count(distinct case when v.visit_id is not null then v.talon_id||'_t' 
+					when r.id is not null then r.id||'_'||r.researches_types_id||'_r' 
+/*					when dd.id is not null then dd.id||'_'||case when ok.bur_dd_magic_number>=2 then 2 else 1 end||'_'||'_d' 
+					else ok.id::character varying end) as kolvo, 
+count(distinct dd.id||'_'||case when ok.bur_dd_magic_number>=2 then 2 else null end||'_'||'_d') as kolvo2 */ 
+ 
+					when dd.id is not null then dd.id||'_d' 
+					else ok.id::character varying end) as kolvo, 
+count(distinct case when ok.bur_dd_magic_number >= 2 then dd.id||'_d' else null end) as kolvo2 
+ 
+ 
+  
+ FROM okaz_uslug_tab ok 
+LEFT JOIN dan_tab d ON d.dan_id = ok.dan_id 
+ 
+LEFT JOIN visit_tab v ON v.visit_id=table_link_id and table_link_name='visit_tab' 
+LEFT JOIN talon_tab t ON t.id  = v.talon_id and table_link_name='visit_tab' 
+LEFT JOIN hosp_tab h ON h.id=table_link_id and table_link_name='hosp_tab' 
+LEFT JOIN researches.main_research_tab r ON r.id=table_link_id and table_link_name ILIKE 'researches.%' and r.researches_types_id=ok.research_id 
+LEFT JOIN dop_disp_main_tab dd ON dd.id=table_link_id and table_link_name ILIKE 'dop_disp_main_tab' --and ok.bur_dd_magic_number < 2 
+LEFT JOIN dop_disp_measures_tab m2 ON m2.dop_disp_main_id = dd.id AND (m2.dop_disp_measure_id=2600000)  
+ 
+LEFT JOIN doctor_tab doc ON doc.id = case when dd.id is null then ok.doctor_id else dd.doctor_id end 
+LEFT JOIN full_doctor_view full_doc ON full_doc.full_doctor_id = doc.id 
+LEFT JOIN codifiers.otdel_tab o ON o.id  = doc.sp_otdel_id  
+ 
+WHERE (case when 'enddate'='enddate' then /*bur_sluch_date_end_for_ok(ok.id)*/ ok.sluch_date_end else ok.accept_date end BETWEEN '2017-08-01' AND '2017-08-28') 
+AND ok.sp_uslug_id IS NOT NULL AND ok.kol_vo > 0 
+						AND d.num_pol is not null AND d.policy_type is not null 
+						AND CASE WHEN 'all'='all' THEN 
+							 (table_link_name = 'visit_tab' OR table_link_name = 'hosp_tab' OR 	table_link_name ILIKE 'researches.%' OR table_link_name='dop_disp_main_tab' OR table_link_name ILIKE 'dop_disp_measures_tab') 
+							WHEN 'all'='visit' THEN table_link_name = 'visit_tab' 
+							WHEN 'all'='hosp' THEN table_link_name = 'hosp_tab' 
+							WHEN 'all'='research' THEN table_link_name ILIKE 'researches.%' 
+							WHEN 'all'='disp' THEN (table_link_name ILIKE 'dop_disp_main_tab' /*and ok.bur_dd_magic_number <= 2*/)  END 
+						AND (v.visit_id is not null OR h.id is not null OR r.id is not null OR dd.id is not null /*or dd2.id is not null*/) 
+						AND coalesce(ok.paid, false) in (true) 
+						AND case when dd.id is not null and coalesce(ok.paid, false)=false then coalesce(dd.errors_common,'')='' else true end 
+						AND case when dd.id is not null  then true and true and true else true end 
+						AND coalesce(d.date_smerti, '01.01.3000'::date) > ok.sluch_date_end AND coalesce(d.life,0) in (0, 2) 
+						AND true 
+GROUP BY 1, 2
+2017-08-28 14:05:43.9383 DEBUG Получено записей: 73
