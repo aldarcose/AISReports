@@ -52,13 +52,21 @@ namespace Reports
             var byteArray = (byte[])queriesData;
             string queriesText = Encoding.UTF8.GetString(byteArray);
             if (queriesText == "NULL") return null;
-
-            // workaround: Data at the root level is invalid. Line 1, position 1
-            string byteOrderMarkUtf8 = Encoding.UTF8.GetString(Encoding.UTF8.GetPreamble());
-            if (queriesText.StartsWith(byteOrderMarkUtf8))
-                queriesText = queriesText.Remove(0, byteOrderMarkUtf8.Length);
-
-            var queriesDoc = XDocument.Parse(queriesText);
+            
+            XDocument queriesDoc = null;
+            try
+            {
+                queriesDoc = XDocument.Parse(queriesText);
+            }
+            catch (Exception)
+            {
+                // workaround: Data at the root level is invalid. Line 1, position 1
+                string byteOrderMarkUtf8 = Encoding.UTF8.GetString(Encoding.UTF8.GetPreamble());
+                if (queriesText.StartsWith(byteOrderMarkUtf8))
+                    queriesText = queriesText.Remove(0, byteOrderMarkUtf8.Length);
+                queriesDoc = XDocument.Parse(queriesText);
+            }
+            
             foreach (XElement el in queriesDoc.Root.Elements("def"))
                 result.Add(new ExportQuery(el.Value, result));
             return result;

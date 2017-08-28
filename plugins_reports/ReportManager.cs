@@ -137,12 +137,20 @@ namespace Reports
         private List<ReportParameter> ParseParameters(string paramsText)
         {
             var result = new List<ReportParameter>();
-            // workaround: Data at the root level is invalid. Line 1, position 1
-            string byteOrderMarkUtf8 = Encoding.UTF8.GetString(Encoding.UTF8.GetPreamble());
-            if (paramsText.StartsWith(byteOrderMarkUtf8))
-                paramsText = paramsText.Remove(0, byteOrderMarkUtf8.Length);
-
-            var paramsDoc = XDocument.Parse(paramsText);
+            XDocument paramsDoc = null;
+            try
+            {
+                paramsDoc = XDocument.Parse(paramsText);
+            }
+            catch(Exception)
+            {
+                // workaround: Data at the root level is invalid. Line 1, position 1
+                string byteOrderMarkUtf8 = Encoding.UTF8.GetString(Encoding.UTF8.GetPreamble());
+                if (paramsText.StartsWith(byteOrderMarkUtf8))
+                    paramsText = paramsText.Remove(0, byteOrderMarkUtf8.Length);
+                paramsDoc = XDocument.Parse(paramsText);
+            }
+            
             foreach (XElement el in paramsDoc.Root.Elements("panel"))
             {
                 // Пропуск отчетов сделанных на мастере отчетов
