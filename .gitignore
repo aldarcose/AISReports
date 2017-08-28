@@ -4,6 +4,10 @@
 # User-specific files
 *.suo
 *.user
+*.pdb
+*.exe
+*.log
+*.dll
 
 # Build results
 
