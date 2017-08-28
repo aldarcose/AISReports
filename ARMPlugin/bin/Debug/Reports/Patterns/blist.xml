@@ -1,0 +1,167 @@
+<document showGrid="true" globalx="0.00" globaly="0.00" pagesize="A4" numCopyes="1" orientation="Portrait" version="2" step="5" shouldMost="false" >
+	<font size="10" strikeOut="false" bold="true" underline="false" name="Courier New" italic="false" />
+	<stringline y="18.00" number="1">
+		<text x="103.00" name="prev_number" length="12"/>
+		<checkbox x="67.50" y="14.00" name="first" />
+		<checkbox x="67.50" y="19.00" name="copy" />
+	</stringline>
+	<stringline y="25.00" number="2">
+		<text x="55.00" name="lpu_name" length="38" />
+	</stringline>
+	<stringline y="32.00" number="3">
+		<text x="55.00" name="lpu_address" length="38" />
+	</stringline>
+	<stringline y="39.00" number="4">
+		<text x="111.00" name="lpu_ogrn" length="15" />
+		<date x="71.00" name="blist_date" />
+	</stringline>
+	<stringline y="46.50" number="5">
+		<text x="55.00" name="p_surname" length="28" />
+	</stringline>
+	<stringline y="52.50" number="6">
+		<text x="55.00" name="p_name" length="28" />
+	</stringline>
+	<stringline y="58.50" number="7">
+		<text x="55.00" name="p_midname" length="28" />
+	</stringline>
+	<stringline y="66.50" number="8">
+		<date x="11.00" name="birth_date" />
+		<checkbox x="59.50" name="male_sex" />
+		<checkbox x="67.50" name="female_sex" />
+		<text x="131.00" name="dis_code" length="2" />
+		<text x="143.00" name="dis_addcode" length="3" />
+		<text x="159.00" name="dis_changecode" length="2" />
+	</stringline>
+	<stringline y="73.50" number="9">
+		<text x="11.00" name="job_place" length="29"/>
+	</stringline>
+	<stringline y="80.50" number="10">
+		<checkbox x="23.50" name="base_job"/>
+		<checkbox x="55.50" name="add_job"/>
+		<text x="79.00" name="base_number" length="12"/>
+		<checkbox x="155.50" name="jobless"/>
+	</stringline>
+	<stringline y="88.00" number="11">
+		<date x="15.00" name="date_begin"/>
+		<date x="59.00" name="date_expired"/>
+		<text x="103.00" name="sanatorium_number" length="7"/>
+		<text x="147.00" name="sanatorium_ogrn" length="15"/>
+	</stringline>
+	<stringline y="95.00" number="12">
+		<text x="15.00" name="nosotrophy_age_1" length="2"/>
+		<text x="27.00" name="nosotrophy_month_1" length="2"/>
+		<text x="39.00" name="nosotropthy_code_1" length="2"/>
+		<text x="51.00" name="nosotrophy_fio_1" length="39"/>
+	</stringline>
+	<stringline y="100.00" number="13">
+		<text x="15.00" name="nosotrophy_age_2" length="2"/>
+		<text x="27.50" name="nosotrophy_month_2" length="2"/>
+		<text x="39.00" name="nosotropthy_code_2" length="2"/>
+		<text x="51.00" name="nosotrophy_fio_2" length="39"/>
+	</stringline>
+	<stringline y="107.00" number="14">
+		<checkbox x="96.00" name="pregnancy_yes"/>
+		<checkbox x="111.00" name="pregnancy_no"/>
+	</stringline>
+	<stringline y="113.50" number="15">
+		<text x="51.00" name="violence_code" length="2"/>
+		<date x="71.00" name="violence_date"/>
+	</stringline>
+	<stringline y="119.50" number="16">
+		<date x="51.00" name="stationar_begin"/>
+		<date x="99.00" name="stationar_expired"/>
+	</stringline>
+	<stringline y="125.50" number="17">
+		<date x="51.00" name="mse_date"/>
+	</stringline>
+	<stringline y="131.50" number="18">
+		<date x="51.00" name="mse_reg_date"/>
+		<text x="147.00" name="inval_set"/>
+	</stringline>
+	<stringline y="137.50" number="19">
+		<date x="51.00" name="mse_examine_date"/>
+	</stringline>
+	<stringline y="150.00" number="20">
+		<date x="9.00" name="disable_begin_1"/>
+		<date x="45.00" name="disable_expired_1"/>
+		<text x="81.00" name="doctor_job_1" length="9" />
+		<text x="117.00" name="doctor_codename_1" length="14" />
+	</stringline>
+	<stringline y="155.00" number="20a">
+		<text x="81.00" name="vkchief_1" length="9" />
+		<text x="117.00" name="vkchief_name_1" length="14" />
+	</stringline>
+	<stringline y="160.00" number="21">
+		<date x="9.00" name="disable_begin_2"/>
+		<date x="45.00" name="disable_expired_2"/>
+		<text x="81.00" name="doctor_job_2" length="9" />
+		<text x="117.00" name="doctor_codename_2" length="14" />
+	</stringline>
+	<stringline y="165.00" number="21a">
+		<text x="81.00" name="vkchief_2" length="9" />
+		<text x="117.00" name="vkchief_name_2" length="14" />
+	</stringline>
+	<stringline y="170.00" number="22">
+		<date x="9.00" name="disable_begin_3"/>
+		<date x="45.00" name="disable_expired_3"/>
+		<text x="81.00" name="doctor_job_3" length="9" />
+		<text x="117.00" name="doctor_codename_3" length="14" />
+	</stringline>
+	<stringline y="175.00" number="21a">
+		<text x="81.00" name="vkchief_3" length="9" />
+		<text x="117.00" name="vkchief_name_3" length="14" />
+	</stringline>
+	<stringline y="181.00" number="23">
+		<date x="51.00" name="job_begin_date"/>
+		<text x="109.00" name="job_other_code" length="2"/>
+		<date x="121.00" name="job_other_date"/>
+	</stringline>
+	<stringline y="188.00" number="24">
+		<text x="51.00" name="blist_continue" length="12"/>
+	</stringline>
+	<stringline y="" number="25">
+	</stringline>
+	<stringline y="" number="26">
+	</stringline>
+	<stringline y="" number="27">
+	</stringline>
+	<stringline y="" number="28">
+	</stringline>
+	<stringline y="" number="29">
+	</stringline>
+	<stringline y="" number="30">
+	</stringline>
+	<stringline y="" number="31">
+	</stringline>
+	<stringline y="" number="32">
+	</stringline>
+	<stringline y="" number="33">
+	</stringline>
+	<stringline y="" number="34">
+	</stringline>
+	<stringline y="263.00" number="35">
+		<text x="103.00" name="prev_number" length="12"/>
+		<checkbox x="67.50" y="258.00" name="first" />
+		<checkbox x="67.50" y="263.00" name="double" />
+	</stringline>
+	<stringline y="269.00" number="36">
+		<text x="15.00" name="p_surname" length="28"/>
+	</stringline>
+	<stringline y="276.00" number="37">
+		<text x="15.00" name="p_name" length="28"/>
+		<text x="143.00" name="doctor_codename_1" length="16"/>
+	</stringline>
+	<stringline y="282.00" number="38">
+		<text x="15.00" name="p_midname" length="28"/>
+		<text x="167.00" name="disease_file" length="10" offsety="1.00"/>
+	</stringline>
+	<stringline y="289.00" number="39">
+		<text x="15.00" name="job_place" length="29"/>
+		<date x="167.00" name="blist_date" />
+	</stringline>
+	<stringline y="296.00" number="40">
+		<checkbox x="23.50" name="base_job"/>
+		<checkbox x="55.50" name="add_job"/>
+		<text x="79.00" name="base_number" length="12"/>
+	</stringline>
+</document>

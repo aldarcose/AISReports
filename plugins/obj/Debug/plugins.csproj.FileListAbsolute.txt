@@ -1,0 +1,353 @@
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Shared\obj\Debug\plugins.exe
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Shared\obj\Debug\plugins.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\obj\Debug\plugins.csprojResolveAssemblyReference.cache
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\obj\Debug\plugins.HostForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\obj\Debug\plugins.FormsAndControls.AuthForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\obj\Debug\plugins.Properties.Resources.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\obj\Debug\plugins.csproj.GenerateResource.Cache
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\obj\Debug\plugins.exe.licenses
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\NLog.config
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\plugins.exe.config
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\plugins.exe.manifest
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\plugins.application
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\plugins.exe
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\plugins.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.BonusSkins.v14.2.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.Data.v14.2.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.Printing.v14.2.Core.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.Sparkline.v14.2.Core.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.Utils.v14.2.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.XtraBars.v14.2.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.XtraEditors.v14.2.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.XtraGrid.v14.2.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.XtraLayout.v14.2.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.XtraNavBar.v14.2.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Model.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\SharedDbWorker.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\SharedPlugin.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\NLog.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Dapper.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Dapper.SimpleCRUD.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DbCaching.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Npgsql.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Model.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\SharedDbWorker.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\SharedPlugin.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.Data.v14.2.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.Printing.v14.2.Core.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.Sparkline.v14.2.Core.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.Utils.v14.2.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.XtraBars.v14.2.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.XtraEditors.v14.2.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.XtraGrid.v14.2.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.XtraLayout.v14.2.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.XtraNavBar.v14.2.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\NLog.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Dapper.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Dapper.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Dapper.SimpleCRUD.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Dapper.SimpleCRUD.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DbCaching.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Npgsql.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\de\DevExpress.Data.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\es\DevExpress.Data.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ja\DevExpress.Data.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ru\DevExpress.Data.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\de\DevExpress.Printing.v14.2.Core.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\es\DevExpress.Printing.v14.2.Core.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ja\DevExpress.Printing.v14.2.Core.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ru\DevExpress.Printing.v14.2.Core.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\de\DevExpress.Sparkline.v14.2.Core.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\es\DevExpress.Sparkline.v14.2.Core.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ja\DevExpress.Sparkline.v14.2.Core.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ru\DevExpress.Sparkline.v14.2.Core.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\de\DevExpress.Utils.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\es\DevExpress.Utils.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ja\DevExpress.Utils.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ru\DevExpress.Utils.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\de\DevExpress.XtraBars.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\es\DevExpress.XtraBars.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ja\DevExpress.XtraBars.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ru\DevExpress.XtraBars.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\de\DevExpress.XtraEditors.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\es\DevExpress.XtraEditors.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ja\DevExpress.XtraEditors.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ru\DevExpress.XtraEditors.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\de\DevExpress.XtraGrid.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\es\DevExpress.XtraGrid.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ja\DevExpress.XtraGrid.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ru\DevExpress.XtraGrid.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\de\DevExpress.XtraLayout.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\es\DevExpress.XtraLayout.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ja\DevExpress.XtraLayout.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ru\DevExpress.XtraLayout.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\de\DevExpress.XtraNavBar.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\es\DevExpress.XtraNavBar.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ja\DevExpress.XtraNavBar.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ru\DevExpress.XtraNavBar.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\de\Npgsql.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\es\Npgsql.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\obj\Debug\plugins.exe.manifest
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\obj\Debug\plugins.application
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\obj\Debug\plugins.exe
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\obj\Debug\plugins.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\plugins.exe.config
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\NLog.config
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\plugins.exe.manifest
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\plugins.application
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\plugins.exe
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\plugins.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.BonusSkins.v17.1.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.Data.v17.1.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.Pdf.v17.1.Core.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.Printing.v17.1.Core.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.Sparkline.v17.1.Core.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.Utils.v17.1.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.XtraBars.v17.1.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.XtraEditors.v17.1.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.XtraGrid.v17.1.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.XtraLayout.v17.1.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.XtraNavBar.v17.1.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.XtraPrinting.v17.1.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Model.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\SharedDbWorker.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\SharedPlugin.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\NLog.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Dapper.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Dapper.SimpleCRUD.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DbCaching.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Npgsql.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Mono.Security.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Model.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\SharedDbWorker.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\SharedPlugin.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.Data.v17.1.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.Pdf.v17.1.Core.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.Printing.v17.1.Core.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.Sparkline.v17.1.Core.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.Utils.v17.1.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.XtraBars.v17.1.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.XtraEditors.v17.1.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.XtraPrinting.v17.1.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.XtraGrid.v17.1.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.XtraLayout.v17.1.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DevExpress.XtraNavBar.v17.1.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\NLog.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Dapper.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Dapper.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Dapper.SimpleCRUD.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Dapper.SimpleCRUD.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\DbCaching.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\Npgsql.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\de\DevExpress.Data.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\es\DevExpress.Data.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ja\DevExpress.Data.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ru\DevExpress.Data.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\de\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\es\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ja\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ru\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\de\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\es\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ja\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ru\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\de\DevExpress.Sparkline.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\es\DevExpress.Sparkline.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ja\DevExpress.Sparkline.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ru\DevExpress.Sparkline.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\de\DevExpress.Utils.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\es\DevExpress.Utils.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ja\DevExpress.Utils.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ru\DevExpress.Utils.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\de\DevExpress.XtraBars.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\es\DevExpress.XtraBars.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ja\DevExpress.XtraBars.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ru\DevExpress.XtraBars.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\de\DevExpress.XtraEditors.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\es\DevExpress.XtraEditors.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ja\DevExpress.XtraEditors.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ru\DevExpress.XtraEditors.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\de\DevExpress.XtraPrinting.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\es\DevExpress.XtraPrinting.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ja\DevExpress.XtraPrinting.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ru\DevExpress.XtraPrinting.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\de\DevExpress.XtraGrid.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\es\DevExpress.XtraGrid.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ja\DevExpress.XtraGrid.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ru\DevExpress.XtraGrid.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\de\DevExpress.XtraLayout.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\es\DevExpress.XtraLayout.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ja\DevExpress.XtraLayout.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ru\DevExpress.XtraLayout.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\de\DevExpress.XtraNavBar.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\es\DevExpress.XtraNavBar.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ja\DevExpress.XtraNavBar.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ru\DevExpress.XtraNavBar.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\de\Npgsql.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\es\Npgsql.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\obj\Debug\plugins.csprojResolveAssemblyReference.cache
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\obj\Debug\plugins.HostForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\obj\Debug\plugins.FormsAndControls.AuthForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\obj\Debug\plugins.Properties.Resources.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\obj\Debug\plugins.csproj.GenerateResource.Cache
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\obj\Debug\plugins.exe.licenses
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\obj\Debug\plugins.exe.manifest
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\obj\Debug\plugins.application
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\obj\Debug\plugins.exe
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\plugins\obj\Debug\plugins.pdb
+D:\programs\GP1\plugins\plugins\bin\Debug\plugins.exe.config
+D:\programs\GP1\plugins\plugins\bin\Debug\App.config
+D:\programs\GP1\plugins\plugins\bin\Debug\NLog.config
+D:\programs\GP1\plugins\plugins\bin\Debug\plugins.exe.manifest
+D:\programs\GP1\plugins\plugins\bin\Debug\plugins.application
+D:\programs\GP1\plugins\plugins\bin\Debug\plugins.exe
+D:\programs\GP1\plugins\plugins\bin\Debug\plugins.pdb
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.BonusSkins.v17.1.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.Data.v17.1.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.Pdf.v17.1.Core.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.Printing.v17.1.Core.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.Sparkline.v17.1.Core.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.Utils.v17.1.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.XtraBars.v17.1.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.XtraEditors.v17.1.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.XtraGrid.v17.1.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.XtraLayout.v17.1.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.XtraNavBar.v17.1.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.XtraPrinting.v17.1.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\Microsoft.Practices.Unity.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\Model.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\SharedDbWorker.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\SharedPlugin.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\Dapper.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\NLog.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\Dapper.SimpleCRUD.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\DbCaching.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\Npgsql.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.RichEdit.v17.1.Core.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.XtraTreeList.v17.1.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\Mono.Security.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.Office.v17.1.Core.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\Model.pdb
+D:\programs\GP1\plugins\plugins\bin\Debug\SharedDbWorker.pdb
+D:\programs\GP1\plugins\plugins\bin\Debug\SharedPlugin.pdb
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.Data.v17.1.xml
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.Pdf.v17.1.Core.xml
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.Printing.v17.1.Core.xml
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.Sparkline.v17.1.Core.xml
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.Utils.v17.1.xml
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.XtraBars.v17.1.xml
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.XtraEditors.v17.1.xml
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.XtraPrinting.v17.1.xml
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.XtraGrid.v17.1.xml
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.XtraLayout.v17.1.xml
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.XtraNavBar.v17.1.xml
+D:\programs\GP1\plugins\plugins\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\programs\GP1\plugins\plugins\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\programs\GP1\plugins\plugins\bin\Debug\Microsoft.Practices.Unity.xml
+D:\programs\GP1\plugins\plugins\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+D:\programs\GP1\plugins\plugins\bin\Debug\Dapper.pdb
+D:\programs\GP1\plugins\plugins\bin\Debug\Dapper.xml
+D:\programs\GP1\plugins\plugins\bin\Debug\NLog.xml
+D:\programs\GP1\plugins\plugins\bin\Debug\Dapper.SimpleCRUD.pdb
+D:\programs\GP1\plugins\plugins\bin\Debug\Dapper.SimpleCRUD.xml
+D:\programs\GP1\plugins\plugins\bin\Debug\DbCaching.pdb
+D:\programs\GP1\plugins\plugins\bin\Debug\Npgsql.xml
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.RichEdit.v17.1.Core.xml
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.XtraTreeList.v17.1.xml
+D:\programs\GP1\plugins\plugins\bin\Debug\DevExpress.Office.v17.1.Core.xml
+D:\programs\GP1\plugins\plugins\bin\Debug\de\DevExpress.Data.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\es\DevExpress.Data.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ja\DevExpress.Data.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ru\DevExpress.Data.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\de\DevExpress.Pdf.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\es\DevExpress.Pdf.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ja\DevExpress.Pdf.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ru\DevExpress.Pdf.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\de\DevExpress.Printing.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\es\DevExpress.Printing.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ja\DevExpress.Printing.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ru\DevExpress.Printing.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\de\DevExpress.Sparkline.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\es\DevExpress.Sparkline.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ja\DevExpress.Sparkline.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ru\DevExpress.Sparkline.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\de\DevExpress.Utils.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\es\DevExpress.Utils.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ja\DevExpress.Utils.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ru\DevExpress.Utils.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\de\DevExpress.XtraBars.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\es\DevExpress.XtraBars.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ja\DevExpress.XtraBars.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ru\DevExpress.XtraBars.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\de\DevExpress.XtraEditors.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\es\DevExpress.XtraEditors.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ja\DevExpress.XtraEditors.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ru\DevExpress.XtraEditors.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\de\DevExpress.XtraPrinting.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\es\DevExpress.XtraPrinting.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ja\DevExpress.XtraPrinting.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ru\DevExpress.XtraPrinting.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\de\DevExpress.XtraGrid.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\es\DevExpress.XtraGrid.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ja\DevExpress.XtraGrid.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ru\DevExpress.XtraGrid.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\de\DevExpress.XtraLayout.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\es\DevExpress.XtraLayout.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ja\DevExpress.XtraLayout.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ru\DevExpress.XtraLayout.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\de\DevExpress.XtraNavBar.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\es\DevExpress.XtraNavBar.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ja\DevExpress.XtraNavBar.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ru\DevExpress.XtraNavBar.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\de\Npgsql.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\es\Npgsql.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\fi\Npgsql.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\fr\Npgsql.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ja\Npgsql.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\zh-CN\Npgsql.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\de\DevExpress.RichEdit.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\es\DevExpress.RichEdit.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ja\DevExpress.RichEdit.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ru\DevExpress.RichEdit.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\de\DevExpress.XtraTreeList.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\es\DevExpress.XtraTreeList.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ja\DevExpress.XtraTreeList.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ru\DevExpress.XtraTreeList.v17.1.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\de\DevExpress.Office.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\es\DevExpress.Office.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ja\DevExpress.Office.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\plugins\bin\Debug\ru\DevExpress.Office.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\plugins\obj\Debug\plugins.csprojResolveAssemblyReference.cache
+D:\programs\GP1\plugins\plugins\obj\Debug\plugins.HostForm.resources
+D:\programs\GP1\plugins\plugins\obj\Debug\plugins.FormsAndControls.AuthForm.resources
+D:\programs\GP1\plugins\plugins\obj\Debug\plugins.Properties.Resources.resources
+D:\programs\GP1\plugins\plugins\obj\Debug\plugins.csproj.GenerateResource.Cache
+D:\programs\GP1\plugins\plugins\obj\Debug\plugins.exe.licenses
+D:\programs\GP1\plugins\plugins\obj\Debug\plugins.exe.manifest
+D:\programs\GP1\plugins\plugins\obj\Debug\plugins.application
+D:\programs\GP1\plugins\plugins\obj\Debug\plugins.exe
+D:\programs\GP1\plugins\plugins\obj\Debug\plugins.pdb

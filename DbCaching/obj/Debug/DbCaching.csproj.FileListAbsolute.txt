@@ -1,0 +1,9 @@
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\DbCaching\bin\Debug\DbCaching.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\DbCaching\bin\Debug\DbCaching.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\DbCaching\obj\Debug\DbCaching.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\DbCaching\obj\Debug\DbCaching.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\DbCaching\bin\Debug\DbCaching.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\DbCaching\bin\Debug\DbCaching.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\DbCaching\obj\Debug\DbCaching.csprojResolveAssemblyReference.cache
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\DbCaching\obj\Debug\DbCaching.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\DbCaching\obj\Debug\DbCaching.pdb

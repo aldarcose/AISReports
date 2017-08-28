@@ -1,0 +1,41 @@
+﻿<html>
+<head>
+<meta charset="UTF-8">
+<meta name="qrichtext" content="1" />
+<script language="javascript">
+            function printDiv(divName) {
+                  var printContents = document.getElementById(divName).innerHTML;
+                  var originalContents = document.body.innerHTML;
+                  document.getElementById('header').style.display = 'none';
+                  document.getElementById('footer').style.display = 'none';
+                  document.body.innerHTML = printContents;
+
+                  window.print();
+
+
+                  document.body.innerHTML = originalContents;
+            }
+
+      </script>
+</head>
+<body style="font-size:10pt;">
+<p align="center"><b>Результат посещения</b></p>
+<table style="font-size:10pt;">
+<tr>
+<td><b>Пациент:&#160;&#160;&#160;</b><myPatient></td>
+<td><b>Дата посещения:&#160;&#160;&#160;</b><myCurrentDate></td>
+</tr>
+<tr>
+<td><b>Место обслуживания:&#160;&#160;&#160;</b><myMestObs></td>
+<td><b>Цель посещения:&#160;&#160;&#160;</b><myTargetPos></td>
+</tr>
+<tr><td colspan="2"><b>Анамнез заболевания:</b>&#160;&#160;&#160;<myAnamnez></td></tr>
+<tr><td colspan="2"><b>Жалобы:</b>&#160;&#160;&#160;<myZhalobi></td></tr>
+<tr><td colspan="2"><b>Объективный&#160;статус:</b>&#160;&#160;&#160;<myObjStatus></td></tr>
+<tr><td colspan="2"><b>Диагноз:</b><br><myDiagnoz></td></tr>
+<tr><td colspan="2"><b>ТАП&#160;закрыт:&#160;</b><myResult></td></tr>
+<tr><td colspan="2"><b>Больничный лист:&#160;</b><myBolList></td></tr>
+<tr><td colspan="2"><b>Дата&#160;следующего&#160;визита:&#160;</b>&#160;&#160;&#160;<myDateNext></td></tr>
+<tr><td colspan="2"><b>Ф.И.О. врача:&#160;</b><myFIOdoct>&#160;&#160;&#160;<b>Подпись&#160;врача:</b>_________________________</td></tr>
+</table>
+</body></html>

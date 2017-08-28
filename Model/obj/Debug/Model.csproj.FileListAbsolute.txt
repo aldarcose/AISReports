@@ -1,0 +1,167 @@
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\Model\bin\Debug\Model.dll
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\Model\bin\Debug\Model.pdb
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\Model\bin\Debug\Model.dll.CodeAnalysisLog.xml
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\Model\bin\Debug\Model.dll.lastcodeanalysissucceeded
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\plugins\Model.dll
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\plugins\Model.pdb
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\Model\obj\Debug\Model.dll
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\Model\obj\Debug\Model.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\plugins\NLog.config
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\plugins\Model.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\plugins\Model.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\NLog.config
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\Model.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\Model.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\Dapper.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\Dapper.SimpleCRUD.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\DbCaching.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\NLog.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\SharedDbWorker.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\SharedPrintWorker.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\Npgsql.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\HtmlRenderer.WinForms.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\HtmlRenderer.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\DbCaching.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\SharedDbWorker.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\SharedPrintWorker.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\Dapper.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\Dapper.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\Dapper.SimpleCRUD.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\Dapper.SimpleCRUD.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\NLog.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\Npgsql.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\HtmlRenderer.WinForms.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\HtmlRenderer.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\de\Npgsql.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\es\Npgsql.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\obj\Debug\Model.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\Model\obj\Debug\Model.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\NLog.config
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\Model.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\Model.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\Dapper.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\Dapper.SimpleCRUD.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\DbCaching.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\NLog.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\SharedDbWorker.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\SharedPrintWorker.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\Npgsql.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\HtmlRenderer.WinForms.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\HtmlRenderer.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\Mono.Security.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\DbCaching.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\SharedDbWorker.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\SharedPrintWorker.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\Dapper.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\Dapper.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\Dapper.SimpleCRUD.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\Dapper.SimpleCRUD.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\NLog.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\Npgsql.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\HtmlRenderer.WinForms.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\HtmlRenderer.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\de\Npgsql.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\es\Npgsql.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\obj\Debug\Model.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\Model\obj\Debug\Model.pdb
+D:\programs\GP1\plugins\Model\bin\Debug\App.config
+D:\programs\GP1\plugins\Model\bin\Debug\NLog.config
+D:\programs\GP1\plugins\Model\bin\Debug\Model.dll
+D:\programs\GP1\plugins\Model\bin\Debug\Model.pdb
+D:\programs\GP1\plugins\Model\bin\Debug\Dapper.dll
+D:\programs\GP1\plugins\Model\bin\Debug\Dapper.SimpleCRUD.dll
+D:\programs\GP1\plugins\Model\bin\Debug\DbCaching.dll
+D:\programs\GP1\plugins\Model\bin\Debug\NLog.dll
+D:\programs\GP1\plugins\Model\bin\Debug\SharedDbWorker.dll
+D:\programs\GP1\plugins\Model\bin\Debug\SharedPrintWorker.dll
+D:\programs\GP1\plugins\Model\bin\Debug\Npgsql.dll
+D:\programs\GP1\plugins\Model\bin\Debug\HtmlRenderer.WinForms.dll
+D:\programs\GP1\plugins\Model\bin\Debug\HtmlRenderer.dll
+D:\programs\GP1\plugins\Model\bin\Debug\Mono.Security.dll
+D:\programs\GP1\plugins\Model\bin\Debug\DbCaching.pdb
+D:\programs\GP1\plugins\Model\bin\Debug\SharedDbWorker.pdb
+D:\programs\GP1\plugins\Model\bin\Debug\SharedPrintWorker.pdb
+D:\programs\GP1\plugins\Model\bin\Debug\Dapper.pdb
+D:\programs\GP1\plugins\Model\bin\Debug\Dapper.xml
+D:\programs\GP1\plugins\Model\bin\Debug\Dapper.SimpleCRUD.pdb
+D:\programs\GP1\plugins\Model\bin\Debug\Dapper.SimpleCRUD.xml
+D:\programs\GP1\plugins\Model\bin\Debug\NLog.xml
+D:\programs\GP1\plugins\Model\bin\Debug\Npgsql.xml
+D:\programs\GP1\plugins\Model\bin\Debug\HtmlRenderer.WinForms.pdb
+D:\programs\GP1\plugins\Model\bin\Debug\HtmlRenderer.pdb
+D:\programs\GP1\plugins\Model\bin\Debug\de\Npgsql.resources.dll
+D:\programs\GP1\plugins\Model\bin\Debug\es\Npgsql.resources.dll
+D:\programs\GP1\plugins\Model\bin\Debug\fi\Npgsql.resources.dll
+D:\programs\GP1\plugins\Model\bin\Debug\fr\Npgsql.resources.dll
+D:\programs\GP1\plugins\Model\bin\Debug\ja\Npgsql.resources.dll
+D:\programs\GP1\plugins\Model\bin\Debug\zh-CN\Npgsql.resources.dll
+D:\programs\GP1\plugins\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\programs\GP1\plugins\Model\obj\Debug\Model.dll
+D:\programs\GP1\plugins\Model\obj\Debug\Model.pdb
+D:\programs\GP1\plugins_reports\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\programs\GP1\plugins_reports\Model\obj\Debug\Model.dll
+D:\programs\GP1\plugins_reports\Model\obj\Debug\Model.pdb
+D:\programs\GP1\plugins_reports\Model\bin\Debug\App.config
+D:\programs\GP1\plugins_reports\Model\bin\Debug\NLog.config
+D:\programs\GP1\plugins_reports\Model\bin\Debug\Model.dll
+D:\programs\GP1\plugins_reports\Model\bin\Debug\Model.pdb
+D:\programs\GP1\plugins_reports\Model\bin\Debug\Dapper.dll
+D:\programs\GP1\plugins_reports\Model\bin\Debug\Dapper.SimpleCRUD.dll
+D:\programs\GP1\plugins_reports\Model\bin\Debug\DbCaching.dll
+D:\programs\GP1\plugins_reports\Model\bin\Debug\NLog.dll
+D:\programs\GP1\plugins_reports\Model\bin\Debug\SharedDbWorker.dll
+D:\programs\GP1\plugins_reports\Model\bin\Debug\Npgsql.dll
+D:\programs\GP1\plugins_reports\Model\bin\Debug\Mono.Security.dll
+D:\programs\GP1\plugins_reports\Model\bin\Debug\DbCaching.pdb
+D:\programs\GP1\plugins_reports\Model\bin\Debug\SharedDbWorker.pdb
+D:\programs\GP1\plugins_reports\Model\bin\Debug\Dapper.pdb
+D:\programs\GP1\plugins_reports\Model\bin\Debug\Dapper.xml
+D:\programs\GP1\plugins_reports\Model\bin\Debug\Dapper.SimpleCRUD.pdb
+D:\programs\GP1\plugins_reports\Model\bin\Debug\Dapper.SimpleCRUD.xml
+D:\programs\GP1\plugins_reports\Model\bin\Debug\NLog.xml
+D:\programs\GP1\plugins_reports\Model\bin\Debug\Npgsql.xml
+D:\programs\GP1\plugins_reports\Model\bin\Debug\de\Npgsql.resources.dll
+D:\programs\GP1\plugins_reports\Model\bin\Debug\es\Npgsql.resources.dll
+D:\programs\GP1\plugins_reports\Model\bin\Debug\fi\Npgsql.resources.dll
+D:\programs\GP1\plugins_reports\Model\bin\Debug\fr\Npgsql.resources.dll
+D:\programs\GP1\plugins_reports\Model\bin\Debug\ja\Npgsql.resources.dll
+D:\programs\GP1\plugins_reports\Model\bin\Debug\zh-CN\Npgsql.resources.dll
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\App.config
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\NLog.config
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\Model.dll
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\Model.pdb
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\Dapper.dll
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\Dapper.SimpleCRUD.dll
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\DbCaching.dll
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\NLog.dll
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\SharedDbWorker.dll
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\Npgsql.dll
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\Mono.Security.dll
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\DbCaching.pdb
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\SharedDbWorker.pdb
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\Dapper.pdb
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\Dapper.xml
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\Dapper.SimpleCRUD.pdb
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\Dapper.SimpleCRUD.xml
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\NLog.xml
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\Npgsql.xml
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\de\Npgsql.resources.dll
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\es\Npgsql.resources.dll
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\fi\Npgsql.resources.dll
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\fr\Npgsql.resources.dll
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\ja\Npgsql.resources.dll
+D:\aldar\work\ambulance_1\plugins_reports\Model\bin\Debug\zh-CN\Npgsql.resources.dll
+D:\aldar\work\ambulance_1\plugins_reports\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\aldar\work\ambulance_1\plugins_reports\Model\obj\Debug\Model.dll
+D:\aldar\work\ambulance_1\plugins_reports\Model\obj\Debug\Model.pdb

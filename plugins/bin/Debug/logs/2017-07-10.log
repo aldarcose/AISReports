@@ -1,0 +1,514 @@
+2017-07-10 08:45:59.8395 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-07-10 08:45:59.8885 DEBUG Получено записей: 187
+2017-07-10 08:46:02.4287 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null;
+2017-07-10 08:46:02.4287 DEBUG Parameters: @patterncode=, @operator=
+2017-07-10 08:46:02.4667 DEBUG Result 
+2017-07-10 08:46:02.4667 DEBUG нет шаблона для пользователя
+2017-07-10 08:46:02.4667 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null
+2017-07-10 08:46:02.4667 DEBUG Parameters: @patterncode 
+2017-07-10 08:46:02.4807 DEBUG Result 
+2017-07-10 08:46:02.5347 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null;
+2017-07-10 08:46:02.5347 DEBUG Parameters: @patterncode=, @operator=
+2017-07-10 08:46:02.5457 DEBUG Result 
+2017-07-10 08:46:02.5457 DEBUG нет шаблона для пользователя
+2017-07-10 08:46:02.5457 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null
+2017-07-10 08:46:02.5457 DEBUG Parameters: @patterncode 
+2017-07-10 08:46:02.5587 DEBUG Result 
+2017-07-10 08:46:02.8967 DEBUG Запрос: Select id, name, code, is_default, parent_id from codifiers.sp_kind_paid_tab order by id
+2017-07-10 08:46:02.8967 DEBUG Получено записей: 9
+2017-07-10 08:46:02.8967 DEBUG Запрос: Select id, name, code from codifiers.first_visit_condition_tab order by id
+2017-07-10 08:46:02.9137 DEBUG Получено записей: 4
+2017-07-10 08:46:02.9137 DEBUG Запрос: Select id, name, code, reestr, idsp, hospital_type_id, is_cure, is_inspection from codifiers.visit_purpose_common_tab order by id
+2017-07-10 08:46:02.9287 DEBUG Получено записей: 22
+2017-07-10 08:46:02.9287 DEBUG Запрос: Select id, name, code from codifiers.place_service_tab order by id
+2017-07-10 08:46:02.9287 DEBUG Получено записей: 3
+2017-07-10 08:46:02.9537 DEBUG Запрос: Select result_id, result, reestr, patient_state_id, reestr_rslt, reestr_ishod, _end from public.result_tab order by result_id
+2017-07-10 08:46:02.9737 DEBUG Получено записей: 29
+2017-07-10 08:46:03.0037 DEBUG Запрос: select id, name, code, bur_reestr_code from codifiers.travma_tab order by name;
+2017-07-10 08:46:03.0067 DEBUG Получено записей: 15
+2017-07-10 08:46:03.0067 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab
+2017-07-10 08:46:03.0437 DEBUG Получено записей: 114
+2017-07-10 08:46:03.3797 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab order by name
+2017-07-10 08:46:03.3927 DEBUG Получено записей: 114
+2017-07-10 08:46:03.4027 DEBUG Запрос: select sp_napr_obosn_id,trim(obosn_name) as obosn_name FROM sp_napr_obosn_tab ORDER BY sp_napr_obosn_id;
+2017-07-10 08:46:03.4027 DEBUG Получено записей: 8
+2017-07-10 08:46:03.4157 DEBUG Запрос: SELECT sp_type_napr_id, sp_type_napr FROM sp_type_napr_tab where sp_type_napr_id!=1 ORDER BY 1;
+2017-07-10 08:46:03.4157 DEBUG Получено записей: 8
+2017-07-10 08:46:03.4307 DEBUG Запрос: select id, code, name from codifiers.doctor_spec_tab order by 3,1;
+2017-07-10 08:46:03.4307 DEBUG Получено записей: 176
+2017-07-10 08:46:03.4477 DEBUG Запрос: Select mkb_id, mkb, kod_d, reestr_code from public.mkb_tab order by 1
+2017-07-10 08:46:03.6597 DEBUG Получено записей: 13813
+2017-07-10 08:46:09.0670 DEBUG Запрос: Select s.id, s.code, s.name from codifiers.sozstatus_tab s
+2017-07-10 08:46:09.0670 DEBUG Получено записей: 11
+2017-07-10 08:46:09.0800 DEBUG Запрос: Select u.id, u.code, u.name, u.doctor_id, u.otdel_id, u.age_from, u.age_for, u.flag_default, u.uchactok_type_id, u.lpu_id, u.sort, u.sex from codifiers.uchactok_tab u order by u.sort, u.name
+2017-07-10 08:46:09.0800 DEBUG Получено записей: 77
+2017-07-10 08:46:09.1361 DEBUG Запрос: select id, socr, name, full_name, index, code 
+                              from codifiers.sp_kladr_tab
+                              where level_ter=@level order by name
+2017-07-10 08:46:09.1431 DEBUG Получено записей: 107
+2017-07-10 08:46:09.3911 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab
+2017-07-10 08:46:09.3911 DEBUG Получено записей: 114
+2017-07-10 08:46:12.4332 DEBUG PatientFindForm ShowFilterByDoctor set to true
+2017-07-10 08:46:12.4332 DEBUG PatientFindForm OperatorId: 2469
+2017-07-10 08:46:12.4332 DEBUG PatientFindForm DoctorId: 2469
+2017-07-10 08:46:12.5562 DEBUG DoctorQuery
+2017-07-10 08:46:12.5562 DEBUG sql: SELECT td.time_nazn as "Время записи", d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен", case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d LEFT JOIN public.talon_doctor_tab td on td.dan_id = d.dan_id WHERE td.date_nazn = date(@date) and td.doctor_id = @doctor;
+2017-07-10 08:46:12.5562 DEBUG @date: 10.07.2017
+2017-07-10 08:46:12.5562 DEBUG @doctor: 2469
+2017-07-10 08:46:12.5562 DEBUG bindQueryToDataGrid
+2017-07-10 08:46:12.5682 DEBUG Sql: SELECT td.time_nazn as "Время записи", d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен", case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d LEFT JOIN public.talon_doctor_tab td on td.dan_id = d.dan_id WHERE td.date_nazn = date(@date) and td.doctor_id = @doctor;
+2017-07-10 08:46:12.5682 DEBUG SqlParams:
+2017-07-10 08:46:12.5682 DEBUG SqlParam @date='10.07.2017'
+2017-07-10 08:46:12.5682 DEBUG SqlParam @doctor=2469
+2017-07-10 08:46:21.5078 DEBUG Sql: SELECT d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.pens as "СНИЛС", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен" , case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d WHERE Lower(d.fam) LIKE @fam and Lower(d.nam) LIKE @nam ORDER BY d.fam, d.nam, d.mid, d.date_born LIMIT 150;
+2017-07-10 08:46:21.5078 DEBUG SqlParams:
+2017-07-10 08:46:21.5078 DEBUG SqlParam @fam=вахрушкина%
+2017-07-10 08:46:21.5078 DEBUG SqlParam @nam=алевтина%
+2017-07-10 08:46:23.6179 DEBUG Запрос: Select smo.id, smo.name, kladr.name from codifiers.strcom_tab smo left join codifiers.sp_kladr_tab kladr on smo.region_id = kladr.code where smo.region_id = @id and smo.name not like '*%'order by smo.name
+2017-07-10 08:46:23.7009 DEBUG Получено записей: 4
+2017-07-10 08:46:23.7839 DEBUG Запрос: select * from fed_lgota_tab where pens like @snils;
+2017-07-10 08:46:23.7879 DEBUG Получено записей: 1
+2017-07-10 08:46:23.9549 DEBUG Запрос: SELECT t.talon_id, t.result_id, t.diag_osn, t.doctor_id, t.date_vnes_inf,
+                        v.visit_id, v.doctor_id as vdoctor_id, v.data_vnes_inf as vdate_vnes_inf, v.data_pos 
+                        FROM public.talon_tab t left join public.visit_tab v on v.talon_id = t.talon_id
+                        where t.dan_id = @patient_id;
+2017-07-10 08:46:24.3389 DEBUG Получено записей: 533
+2017-07-10 08:46:27.2931 DEBUG Запрос: Select visit_id from public.visit_tab where talon_id = @talonId;
+2017-07-10 08:46:27.2951 DEBUG Получено записей: 1
+2017-07-10 08:46:27.3781 DEBUG Запрос: SELECT d.id FROM diagn_tab d WHERE d.talon_id = @caseId ORDER BY d.id desc;
+2017-07-10 08:46:27.3781 DEBUG Получено записей: 1
+2017-07-10 08:46:35.2355 DEBUG Запрос: Select mkb_id, mkb, kod_d, reestr_code from public.mkb_tab order by 1
+2017-07-10 08:46:35.4226 DEBUG Получено записей: 13813
+2017-07-10 08:46:35.4616 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab
+2017-07-10 08:46:35.4726 DEBUG Получено записей: 114
+2017-07-10 08:47:50.5619 DEBUG Запрос: Select mkb_id, mkb, kod_d, reestr_code from public.mkb_tab order by 1
+2017-07-10 08:47:50.7429 DEBUG Получено записей: 13813
+2017-07-10 08:47:50.7809 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab
+2017-07-10 08:47:50.7929 DEBUG Получено записей: 114
+2017-07-10 08:51:08.5372 DEBUG Запрос: Select mkb_id, mkb, kod_d, reestr_code from public.mkb_tab order by 1
+2017-07-10 08:51:08.7132 DEBUG Получено записей: 13813
+2017-07-10 08:51:08.7732 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab
+2017-07-10 08:51:08.7862 DEBUG Получено записей: 114
+2017-07-10 09:28:23.6600 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-07-10 09:28:23.7080 DEBUG Получено записей: 187
+2017-07-10 09:28:27.3782 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null;
+2017-07-10 09:28:27.3782 DEBUG Parameters: @patterncode=, @operator=
+2017-07-10 09:28:27.4072 DEBUG Result 
+2017-07-10 09:28:27.4072 DEBUG нет шаблона для пользователя
+2017-07-10 09:28:27.4072 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null
+2017-07-10 09:28:27.4072 DEBUG Parameters: @patterncode 
+2017-07-10 09:28:27.4202 DEBUG Result 
+2017-07-10 09:28:27.4752 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null;
+2017-07-10 09:28:27.4752 DEBUG Parameters: @patterncode=, @operator=
+2017-07-10 09:28:27.4852 DEBUG Result 
+2017-07-10 09:28:27.4852 DEBUG нет шаблона для пользователя
+2017-07-10 09:28:27.4852 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null
+2017-07-10 09:28:27.4852 DEBUG Parameters: @patterncode 
+2017-07-10 09:28:27.4962 DEBUG Result 
+2017-07-10 09:28:27.8553 DEBUG Запрос: Select id, name, code, is_default, parent_id from codifiers.sp_kind_paid_tab order by id
+2017-07-10 09:28:27.8553 DEBUG Получено записей: 9
+2017-07-10 09:28:27.8683 DEBUG Запрос: Select id, name, code from codifiers.first_visit_condition_tab order by id
+2017-07-10 09:28:27.8683 DEBUG Получено записей: 4
+2017-07-10 09:28:27.8813 DEBUG Запрос: Select id, name, code, reestr, idsp, hospital_type_id, is_cure, is_inspection from codifiers.visit_purpose_common_tab order by id
+2017-07-10 09:28:27.8813 DEBUG Получено записей: 22
+2017-07-10 09:28:27.8973 DEBUG Запрос: Select id, name, code from codifiers.place_service_tab order by id
+2017-07-10 09:28:27.8973 DEBUG Получено записей: 3
+2017-07-10 09:28:27.8973 DEBUG Запрос: Select result_id, result, reestr, patient_state_id, reestr_rslt, reestr_ishod, _end from public.result_tab order by result_id
+2017-07-10 09:28:27.9293 DEBUG Получено записей: 29
+2017-07-10 09:28:27.9293 DEBUG Запрос: select id, name, code, bur_reestr_code from codifiers.travma_tab order by name;
+2017-07-10 09:28:27.9453 DEBUG Получено записей: 15
+2017-07-10 09:28:27.9453 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab
+2017-07-10 09:28:27.9803 DEBUG Получено записей: 114
+2017-07-10 09:28:28.3683 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab order by name
+2017-07-10 09:28:28.3803 DEBUG Получено записей: 114
+2017-07-10 09:28:28.3803 DEBUG Запрос: select sp_napr_obosn_id,trim(obosn_name) as obosn_name FROM sp_napr_obosn_tab ORDER BY sp_napr_obosn_id;
+2017-07-10 09:28:28.3803 DEBUG Получено записей: 8
+2017-07-10 09:28:28.4023 DEBUG Запрос: SELECT sp_type_napr_id, sp_type_napr FROM sp_type_napr_tab where sp_type_napr_id!=1 ORDER BY 1;
+2017-07-10 09:28:28.4023 DEBUG Получено записей: 8
+2017-07-10 09:28:28.4153 DEBUG Запрос: select id, code, name from codifiers.doctor_spec_tab order by 3,1;
+2017-07-10 09:28:28.4153 DEBUG Получено записей: 176
+2017-07-10 09:28:28.4323 DEBUG Запрос: Select mkb_id, mkb, kod_d, reestr_code from public.mkb_tab order by 1
+2017-07-10 09:28:28.6233 DEBUG Получено записей: 13813
+2017-07-10 09:28:33.3226 DEBUG Запрос: Select s.id, s.code, s.name from codifiers.sozstatus_tab s
+2017-07-10 09:28:33.3256 DEBUG Получено записей: 11
+2017-07-10 09:28:33.3256 DEBUG Запрос: Select u.id, u.code, u.name, u.doctor_id, u.otdel_id, u.age_from, u.age_for, u.flag_default, u.uchactok_type_id, u.lpu_id, u.sort, u.sex from codifiers.uchactok_tab u order by u.sort, u.name
+2017-07-10 09:28:33.3426 DEBUG Получено записей: 77
+2017-07-10 09:28:33.4016 DEBUG Запрос: select id, socr, name, full_name, index, code 
+                              from codifiers.sp_kladr_tab
+                              where level_ter=@level order by name
+2017-07-10 09:28:33.4086 DEBUG Получено записей: 107
+2017-07-10 09:28:33.6766 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab
+2017-07-10 09:28:33.6886 DEBUG Получено записей: 114
+2017-07-10 09:29:07.2845 DEBUG PatientFindForm ShowFilterByDoctor set to true
+2017-07-10 09:29:07.2845 DEBUG PatientFindForm OperatorId: 2469
+2017-07-10 09:29:07.2845 DEBUG PatientFindForm DoctorId: 2469
+2017-07-10 09:29:07.4175 DEBUG DoctorQuery
+2017-07-10 09:29:07.4175 DEBUG sql: SELECT td.time_nazn as "Время записи", d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен", case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d LEFT JOIN public.talon_doctor_tab td on td.dan_id = d.dan_id WHERE td.date_nazn = date(@date) and td.doctor_id = @doctor;
+2017-07-10 09:29:07.4175 DEBUG @date: 10.07.2017
+2017-07-10 09:29:07.4175 DEBUG @doctor: 2469
+2017-07-10 09:29:07.4175 DEBUG bindQueryToDataGrid
+2017-07-10 09:29:07.5125 DEBUG Sql: SELECT td.time_nazn as "Время записи", d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен", case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d LEFT JOIN public.talon_doctor_tab td on td.dan_id = d.dan_id WHERE td.date_nazn = date(@date) and td.doctor_id = @doctor;
+2017-07-10 09:29:07.5125 DEBUG SqlParams:
+2017-07-10 09:29:07.5125 DEBUG SqlParam @date='10.07.2017'
+2017-07-10 09:29:07.5125 DEBUG SqlParam @doctor=2469
+2017-07-10 09:29:16.4360 DEBUG Sql: SELECT d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.pens as "СНИЛС", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен" , case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d WHERE Lower(d.fam) LIKE @fam and Lower(d.nam) LIKE @nam ORDER BY d.fam, d.nam, d.mid, d.date_born LIMIT 150;
+2017-07-10 09:29:16.4360 DEBUG SqlParams:
+2017-07-10 09:29:16.4360 DEBUG SqlParam @fam=вахрушкина%
+2017-07-10 09:29:16.4360 DEBUG SqlParam @nam=алевтина%
+2017-07-10 09:29:18.0721 DEBUG Запрос: Select smo.id, smo.name, kladr.name from codifiers.strcom_tab smo left join codifiers.sp_kladr_tab kladr on smo.region_id = kladr.code where smo.region_id = @id and smo.name not like '*%'order by smo.name
+2017-07-10 09:29:18.1551 DEBUG Получено записей: 4
+2017-07-10 09:29:18.2511 DEBUG Запрос: select * from fed_lgota_tab where pens like @snils;
+2017-07-10 09:29:18.2541 DEBUG Получено записей: 1
+2017-07-10 09:29:18.4182 DEBUG Запрос: SELECT t.talon_id, t.result_id, t.diag_osn, t.doctor_id, t.date_vnes_inf,
+                        v.visit_id, v.doctor_id as vdoctor_id, v.data_vnes_inf as vdate_vnes_inf, v.data_pos 
+                        FROM public.talon_tab t left join public.visit_tab v on v.talon_id = t.talon_id
+                        where t.dan_id = @patient_id;
+2017-07-10 09:29:18.4462 DEBUG Получено записей: 533
+2017-07-10 09:29:21.3793 DEBUG Запрос: Select visit_id from public.visit_tab where talon_id = @talonId;
+2017-07-10 09:29:21.3793 DEBUG Получено записей: 1
+2017-07-10 09:29:21.4613 DEBUG Запрос: SELECT d.id FROM diagn_tab d WHERE d.talon_id = @caseId ORDER BY d.id desc;
+2017-07-10 09:29:21.4613 DEBUG Получено записей: 1
+2017-07-10 09:29:31.7929 DEBUG Запрос: Select mkb_id, mkb, kod_d, reestr_code from public.mkb_tab order by 1
+2017-07-10 09:29:31.9769 DEBUG Получено записей: 13813
+2017-07-10 09:29:32.0279 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab
+2017-07-10 09:29:32.0399 DEBUG Получено записей: 114
+2017-07-10 09:33:08.5973 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-07-10 09:33:08.6443 DEBUG Получено записей: 187
+2017-07-10 09:33:11.3695 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null;
+2017-07-10 09:33:11.3695 DEBUG Parameters: @patterncode=, @operator=
+2017-07-10 09:33:11.3975 DEBUG Result 
+2017-07-10 09:33:11.3975 DEBUG нет шаблона для пользователя
+2017-07-10 09:33:11.3975 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null
+2017-07-10 09:33:11.3975 DEBUG Parameters: @patterncode 
+2017-07-10 09:33:11.3975 DEBUG Result 
+2017-07-10 09:33:11.4635 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null;
+2017-07-10 09:33:11.4635 DEBUG Parameters: @patterncode=, @operator=
+2017-07-10 09:33:11.4635 DEBUG Result 
+2017-07-10 09:33:11.4635 DEBUG нет шаблона для пользователя
+2017-07-10 09:33:11.4635 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null
+2017-07-10 09:33:11.4755 DEBUG Parameters: @patterncode 
+2017-07-10 09:33:11.4755 DEBUG Result 
+2017-07-10 09:33:11.8275 DEBUG Запрос: Select id, name, code, is_default, parent_id from codifiers.sp_kind_paid_tab order by id
+2017-07-10 09:33:11.8275 DEBUG Получено записей: 9
+2017-07-10 09:33:11.8405 DEBUG Запрос: Select id, name, code from codifiers.first_visit_condition_tab order by id
+2017-07-10 09:33:11.8405 DEBUG Получено записей: 4
+2017-07-10 09:33:11.8535 DEBUG Запрос: Select id, name, code, reestr, idsp, hospital_type_id, is_cure, is_inspection from codifiers.visit_purpose_common_tab order by id
+2017-07-10 09:33:11.8535 DEBUG Получено записей: 22
+2017-07-10 09:33:11.8685 DEBUG Запрос: Select id, name, code from codifiers.place_service_tab order by id
+2017-07-10 09:33:11.8685 DEBUG Получено записей: 3
+2017-07-10 09:33:11.8965 DEBUG Запрос: Select result_id, result, reestr, patient_state_id, reestr_rslt, reestr_ishod, _end from public.result_tab order by result_id
+2017-07-10 09:33:11.8965 DEBUG Получено записей: 29
+2017-07-10 09:33:11.9125 DEBUG Запрос: select id, name, code, bur_reestr_code from codifiers.travma_tab order by name;
+2017-07-10 09:33:11.9125 DEBUG Получено записей: 15
+2017-07-10 09:33:11.9125 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab
+2017-07-10 09:33:11.9495 DEBUG Получено записей: 114
+2017-07-10 09:33:12.3485 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab order by name
+2017-07-10 09:33:12.3605 DEBUG Получено записей: 114
+2017-07-10 09:33:12.3715 DEBUG Запрос: select sp_napr_obosn_id,trim(obosn_name) as obosn_name FROM sp_napr_obosn_tab ORDER BY sp_napr_obosn_id;
+2017-07-10 09:33:12.3715 DEBUG Получено записей: 8
+2017-07-10 09:33:12.3845 DEBUG Запрос: SELECT sp_type_napr_id, sp_type_napr FROM sp_type_napr_tab where sp_type_napr_id!=1 ORDER BY 1;
+2017-07-10 09:33:12.3845 DEBUG Получено записей: 8
+2017-07-10 09:33:12.3975 DEBUG Запрос: select id, code, name from codifiers.doctor_spec_tab order by 3,1;
+2017-07-10 09:33:12.3975 DEBUG Получено записей: 176
+2017-07-10 09:33:12.4145 DEBUG Запрос: Select mkb_id, mkb, kod_d, reestr_code from public.mkb_tab order by 1
+2017-07-10 09:33:12.6085 DEBUG Получено записей: 13813
+2017-07-10 09:33:16.8998 DEBUG Запрос: Select s.id, s.code, s.name from codifiers.sozstatus_tab s
+2017-07-10 09:33:16.8998 DEBUG Получено записей: 11
+2017-07-10 09:33:16.9138 DEBUG Запрос: Select u.id, u.code, u.name, u.doctor_id, u.otdel_id, u.age_from, u.age_for, u.flag_default, u.uchactok_type_id, u.lpu_id, u.sort, u.sex from codifiers.uchactok_tab u order by u.sort, u.name
+2017-07-10 09:33:16.9198 DEBUG Получено записей: 77
+2017-07-10 09:33:16.9908 DEBUG Запрос: select id, socr, name, full_name, index, code 
+                              from codifiers.sp_kladr_tab
+                              where level_ter=@level order by name
+2017-07-10 09:33:16.9978 DEBUG Получено записей: 107
+2017-07-10 09:33:17.2498 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab
+2017-07-10 09:33:17.2498 DEBUG Получено записей: 114
+2017-07-10 09:33:19.6249 DEBUG PatientFindForm ShowFilterByDoctor set to true
+2017-07-10 09:33:19.6249 DEBUG PatientFindForm OperatorId: 2469
+2017-07-10 09:33:19.6249 DEBUG PatientFindForm DoctorId: 2469
+2017-07-10 09:33:19.7630 DEBUG DoctorQuery
+2017-07-10 09:33:19.7630 DEBUG sql: SELECT td.time_nazn as "Время записи", d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен", case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d LEFT JOIN public.talon_doctor_tab td on td.dan_id = d.dan_id WHERE td.date_nazn = date(@date) and td.doctor_id = @doctor;
+2017-07-10 09:33:19.7630 DEBUG @date: 10.07.2017
+2017-07-10 09:33:19.7630 DEBUG @doctor: 2469
+2017-07-10 09:33:19.7630 DEBUG bindQueryToDataGrid
+2017-07-10 09:33:19.7770 DEBUG Sql: SELECT td.time_nazn as "Время записи", d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен", case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d LEFT JOIN public.talon_doctor_tab td on td.dan_id = d.dan_id WHERE td.date_nazn = date(@date) and td.doctor_id = @doctor;
+2017-07-10 09:33:19.7770 DEBUG SqlParams:
+2017-07-10 09:33:19.7770 DEBUG SqlParam @date='10.07.2017'
+2017-07-10 09:33:19.7770 DEBUG SqlParam @doctor=2469
+2017-07-10 09:33:28.5295 DEBUG Sql: SELECT d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.pens as "СНИЛС", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен" , case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d WHERE Lower(d.fam) LIKE @fam and Lower(d.nam) LIKE @nam ORDER BY d.fam, d.nam, d.mid, d.date_born LIMIT 150;
+2017-07-10 09:33:28.5295 DEBUG SqlParams:
+2017-07-10 09:33:28.5295 DEBUG SqlParam @fam=вахрушкина%
+2017-07-10 09:33:28.5295 DEBUG SqlParam @nam=алевтина%
+2017-07-10 09:33:30.2486 DEBUG Запрос: Select smo.id, smo.name, kladr.name from codifiers.strcom_tab smo left join codifiers.sp_kladr_tab kladr on smo.region_id = kladr.code where smo.region_id = @id and smo.name not like '*%'order by smo.name
+2017-07-10 09:33:30.3326 DEBUG Получено записей: 4
+2017-07-10 09:33:30.4166 DEBUG Запрос: select * from fed_lgota_tab where pens like @snils;
+2017-07-10 09:33:30.4166 DEBUG Получено записей: 1
+2017-07-10 09:33:30.5786 DEBUG Запрос: SELECT t.talon_id, t.result_id, t.diag_osn, t.doctor_id, t.date_vnes_inf,
+                        v.visit_id, v.doctor_id as vdoctor_id, v.data_vnes_inf as vdate_vnes_inf, v.data_pos 
+                        FROM public.talon_tab t left join public.visit_tab v on v.talon_id = t.talon_id
+                        where t.dan_id = @patient_id;
+2017-07-10 09:33:30.6016 DEBUG Получено записей: 533
+2017-07-10 09:33:33.6367 DEBUG Запрос: Select visit_id from public.visit_tab where talon_id = @talonId;
+2017-07-10 09:33:33.6367 DEBUG Получено записей: 1
+2017-07-10 09:33:33.7188 DEBUG Запрос: SELECT d.id FROM diagn_tab d WHERE d.talon_id = @caseId ORDER BY d.id desc;
+2017-07-10 09:33:33.7218 DEBUG Получено записей: 1
+2017-07-10 09:33:52.5008 DEBUG Запрос: Select mkb_id, mkb, kod_d, reestr_code from public.mkb_tab order by 1
+2017-07-10 09:33:52.6948 DEBUG Получено записей: 13813
+2017-07-10 09:33:52.7348 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab
+2017-07-10 09:33:52.7448 DEBUG Получено записей: 114
+2017-07-10 09:34:09.0798 ERROR Cannot open connection: Failed to establish a connection to '192.168.16.253'.
+2017-07-10 09:35:26.1402 ERROR Cannot open connection: Failed to establish a connection to '192.168.16.253'.
+2017-07-10 09:47:38.1030 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-07-10 09:47:38.1521 DEBUG Получено записей: 187
+2017-07-10 09:47:40.6052 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null;
+2017-07-10 09:47:40.6052 DEBUG Parameters: @patterncode=, @operator=
+2017-07-10 09:47:40.6352 DEBUG Result 
+2017-07-10 09:47:40.6352 DEBUG нет шаблона для пользователя
+2017-07-10 09:47:40.6352 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null
+2017-07-10 09:47:40.6352 DEBUG Parameters: @patterncode 
+2017-07-10 09:47:40.6352 DEBUG Result 
+2017-07-10 09:47:40.7042 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null;
+2017-07-10 09:47:40.7042 DEBUG Parameters: @patterncode=, @operator=
+2017-07-10 09:47:40.7162 DEBUG Result 
+2017-07-10 09:47:40.7162 DEBUG нет шаблона для пользователя
+2017-07-10 09:47:40.7162 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null
+2017-07-10 09:47:40.7162 DEBUG Parameters: @patterncode 
+2017-07-10 09:47:40.7162 DEBUG Result 
+2017-07-10 09:47:41.0332 DEBUG Запрос: Select id, name, code, is_default, parent_id from codifiers.sp_kind_paid_tab order by id
+2017-07-10 09:47:41.0332 DEBUG Получено записей: 9
+2017-07-10 09:47:41.0452 DEBUG Запрос: Select id, name, code from codifiers.first_visit_condition_tab order by id
+2017-07-10 09:47:41.0452 DEBUG Получено записей: 4
+2017-07-10 09:47:41.0582 DEBUG Запрос: Select id, name, code, reestr, idsp, hospital_type_id, is_cure, is_inspection from codifiers.visit_purpose_common_tab order by id
+2017-07-10 09:47:41.0582 DEBUG Получено записей: 22
+2017-07-10 09:47:41.0882 DEBUG Запрос: Select id, name, code from codifiers.place_service_tab order by id
+2017-07-10 09:47:41.0882 DEBUG Получено записей: 3
+2017-07-10 09:47:41.0882 DEBUG Запрос: Select result_id, result, reestr, patient_state_id, reestr_rslt, reestr_ishod, _end from public.result_tab order by result_id
+2017-07-10 09:47:41.1072 DEBUG Получено записей: 29
+2017-07-10 09:47:41.1192 DEBUG Запрос: select id, name, code, bur_reestr_code from codifiers.travma_tab order by name;
+2017-07-10 09:47:41.1192 DEBUG Получено записей: 15
+2017-07-10 09:47:41.1192 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab
+2017-07-10 09:47:41.1582 DEBUG Получено записей: 114
+2017-07-10 09:47:41.4712 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab order by name
+2017-07-10 09:47:41.4832 DEBUG Получено записей: 114
+2017-07-10 09:47:41.4932 DEBUG Запрос: select sp_napr_obosn_id,trim(obosn_name) as obosn_name FROM sp_napr_obosn_tab ORDER BY sp_napr_obosn_id;
+2017-07-10 09:47:41.4932 DEBUG Получено записей: 8
+2017-07-10 09:47:41.4932 DEBUG Запрос: SELECT sp_type_napr_id, sp_type_napr FROM sp_type_napr_tab where sp_type_napr_id!=1 ORDER BY 1;
+2017-07-10 09:47:41.5092 DEBUG Получено записей: 8
+2017-07-10 09:47:41.5092 DEBUG Запрос: select id, code, name from codifiers.doctor_spec_tab order by 3,1;
+2017-07-10 09:47:41.5272 DEBUG Получено записей: 176
+2017-07-10 09:47:41.5402 DEBUG Запрос: Select mkb_id, mkb, kod_d, reestr_code from public.mkb_tab order by 1
+2017-07-10 09:47:41.7373 DEBUG Получено записей: 13813
+2017-07-10 09:47:46.7005 DEBUG Запрос: Select s.id, s.code, s.name from codifiers.sozstatus_tab s
+2017-07-10 09:47:46.7005 DEBUG Получено записей: 11
+2017-07-10 09:47:46.7145 DEBUG Запрос: Select u.id, u.code, u.name, u.doctor_id, u.otdel_id, u.age_from, u.age_for, u.flag_default, u.uchactok_type_id, u.lpu_id, u.sort, u.sex from codifiers.uchactok_tab u order by u.sort, u.name
+2017-07-10 09:47:46.7205 DEBUG Получено записей: 77
+2017-07-10 09:47:46.7725 DEBUG Запрос: select id, socr, name, full_name, index, code 
+                              from codifiers.sp_kladr_tab
+                              where level_ter=@level order by name
+2017-07-10 09:47:46.7725 DEBUG Получено записей: 107
+2017-07-10 09:47:47.0306 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab
+2017-07-10 09:47:47.0426 DEBUG Получено записей: 114
+2017-07-10 09:47:51.0478 DEBUG PatientFindForm ShowFilterByDoctor set to true
+2017-07-10 09:47:51.0478 DEBUG PatientFindForm OperatorId: 2469
+2017-07-10 09:47:51.0478 DEBUG PatientFindForm DoctorId: 2469
+2017-07-10 09:47:51.1878 DEBUG DoctorQuery
+2017-07-10 09:47:51.1878 DEBUG sql: SELECT td.time_nazn as "Время записи", d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен", case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d LEFT JOIN public.talon_doctor_tab td on td.dan_id = d.dan_id WHERE td.date_nazn = date(@date) and td.doctor_id = @doctor;
+2017-07-10 09:47:51.1878 DEBUG @date: 10.07.2017
+2017-07-10 09:47:51.1878 DEBUG @doctor: 2469
+2017-07-10 09:47:51.1878 DEBUG bindQueryToDataGrid
+2017-07-10 09:47:51.2018 DEBUG Sql: SELECT td.time_nazn as "Время записи", d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен", case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d LEFT JOIN public.talon_doctor_tab td on td.dan_id = d.dan_id WHERE td.date_nazn = date(@date) and td.doctor_id = @doctor;
+2017-07-10 09:47:51.2018 DEBUG SqlParams:
+2017-07-10 09:47:51.2018 DEBUG SqlParam @date='10.07.2017'
+2017-07-10 09:47:51.2018 DEBUG SqlParam @doctor=2469
+2017-07-10 09:48:04.5916 DEBUG Sql: SELECT d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.pens as "СНИЛС", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен" , case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d WHERE Lower(d.fam) LIKE @fam and Lower(d.nam) LIKE @nam ORDER BY d.fam, d.nam, d.mid, d.date_born LIMIT 150;
+2017-07-10 09:48:04.5916 DEBUG SqlParams:
+2017-07-10 09:48:04.5916 DEBUG SqlParam @fam=вахрушкина%
+2017-07-10 09:48:04.5916 DEBUG SqlParam @nam=алевтина%
+2017-07-10 09:48:06.8087 DEBUG Запрос: Select smo.id, smo.name, kladr.name from codifiers.strcom_tab smo left join codifiers.sp_kladr_tab kladr on smo.region_id = kladr.code where smo.region_id = @id and smo.name not like '*%'order by smo.name
+2017-07-10 09:48:06.9157 DEBUG Получено записей: 4
+2017-07-10 09:48:07.0037 DEBUG Запрос: select * from fed_lgota_tab where pens like @snils;
+2017-07-10 09:48:07.0747 DEBUG Получено записей: 1
+2017-07-10 09:48:07.2487 DEBUG Запрос: SELECT t.talon_id, t.result_id, t.diag_osn, t.doctor_id, t.date_vnes_inf,
+                        v.visit_id, v.doctor_id as vdoctor_id, v.data_vnes_inf as vdate_vnes_inf, v.data_pos 
+                        FROM public.talon_tab t left join public.visit_tab v on v.talon_id = t.talon_id
+                        where t.dan_id = @patient_id;
+2017-07-10 09:48:07.2827 DEBUG Получено записей: 533
+2017-07-10 09:48:10.4709 DEBUG Запрос: Select visit_id from public.visit_tab where talon_id = @talonId;
+2017-07-10 09:48:10.4709 DEBUG Получено записей: 1
+2017-07-10 09:48:10.5539 DEBUG Запрос: SELECT d.id FROM diagn_tab d WHERE d.talon_id = @caseId ORDER BY d.id desc;
+2017-07-10 09:48:10.5569 DEBUG Получено записей: 1
+2017-07-10 09:49:55.2849 DEBUG Запрос: Select mkb_id, mkb, kod_d, reestr_code from public.mkb_tab order by 1
+2017-07-10 09:49:55.4839 DEBUG Получено записей: 13813
+2017-07-10 09:49:55.5249 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab
+2017-07-10 09:49:55.5359 DEBUG Получено записей: 114
+2017-07-10 09:54:27.5995 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-07-10 09:54:27.6465 DEBUG Получено записей: 187
+2017-07-10 09:54:30.4316 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null;
+2017-07-10 09:54:30.4316 DEBUG Parameters: @patterncode=, @operator=
+2017-07-10 09:54:30.4616 DEBUG Result 
+2017-07-10 09:54:30.4616 DEBUG нет шаблона для пользователя
+2017-07-10 09:54:30.4616 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null
+2017-07-10 09:54:30.4616 DEBUG Parameters: @patterncode 
+2017-07-10 09:54:30.4746 DEBUG Result 
+2017-07-10 09:54:30.5276 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null;
+2017-07-10 09:54:30.5276 DEBUG Parameters: @patterncode=, @operator=
+2017-07-10 09:54:30.5276 DEBUG Result 
+2017-07-10 09:54:30.5276 DEBUG нет шаблона для пользователя
+2017-07-10 09:54:30.5276 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null
+2017-07-10 09:54:30.5276 DEBUG Parameters: @patterncode 
+2017-07-10 09:54:30.5506 DEBUG Result 
+2017-07-10 09:54:30.8837 DEBUG Запрос: Select id, name, code, is_default, parent_id from codifiers.sp_kind_paid_tab order by id
+2017-07-10 09:54:30.8867 DEBUG Получено записей: 9
+2017-07-10 09:54:30.8867 DEBUG Запрос: Select id, name, code from codifiers.first_visit_condition_tab order by id
+2017-07-10 09:54:30.8867 DEBUG Получено записей: 4
+2017-07-10 09:54:30.9087 DEBUG Запрос: Select id, name, code, reestr, idsp, hospital_type_id, is_cure, is_inspection from codifiers.visit_purpose_common_tab order by id
+2017-07-10 09:54:30.9087 DEBUG Получено записей: 22
+2017-07-10 09:54:30.9247 DEBUG Запрос: Select id, name, code from codifiers.place_service_tab order by id
+2017-07-10 09:54:30.9247 DEBUG Получено записей: 3
+2017-07-10 09:54:30.9517 DEBUG Запрос: Select result_id, result, reestr, patient_state_id, reestr_rslt, reestr_ishod, _end from public.result_tab order by result_id
+2017-07-10 09:54:30.9517 DEBUG Получено записей: 29
+2017-07-10 09:54:30.9677 DEBUG Запрос: select id, name, code, bur_reestr_code from codifiers.travma_tab order by name;
+2017-07-10 09:54:30.9677 DEBUG Получено записей: 15
+2017-07-10 09:54:30.9817 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab
+2017-07-10 09:54:31.0697 DEBUG Получено записей: 114
+2017-07-10 09:54:31.3987 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab order by name
+2017-07-10 09:54:31.4107 DEBUG Получено записей: 114
+2017-07-10 09:54:31.4217 DEBUG Запрос: select sp_napr_obosn_id,trim(obosn_name) as obosn_name FROM sp_napr_obosn_tab ORDER BY sp_napr_obosn_id;
+2017-07-10 09:54:31.4217 DEBUG Получено записей: 8
+2017-07-10 09:54:31.4347 DEBUG Запрос: SELECT sp_type_napr_id, sp_type_napr FROM sp_type_napr_tab where sp_type_napr_id!=1 ORDER BY 1;
+2017-07-10 09:54:31.4347 DEBUG Получено записей: 8
+2017-07-10 09:54:31.4497 DEBUG Запрос: select id, code, name from codifiers.doctor_spec_tab order by 3,1;
+2017-07-10 09:54:31.4497 DEBUG Получено записей: 176
+2017-07-10 09:54:31.4677 DEBUG Запрос: Select mkb_id, mkb, kod_d, reestr_code from public.mkb_tab order by 1
+2017-07-10 09:54:31.6547 DEBUG Получено записей: 13813
+2017-07-10 09:54:36.4500 DEBUG Запрос: Select s.id, s.code, s.name from codifiers.sozstatus_tab s
+2017-07-10 09:54:36.4500 DEBUG Получено записей: 11
+2017-07-10 09:54:36.4640 DEBUG Запрос: Select u.id, u.code, u.name, u.doctor_id, u.otdel_id, u.age_from, u.age_for, u.flag_default, u.uchactok_type_id, u.lpu_id, u.sort, u.sex from codifiers.uchactok_tab u order by u.sort, u.name
+2017-07-10 09:54:36.4640 DEBUG Получено записей: 77
+2017-07-10 09:54:36.5230 DEBUG Запрос: select id, socr, name, full_name, index, code 
+                              from codifiers.sp_kladr_tab
+                              where level_ter=@level order by name
+2017-07-10 09:54:36.5230 DEBUG Получено записей: 107
+2017-07-10 09:54:36.7960 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab
+2017-07-10 09:54:36.8080 DEBUG Получено записей: 114
+2017-07-10 09:54:39.5212 DEBUG PatientFindForm ShowFilterByDoctor set to true
+2017-07-10 09:54:39.5212 DEBUG PatientFindForm OperatorId: 2469
+2017-07-10 09:54:39.5212 DEBUG PatientFindForm DoctorId: 2469
+2017-07-10 09:54:39.7362 DEBUG DoctorQuery
+2017-07-10 09:54:39.7362 DEBUG sql: SELECT td.time_nazn as "Время записи", d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен", case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d LEFT JOIN public.talon_doctor_tab td on td.dan_id = d.dan_id WHERE td.date_nazn = date(@date) and td.doctor_id = @doctor;
+2017-07-10 09:54:39.7362 DEBUG @date: 10.07.2017
+2017-07-10 09:54:39.7362 DEBUG @doctor: 2469
+2017-07-10 09:54:39.7362 DEBUG bindQueryToDataGrid
+2017-07-10 09:54:39.7492 DEBUG Sql: SELECT td.time_nazn as "Время записи", d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен", case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d LEFT JOIN public.talon_doctor_tab td on td.dan_id = d.dan_id WHERE td.date_nazn = date(@date) and td.doctor_id = @doctor;
+2017-07-10 09:54:39.7492 DEBUG SqlParams:
+2017-07-10 09:54:39.7492 DEBUG SqlParam @date='10.07.2017'
+2017-07-10 09:54:39.7492 DEBUG SqlParam @doctor=2469
+2017-07-10 09:54:48.1076 DEBUG Sql: SELECT d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.pens as "СНИЛС", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен" , case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d WHERE Lower(d.fam) LIKE @fam and Lower(d.nam) LIKE @nam ORDER BY d.fam, d.nam, d.mid, d.date_born LIMIT 150;
+2017-07-10 09:54:48.1076 DEBUG SqlParams:
+2017-07-10 09:54:48.1086 DEBUG SqlParam @fam=вахрушкина%
+2017-07-10 09:54:48.1086 DEBUG SqlParam @nam=алевтина%
+2017-07-10 09:54:50.3268 DEBUG Запрос: Select smo.id, smo.name, kladr.name from codifiers.strcom_tab smo left join codifiers.sp_kladr_tab kladr on smo.region_id = kladr.code where smo.region_id = @id and smo.name not like '*%'order by smo.name
+2017-07-10 09:54:50.4098 DEBUG Получено записей: 4
+2017-07-10 09:54:50.4908 DEBUG Запрос: select * from fed_lgota_tab where pens like @snils;
+2017-07-10 09:54:50.4908 DEBUG Получено записей: 1
+2017-07-10 09:54:50.6538 DEBUG Запрос: SELECT t.talon_id, t.result_id, t.diag_osn, t.doctor_id, t.date_vnes_inf,
+                        v.visit_id, v.doctor_id as vdoctor_id, v.data_vnes_inf as vdate_vnes_inf, v.data_pos 
+                        FROM public.talon_tab t left join public.visit_tab v on v.talon_id = t.talon_id
+                        where t.dan_id = @patient_id;
+2017-07-10 09:54:50.7268 DEBUG Получено записей: 533
+2017-07-10 09:54:53.6450 DEBUG Запрос: Select visit_id from public.visit_tab where talon_id = @talonId;
+2017-07-10 09:54:53.6480 DEBUG Получено записей: 1
+2017-07-10 09:54:53.7260 DEBUG Запрос: SELECT d.id FROM diagn_tab d WHERE d.talon_id = @caseId ORDER BY d.id desc;
+2017-07-10 09:54:53.7260 DEBUG Получено записей: 1
+2017-07-10 09:55:01.3394 DEBUG Запрос: Select mkb_id, mkb, kod_d, reestr_code from public.mkb_tab order by 1
+2017-07-10 09:55:01.5134 DEBUG Получено записей: 13813
+2017-07-10 09:55:01.5544 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab
+2017-07-10 09:55:01.5644 DEBUG Получено записей: 114
+2017-07-10 09:57:11.9059 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-07-10 09:57:11.9539 DEBUG Получено записей: 187
+2017-07-10 09:57:14.6660 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null;
+2017-07-10 09:57:14.6660 DEBUG Parameters: @patterncode=, @operator=
+2017-07-10 09:57:14.6940 DEBUG Result 
+2017-07-10 09:57:14.6940 DEBUG нет шаблона для пользователя
+2017-07-10 09:57:14.6940 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null
+2017-07-10 09:57:14.6940 DEBUG Parameters: @patterncode 
+2017-07-10 09:57:14.7070 DEBUG Result 
+2017-07-10 09:57:14.7580 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null;
+2017-07-10 09:57:14.7580 DEBUG Parameters: @patterncode=, @operator=
+2017-07-10 09:57:14.7680 DEBUG Result 
+2017-07-10 09:57:14.7680 DEBUG нет шаблона для пользователя
+2017-07-10 09:57:14.7680 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null
+2017-07-10 09:57:14.7680 DEBUG Parameters: @patterncode 
+2017-07-10 09:57:14.7680 DEBUG Result 
+2017-07-10 09:57:15.0660 DEBUG Запрос: Select id, name, code, is_default, parent_id from codifiers.sp_kind_paid_tab order by id
+2017-07-10 09:57:15.0660 DEBUG Получено записей: 9
+2017-07-10 09:57:15.0780 DEBUG Запрос: Select id, name, code from codifiers.first_visit_condition_tab order by id
+2017-07-10 09:57:15.0780 DEBUG Получено записей: 4
+2017-07-10 09:57:15.0780 DEBUG Запрос: Select id, name, code, reestr, idsp, hospital_type_id, is_cure, is_inspection from codifiers.visit_purpose_common_tab order by id
+2017-07-10 09:57:15.0961 DEBUG Получено записей: 22
+2017-07-10 09:57:15.0961 DEBUG Запрос: Select id, name, code from codifiers.place_service_tab order by id
+2017-07-10 09:57:15.1101 DEBUG Получено записей: 3
+2017-07-10 09:57:15.1361 DEBUG Запрос: Select result_id, result, reestr, patient_state_id, reestr_rslt, reestr_ishod, _end from public.result_tab order by result_id
+2017-07-10 09:57:15.1411 DEBUG Получено записей: 29
+2017-07-10 09:57:15.1411 DEBUG Запрос: select id, name, code, bur_reestr_code from codifiers.travma_tab order by name;
+2017-07-10 09:57:15.1411 DEBUG Получено записей: 15
+2017-07-10 09:57:15.1661 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab
+2017-07-10 09:57:15.1911 DEBUG Получено записей: 114
+2017-07-10 09:57:15.5131 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab order by name
+2017-07-10 09:57:15.5251 DEBUG Получено записей: 114
+2017-07-10 09:57:15.5361 DEBUG Запрос: select sp_napr_obosn_id,trim(obosn_name) as obosn_name FROM sp_napr_obosn_tab ORDER BY sp_napr_obosn_id;
+2017-07-10 09:57:15.5361 DEBUG Получено записей: 8
+2017-07-10 09:57:15.5491 DEBUG Запрос: SELECT sp_type_napr_id, sp_type_napr FROM sp_type_napr_tab where sp_type_napr_id!=1 ORDER BY 1;
+2017-07-10 09:57:15.5491 DEBUG Получено записей: 8
+2017-07-10 09:57:15.5641 DEBUG Запрос: select id, code, name from codifiers.doctor_spec_tab order by 3,1;
+2017-07-10 09:57:15.5641 DEBUG Получено записей: 176
+2017-07-10 09:57:15.5821 DEBUG Запрос: Select mkb_id, mkb, kod_d, reestr_code from public.mkb_tab order by 1
+2017-07-10 09:57:15.7751 DEBUG Получено записей: 13813
+2017-07-10 09:57:20.6634 DEBUG Запрос: Select s.id, s.code, s.name from codifiers.sozstatus_tab s
+2017-07-10 09:57:20.6634 DEBUG Получено записей: 11
+2017-07-10 09:57:20.6634 DEBUG Запрос: Select u.id, u.code, u.name, u.doctor_id, u.otdel_id, u.age_from, u.age_for, u.flag_default, u.uchactok_type_id, u.lpu_id, u.sort, u.sex from codifiers.uchactok_tab u order by u.sort, u.name
+2017-07-10 09:57:20.6834 DEBUG Получено записей: 77
+2017-07-10 09:57:20.7364 DEBUG Запрос: select id, socr, name, full_name, index, code 
+                              from codifiers.sp_kladr_tab
+                              where level_ter=@level order by name
+2017-07-10 09:57:20.7434 DEBUG Получено записей: 107
+2017-07-10 09:57:21.0084 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab
+2017-07-10 09:57:21.0084 DEBUG Получено записей: 114
+2017-07-10 09:57:24.9776 DEBUG PatientFindForm ShowFilterByDoctor set to true
+2017-07-10 09:57:24.9776 DEBUG PatientFindForm OperatorId: 2469
+2017-07-10 09:57:24.9776 DEBUG PatientFindForm DoctorId: 2469
+2017-07-10 09:57:25.1136 DEBUG DoctorQuery
+2017-07-10 09:57:25.1136 DEBUG sql: SELECT td.time_nazn as "Время записи", d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен", case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d LEFT JOIN public.talon_doctor_tab td on td.dan_id = d.dan_id WHERE td.date_nazn = date(@date) and td.doctor_id = @doctor;
+2017-07-10 09:57:25.1136 DEBUG @date: 10.07.2017
+2017-07-10 09:57:25.1136 DEBUG @doctor: 2469
+2017-07-10 09:57:25.1136 DEBUG bindQueryToDataGrid
+2017-07-10 09:57:25.1326 DEBUG Sql: SELECT td.time_nazn as "Время записи", d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен", case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d LEFT JOIN public.talon_doctor_tab td on td.dan_id = d.dan_id WHERE td.date_nazn = date(@date) and td.doctor_id = @doctor;
+2017-07-10 09:57:25.1326 DEBUG SqlParams:
+2017-07-10 09:57:25.1326 DEBUG SqlParam @date='10.07.2017'
+2017-07-10 09:57:25.1326 DEBUG SqlParam @doctor=2469
+2017-07-10 09:57:33.0591 DEBUG Sql: SELECT d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.pens as "СНИЛС", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен" , case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d WHERE Lower(d.fam) LIKE @fam and Lower(d.nam) LIKE @nam ORDER BY d.fam, d.nam, d.mid, d.date_born LIMIT 150;
+2017-07-10 09:57:33.0591 DEBUG SqlParams:
+2017-07-10 09:57:33.0591 DEBUG SqlParam @fam=вахрушкина%
+2017-07-10 09:57:33.0591 DEBUG SqlParam @nam=алевтина%
+2017-07-10 09:57:35.0102 DEBUG Запрос: Select smo.id, smo.name, kladr.name from codifiers.strcom_tab smo left join codifiers.sp_kladr_tab kladr on smo.region_id = kladr.code where smo.region_id = @id and smo.name not like '*%'order by smo.name
+2017-07-10 09:57:35.0932 DEBUG Получено записей: 4
+2017-07-10 09:57:35.1862 DEBUG Запрос: select * from fed_lgota_tab where pens like @snils;
+2017-07-10 09:57:35.1862 DEBUG Получено записей: 1
+2017-07-10 09:57:35.3422 DEBUG Запрос: SELECT t.talon_id, t.result_id, t.diag_osn, t.doctor_id, t.date_vnes_inf,
+                        v.visit_id, v.doctor_id as vdoctor_id, v.data_vnes_inf as vdate_vnes_inf, v.data_pos 
+                        FROM public.talon_tab t left join public.visit_tab v on v.talon_id = t.talon_id
+                        where t.dan_id = @patient_id;
+2017-07-10 09:57:35.3672 DEBUG Получено записей: 533
+2017-07-10 09:57:38.3874 DEBUG Запрос: Select visit_id from public.visit_tab where talon_id = @talonId;
+2017-07-10 09:57:38.3874 DEBUG Получено записей: 1
+2017-07-10 09:57:38.4704 DEBUG Запрос: SELECT d.id FROM diagn_tab d WHERE d.talon_id = @caseId ORDER BY d.id desc;
+2017-07-10 09:57:38.4704 DEBUG Получено записей: 1
+2017-07-10 09:57:46.9049 DEBUG Запрос: Select mkb_id, mkb, kod_d, reestr_code from public.mkb_tab order by 1
+2017-07-10 09:57:47.0989 DEBUG Получено записей: 13813
+2017-07-10 09:57:47.1419 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab
+2017-07-10 09:57:47.1539 DEBUG Получено записей: 114

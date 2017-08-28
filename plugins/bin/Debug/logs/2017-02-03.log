@@ -1,0 +1,369 @@
+2017-02-03 10:36:11.3948 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 10:36:11.4528 DEBUG Получено записей: 1
+2017-02-03 10:36:15.0670 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null;
+2017-02-03 10:36:15.0670 DEBUG Parameters: @patterncode=, @operator=
+2017-02-03 10:36:15.1100 DEBUG Result 
+2017-02-03 10:36:15.1100 DEBUG нет шаблона для пользователя
+2017-02-03 10:36:15.1100 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null
+2017-02-03 10:36:15.1100 DEBUG Parameters: @patterncode 
+2017-02-03 10:36:15.1260 DEBUG Result 
+2017-02-03 10:36:15.1820 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null;
+2017-02-03 10:36:15.1820 DEBUG Parameters: @patterncode=, @operator=
+2017-02-03 10:36:15.1980 DEBUG Result 
+2017-02-03 10:36:15.1980 DEBUG нет шаблона для пользователя
+2017-02-03 10:36:15.1980 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null
+2017-02-03 10:36:15.1980 DEBUG Parameters: @patterncode 
+2017-02-03 10:36:15.2120 DEBUG Result 
+2017-02-03 10:36:15.7250 DEBUG Запрос: Select id, name, code, is_default, parent_id from codifiers.sp_kind_paid_tab order by id
+2017-02-03 10:36:15.7250 DEBUG Получено записей: 9
+2017-02-03 10:36:15.7440 DEBUG Запрос: Select id, name, code from codifiers.first_visit_condition_tab order by id
+2017-02-03 10:36:15.7440 DEBUG Получено записей: 4
+2017-02-03 10:36:15.7620 DEBUG Запрос: Select id, name, code, reestr, idsp, hospital_type_id, is_cure, is_inspection from codifiers.visit_purpose_common_tab order by id
+2017-02-03 10:36:15.7620 DEBUG Получено записей: 22
+2017-02-03 10:36:15.7830 DEBUG Запрос: Select id, name, code from codifiers.place_service_tab order by id
+2017-02-03 10:36:15.7830 DEBUG Получено записей: 3
+2017-02-03 10:36:15.7970 DEBUG Запрос: Select result_id, result, reestr, patient_state_id, reestr_rslt, reestr_ishod, _end from public.result_tab order by result_id
+2017-02-03 10:36:15.8040 DEBUG Получено записей: 29
+2017-02-03 10:36:15.8040 DEBUG Запрос: select id, name, code, bur_reestr_code from codifiers.travma_tab order by name;
+2017-02-03 10:36:15.8340 DEBUG Получено записей: 15
+2017-02-03 10:36:15.8340 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab
+2017-02-03 10:36:15.8720 DEBUG Получено записей: 102
+2017-02-03 10:36:16.2330 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab order by name
+2017-02-03 10:36:16.2460 DEBUG Получено записей: 102
+2017-02-03 10:36:16.2580 DEBUG Запрос: select sp_napr_obosn_id,trim(obosn_name) as obosn_name FROM sp_napr_obosn_tab ORDER BY sp_napr_obosn_id;
+2017-02-03 10:56:43.4612 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 10:56:43.5112 DEBUG Получено записей: 1
+2017-02-03 10:56:46.0354 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null;
+2017-02-03 10:56:46.0354 DEBUG Parameters: @patterncode=, @operator=
+2017-02-03 10:56:46.0764 DEBUG Result 
+2017-02-03 10:56:46.0764 DEBUG нет шаблона для пользователя
+2017-02-03 10:56:46.0764 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null
+2017-02-03 10:56:46.0764 DEBUG Parameters: @patterncode 
+2017-02-03 10:56:46.0914 DEBUG Result 
+2017-02-03 10:56:46.1474 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null;
+2017-02-03 10:56:46.1474 DEBUG Parameters: @patterncode=, @operator=
+2017-02-03 10:56:46.1594 DEBUG Result 
+2017-02-03 10:56:46.1594 DEBUG нет шаблона для пользователя
+2017-02-03 10:56:46.1594 DEBUG SQL: select pattern from codifiers.patterns_tab where code = @patterncode and users_id is null
+2017-02-03 10:56:46.1594 DEBUG Parameters: @patterncode 
+2017-02-03 10:56:46.1714 DEBUG Result 
+2017-02-03 10:56:46.5704 DEBUG Запрос: Select id, name, code, is_default, parent_id from codifiers.sp_kind_paid_tab order by id
+2017-02-03 10:56:46.5774 DEBUG Получено записей: 9
+2017-02-03 10:56:46.5884 DEBUG Запрос: Select id, name, code from codifiers.first_visit_condition_tab order by id
+2017-02-03 10:56:46.5884 DEBUG Получено записей: 4
+2017-02-03 10:56:46.5884 DEBUG Запрос: Select id, name, code, reestr, idsp, hospital_type_id, is_cure, is_inspection from codifiers.visit_purpose_common_tab order by id
+2017-02-03 10:56:46.6074 DEBUG Получено записей: 22
+2017-02-03 10:56:46.6194 DEBUG Запрос: Select id, name, code from codifiers.place_service_tab order by id
+2017-02-03 10:56:46.6194 DEBUG Получено записей: 3
+2017-02-03 10:56:46.6474 DEBUG Запрос: Select result_id, result, reestr, patient_state_id, reestr_rslt, reestr_ishod, _end from public.result_tab order by result_id
+2017-02-03 10:56:46.6544 DEBUG Получено записей: 29
+2017-02-03 10:56:46.6674 DEBUG Запрос: select id, name, code, bur_reestr_code from codifiers.travma_tab order by name;
+2017-02-03 10:56:46.6674 DEBUG Получено записей: 15
+2017-02-03 10:56:46.6674 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab
+2017-02-03 10:56:46.7074 DEBUG Получено записей: 102
+2017-02-03 10:56:47.1054 DEBUG Запрос: SELECT * FROM codifiers.lpu_tab order by name
+2017-02-03 10:56:47.1054 DEBUG Получено записей: 102
+2017-02-03 10:56:47.1284 DEBUG Запрос: select sp_napr_obosn_id,trim(obosn_name) as obosn_name FROM sp_napr_obosn_tab ORDER BY sp_napr_obosn_id;
+2017-02-03 10:58:12.9513 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 10:58:12.9893 DEBUG Получено записей: 1
+2017-02-03 10:58:17.3586 DEBUG Запрос: Select s.id, s.code, s.name from codifiers.sozstatus_tab s
+2017-02-03 10:58:17.3586 DEBUG Получено записей: 11
+2017-02-03 10:58:17.3766 DEBUG Запрос: Select u.id, u.code, u.name, u.doctor_id, u.otdel_id, u.age_from, u.age_for, u.flag_default, u.uchactok_type_id, u.lpu_id, u.sort, u.sex from codifiers.uchactok_tab u order by u.sort, u.name
+2017-02-03 10:58:17.3836 DEBUG Получено записей: 75
+2017-02-03 10:58:17.4366 DEBUG Запрос: select id, socr, name, full_name, index, code 
+                              from codifiers.sp_kladr_tab
+                              where level_ter=@level order by name
+2017-02-03 10:58:17.4366 DEBUG Получено записей: 0
+2017-02-03 10:58:27.5442 DEBUG PatientFindForm ShowFilterByDoctor set to true
+2017-02-03 10:58:27.5442 DEBUG PatientFindForm OperatorId: 2470
+2017-02-03 10:58:27.5442 DEBUG PatientFindForm DoctorId: -1
+2017-02-03 10:58:29.9323 DEBUG _loggedOperator.DoctorId==-1
+2017-02-03 10:58:29.9773 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 10:58:30.0573 DEBUG Получено записей: 1
+2017-02-03 10:58:30.1013 DEBUG _loggedOperator.DoctorId:-1
+2017-02-03 10:58:38.8528 DEBUG Sql: SELECT d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.pens as "СНИЛС", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен" , case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d WHERE Lower(d.fam) LIKE @fam ORDER BY d.fam, d.nam, d.mid, d.date_born LIMIT 150;
+2017-02-03 10:58:38.8528 DEBUG SqlParams:
+2017-02-03 10:58:38.8528 DEBUG SqlParam @fam=снег%
+2017-02-03 10:58:43.2481 DEBUG Запрос: select * from fed_lgota_tab where pens like @snils;
+2017-02-03 10:58:43.2481 DEBUG Получено записей: 0
+2017-02-03 10:58:43.2481 DEBUG Запрос: select * from lgot_client_tab where dan_id = @id;
+2017-02-03 10:58:43.2651 DEBUG Получено записей: 0
+2017-02-03 11:07:26.1380 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 11:07:26.1860 DEBUG Получено записей: 1
+2017-02-03 11:07:30.8823 DEBUG Запрос: Select s.id, s.code, s.name from codifiers.sozstatus_tab s
+2017-02-03 11:07:30.8823 DEBUG Получено записей: 11
+2017-02-03 11:07:30.8993 DEBUG Запрос: Select u.id, u.code, u.name, u.doctor_id, u.otdel_id, u.age_from, u.age_for, u.flag_default, u.uchactok_type_id, u.lpu_id, u.sort, u.sex from codifiers.uchactok_tab u order by u.sort, u.name
+2017-02-03 11:07:30.9063 DEBUG Получено записей: 75
+2017-02-03 11:07:30.9583 DEBUG Запрос: select id, socr, name, full_name, index, code 
+                              from codifiers.sp_kladr_tab
+                              where level_ter=@level order by name
+2017-02-03 11:07:30.9583 DEBUG Получено записей: 0
+2017-02-03 11:07:36.5406 DEBUG PatientFindForm ShowFilterByDoctor set to true
+2017-02-03 11:07:36.5406 DEBUG PatientFindForm OperatorId: 2470
+2017-02-03 11:07:36.5406 DEBUG PatientFindForm DoctorId: -1
+2017-02-03 11:07:37.1656 DEBUG _loggedOperator.DoctorId==-1
+2017-02-03 11:07:38.9207 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 11:07:38.9297 DEBUG Получено записей: 1
+2017-02-03 11:07:38.9777 DEBUG _loggedOperator.DoctorId:-1
+2017-02-03 11:07:50.1554 DEBUG Sql: SELECT d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.pens as "СНИЛС", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен" , case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d WHERE Lower(d.fam) LIKE @fam ORDER BY d.fam, d.nam, d.mid, d.date_born LIMIT 150;
+2017-02-03 11:07:50.1554 DEBUG SqlParams:
+2017-02-03 11:07:50.1554 DEBUG SqlParam @fam=снег%
+2017-02-03 11:07:54.5066 DEBUG Запрос: select * from fed_lgota_tab where pens like @snils;
+2017-02-03 11:07:54.5066 DEBUG Получено записей: 0
+2017-02-03 11:07:54.5066 DEBUG Запрос: select * from lgot_client_tab where dan_id = @id;
+2017-02-03 11:07:54.5226 DEBUG Получено записей: 0
+2017-02-03 11:09:49.7892 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 11:09:49.8412 DEBUG Получено записей: 1
+2017-02-03 11:09:54.8045 DEBUG Запрос: Select s.id, s.code, s.name from codifiers.sozstatus_tab s
+2017-02-03 11:09:54.8045 DEBUG Получено записей: 11
+2017-02-03 11:09:54.8225 DEBUG Запрос: Select u.id, u.code, u.name, u.doctor_id, u.otdel_id, u.age_from, u.age_for, u.flag_default, u.uchactok_type_id, u.lpu_id, u.sort, u.sex from codifiers.uchactok_tab u order by u.sort, u.name
+2017-02-03 11:09:54.8225 DEBUG Получено записей: 75
+2017-02-03 11:09:54.8875 DEBUG Запрос: select id, socr, name, full_name, index, code 
+                              from codifiers.sp_kladr_tab
+                              where level_ter=@level order by name
+2017-02-03 11:09:54.8875 DEBUG Получено записей: 0
+2017-02-03 11:09:59.7098 DEBUG PatientFindForm ShowFilterByDoctor set to true
+2017-02-03 11:09:59.7098 DEBUG PatientFindForm OperatorId: 2470
+2017-02-03 11:09:59.7098 DEBUG PatientFindForm DoctorId: -1
+2017-02-03 11:10:02.0539 DEBUG _loggedOperator.DoctorId==-1
+2017-02-03 11:10:02.1029 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 11:10:02.1159 DEBUG Получено записей: 1
+2017-02-03 11:10:02.5429 DEBUG _loggedOperator.DoctorId:-1
+2017-02-03 11:10:18.7439 DEBUG Sql: SELECT d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.pens as "СНИЛС", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен" , case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d WHERE Lower(d.fam) LIKE @fam ORDER BY d.fam, d.nam, d.mid, d.date_born LIMIT 150;
+2017-02-03 11:10:18.7439 DEBUG SqlParams:
+2017-02-03 11:10:18.7459 DEBUG SqlParam @fam=снег%
+2017-02-03 11:10:22.4061 DEBUG Запрос: select * from fed_lgota_tab where pens like @snils;
+2017-02-03 11:10:22.4061 DEBUG Получено записей: 0
+2017-02-03 11:10:22.4181 DEBUG Запрос: select * from lgot_client_tab where dan_id = @id;
+2017-02-03 11:10:22.4181 DEBUG Получено записей: 0
+2017-02-03 11:13:03.1113 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 11:13:03.1513 DEBUG Получено записей: 1
+2017-02-03 11:13:09.3476 DEBUG Запрос: Select s.id, s.code, s.name from codifiers.sozstatus_tab s
+2017-02-03 11:13:09.3506 DEBUG Получено записей: 11
+2017-02-03 11:13:09.3686 DEBUG Запрос: Select u.id, u.code, u.name, u.doctor_id, u.otdel_id, u.age_from, u.age_for, u.flag_default, u.uchactok_type_id, u.lpu_id, u.sort, u.sex from codifiers.uchactok_tab u order by u.sort, u.name
+2017-02-03 11:13:09.3686 DEBUG Получено записей: 75
+2017-02-03 11:13:09.4326 DEBUG Запрос: select id, socr, name, full_name, index, code 
+                              from codifiers.sp_kladr_tab
+                              where level_ter=@level order by name
+2017-02-03 11:13:09.4326 DEBUG Получено записей: 0
+2017-02-03 11:13:14.9009 DEBUG PatientFindForm ShowFilterByDoctor set to true
+2017-02-03 11:13:14.9029 DEBUG PatientFindForm OperatorId: 2470
+2017-02-03 11:13:14.9029 DEBUG PatientFindForm DoctorId: -1
+2017-02-03 11:13:15.3910 DEBUG _loggedOperator.DoctorId==-1
+2017-02-03 11:13:15.4110 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 11:13:15.4180 DEBUG Получено записей: 1
+2017-02-03 11:13:17.1291 DEBUG _loggedOperator.DoctorId:-1
+2017-02-03 11:13:28.4977 DEBUG Sql: SELECT d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.pens as "СНИЛС", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен" , case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d WHERE Lower(d.fam) LIKE @fam ORDER BY d.fam, d.nam, d.mid, d.date_born LIMIT 150;
+2017-02-03 11:13:28.4977 DEBUG SqlParams:
+2017-02-03 11:13:28.4977 DEBUG SqlParam @fam=снег%
+2017-02-03 11:13:33.5060 DEBUG Запрос: select * from fed_lgota_tab where pens like @snils;
+2017-02-03 11:13:33.5060 DEBUG Получено записей: 0
+2017-02-03 11:13:33.5170 DEBUG Запрос: select * from lgot_client_tab where dan_id = @id;
+2017-02-03 11:13:33.5170 DEBUG Получено записей: 0
+2017-02-03 11:16:23.2847 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 11:16:23.3307 DEBUG Получено записей: 1
+2017-02-03 11:16:28.0880 DEBUG Запрос: Select s.id, s.code, s.name from codifiers.sozstatus_tab s
+2017-02-03 11:16:28.0880 DEBUG Получено записей: 11
+2017-02-03 11:16:28.1050 DEBUG Запрос: Select u.id, u.code, u.name, u.doctor_id, u.otdel_id, u.age_from, u.age_for, u.flag_default, u.uchactok_type_id, u.lpu_id, u.sort, u.sex from codifiers.uchactok_tab u order by u.sort, u.name
+2017-02-03 11:16:28.1110 DEBUG Получено записей: 75
+2017-02-03 11:16:28.1700 DEBUG Запрос: select id, socr, name, full_name, index, code 
+                              from codifiers.sp_kladr_tab
+                              where level_ter=@level order by name
+2017-02-03 11:16:28.1740 DEBUG Получено записей: 0
+2017-02-03 11:16:34.2043 DEBUG PatientFindForm ShowFilterByDoctor set to true
+2017-02-03 11:16:34.2043 DEBUG PatientFindForm OperatorId: 2470
+2017-02-03 11:16:34.2043 DEBUG PatientFindForm DoctorId: -1
+2017-02-03 11:16:34.8194 DEBUG _loggedOperator.DoctorId==-1
+2017-02-03 11:16:36.5075 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 11:16:36.5075 DEBUG Получено записей: 1
+2017-02-03 11:16:36.5525 DEBUG _loggedOperator.DoctorId:-1
+2017-02-03 11:16:46.5870 DEBUG Sql: SELECT d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.pens as "СНИЛС", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен" , case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d WHERE Lower(d.fam) LIKE @fam ORDER BY d.fam, d.nam, d.mid, d.date_born LIMIT 150;
+2017-02-03 11:16:46.5870 DEBUG SqlParams:
+2017-02-03 11:16:46.5870 DEBUG SqlParam @fam=снег%
+2017-02-03 11:16:51.2533 DEBUG Запрос: select * from fed_lgota_tab where pens like @snils;
+2017-02-03 11:16:51.2533 DEBUG Получено записей: 0
+2017-02-03 11:16:51.2663 DEBUG Запрос: select * from lgot_client_tab where dan_id = @id;
+2017-02-03 11:16:51.2663 DEBUG Получено записей: 0
+2017-02-03 11:19:31.8275 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 11:19:31.8735 DEBUG Получено записей: 1
+2017-02-03 11:19:36.7948 DEBUG Запрос: Select s.id, s.code, s.name from codifiers.sozstatus_tab s
+2017-02-03 11:19:36.7948 DEBUG Получено записей: 11
+2017-02-03 11:19:36.8108 DEBUG Запрос: Select u.id, u.code, u.name, u.doctor_id, u.otdel_id, u.age_from, u.age_for, u.flag_default, u.uchactok_type_id, u.lpu_id, u.sort, u.sex from codifiers.uchactok_tab u order by u.sort, u.name
+2017-02-03 11:19:36.8108 DEBUG Получено записей: 75
+2017-02-03 11:19:36.8688 DEBUG Запрос: select id, socr, name, full_name, index, code 
+                              from codifiers.sp_kladr_tab
+                              where level_ter=@level order by name
+2017-02-03 11:19:36.8728 DEBUG Получено записей: 0
+2017-02-03 11:19:46.8744 DEBUG PatientFindForm ShowFilterByDoctor set to true
+2017-02-03 11:19:46.8744 DEBUG PatientFindForm OperatorId: 2470
+2017-02-03 11:19:46.8744 DEBUG PatientFindForm DoctorId: -1
+2017-02-03 11:19:47.4434 DEBUG _loggedOperator.DoctorId==-1
+2017-02-03 11:19:47.4634 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 11:19:47.4634 DEBUG Получено записей: 1
+2017-02-03 11:19:47.5014 DEBUG _loggedOperator.DoctorId:-1
+2017-02-03 11:20:01.8232 DEBUG Sql: SELECT d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.pens as "СНИЛС", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен" , case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d WHERE Lower(d.fam) LIKE @fam ORDER BY d.fam, d.nam, d.mid, d.date_born LIMIT 150;
+2017-02-03 11:20:01.8232 DEBUG SqlParams:
+2017-02-03 11:20:01.8232 DEBUG SqlParam @fam=снег%
+2017-02-03 11:20:05.9034 DEBUG Запрос: select * from fed_lgota_tab where pens like @snils;
+2017-02-03 11:20:05.9034 DEBUG Получено записей: 0
+2017-02-03 11:20:05.9194 DEBUG Запрос: select * from lgot_client_tab where dan_id = @id;
+2017-02-03 11:20:05.9194 DEBUG Получено записей: 0
+2017-02-03 11:20:18.3532 DEBUG PatientFindForm ShowFilterByDoctor set to true
+2017-02-03 11:20:18.3532 DEBUG PatientFindForm OperatorId: 2470
+2017-02-03 11:20:18.3532 DEBUG PatientFindForm DoctorId: -1
+2017-02-03 11:20:18.4692 DEBUG _loggedOperator.DoctorId==-1
+2017-02-03 11:20:18.4922 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 11:20:18.4922 DEBUG Получено записей: 1
+2017-02-03 11:20:20.2083 DEBUG _loggedOperator.DoctorId:-1
+2017-02-03 11:20:36.6922 DEBUG Sql: SELECT d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.pens as "СНИЛС", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен" , case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d WHERE Lower(d.fam) LIKE @fam ORDER BY d.fam, d.nam, d.mid, d.date_born LIMIT 150;
+2017-02-03 11:20:36.6922 DEBUG SqlParams:
+2017-02-03 11:20:36.6922 DEBUG SqlParam @fam=снег%
+2017-02-03 11:20:40.5634 DEBUG Запрос: select * from fed_lgota_tab where pens like @snils;
+2017-02-03 11:20:40.5664 DEBUG Получено записей: 0
+2017-02-03 11:20:40.5844 DEBUG Запрос: select * from lgot_client_tab where dan_id = @id;
+2017-02-03 11:20:40.5844 DEBUG Получено записей: 0
+2017-02-03 11:23:24.3298 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 11:23:24.3788 DEBUG Получено записей: 1
+2017-02-03 11:23:29.6361 DEBUG Запрос: Select s.id, s.code, s.name from codifiers.sozstatus_tab s
+2017-02-03 11:23:29.6361 DEBUG Получено записей: 11
+2017-02-03 11:23:29.6521 DEBUG Запрос: Select u.id, u.code, u.name, u.doctor_id, u.otdel_id, u.age_from, u.age_for, u.flag_default, u.uchactok_type_id, u.lpu_id, u.sort, u.sex from codifiers.uchactok_tab u order by u.sort, u.name
+2017-02-03 11:23:29.6581 DEBUG Получено записей: 75
+2017-02-03 11:23:29.7111 DEBUG Запрос: select id, socr, name, full_name, index, code 
+                              from codifiers.sp_kladr_tab
+                              where level_ter=@level order by name
+2017-02-03 11:23:29.7111 DEBUG Получено записей: 0
+2017-02-03 11:24:13.1476 DEBUG PatientFindForm ShowFilterByDoctor set to true
+2017-02-03 11:24:13.1476 DEBUG PatientFindForm OperatorId: 2470
+2017-02-03 11:24:13.1476 DEBUG PatientFindForm DoctorId: -1
+2017-02-03 11:24:13.7296 DEBUG _loggedOperator.DoctorId==-1
+2017-02-03 11:24:13.7556 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 11:24:13.7636 DEBUG Получено записей: 1
+2017-02-03 11:24:15.4027 DEBUG _loggedOperator.DoctorId:-1
+2017-02-03 11:24:26.8124 DEBUG Sql: SELECT d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.pens as "СНИЛС", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен" , case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d WHERE Lower(d.fam) LIKE @fam ORDER BY d.fam, d.nam, d.mid, d.date_born LIMIT 150;
+2017-02-03 11:24:26.8124 DEBUG SqlParams:
+2017-02-03 11:24:26.8134 DEBUG SqlParam @fam=снег%
+2017-02-03 11:24:31.7576 DEBUG Запрос: select * from fed_lgota_tab where pens like @snils;
+2017-02-03 11:24:31.7616 DEBUG Получено записей: 0
+2017-02-03 11:24:31.7616 DEBUG Запрос: select * from lgot_client_tab where dan_id = @id;
+2017-02-03 11:24:31.7767 DEBUG Получено записей: 0
+2017-02-03 11:27:59.1985 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 11:27:59.2435 DEBUG Получено записей: 1
+2017-02-03 11:28:08.5400 DEBUG Запрос: Select s.id, s.code, s.name from codifiers.sozstatus_tab s
+2017-02-03 11:28:08.5400 DEBUG Получено записей: 11
+2017-02-03 11:28:08.5580 DEBUG Запрос: Select u.id, u.code, u.name, u.doctor_id, u.otdel_id, u.age_from, u.age_for, u.flag_default, u.uchactok_type_id, u.lpu_id, u.sort, u.sex from codifiers.uchactok_tab u order by u.sort, u.name
+2017-02-03 11:28:08.5580 DEBUG Получено записей: 75
+2017-02-03 11:28:08.6191 DEBUG Запрос: select id, socr, name, full_name, index, code 
+                              from codifiers.sp_kladr_tab
+                              where level_ter=@level order by name
+2017-02-03 11:28:08.6191 DEBUG Получено записей: 0
+2017-02-03 11:28:15.9585 DEBUG PatientFindForm ShowFilterByDoctor set to true
+2017-02-03 11:28:15.9585 DEBUG PatientFindForm OperatorId: 2470
+2017-02-03 11:28:15.9585 DEBUG PatientFindForm DoctorId: -1
+2017-02-03 11:28:16.5205 DEBUG _loggedOperator.DoctorId==-1
+2017-02-03 11:28:18.2226 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 11:28:18.2326 DEBUG Получено записей: 1
+2017-02-03 11:28:18.3206 DEBUG _loggedOperator.DoctorId:-1
+2017-02-03 11:28:27.8012 DEBUG Sql: SELECT d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.pens as "СНИЛС", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен" , case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d WHERE Lower(d.fam) LIKE @fam ORDER BY d.fam, d.nam, d.mid, d.date_born LIMIT 150;
+2017-02-03 11:28:27.8012 DEBUG SqlParams:
+2017-02-03 11:28:27.8012 DEBUG SqlParam @fam=снег%
+2017-02-03 11:28:31.8344 DEBUG Запрос: select * from fed_lgota_tab where pens like @snils;
+2017-02-03 11:28:31.8344 DEBUG Получено записей: 0
+2017-02-03 11:28:31.8474 DEBUG Запрос: select * from lgot_client_tab where dan_id = @id;
+2017-02-03 11:28:31.8474 DEBUG Получено записей: 0
+2017-02-03 11:32:31.3931 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 11:32:31.4341 DEBUG Получено записей: 1
+2017-02-03 11:32:35.9183 DEBUG Запрос: Select s.id, s.code, s.name from codifiers.sozstatus_tab s
+2017-02-03 11:32:35.9183 DEBUG Получено записей: 11
+2017-02-03 11:32:35.9373 DEBUG Запрос: Select u.id, u.code, u.name, u.doctor_id, u.otdel_id, u.age_from, u.age_for, u.flag_default, u.uchactok_type_id, u.lpu_id, u.sort, u.sex from codifiers.uchactok_tab u order by u.sort, u.name
+2017-02-03 11:32:35.9433 DEBUG Получено записей: 75
+2017-02-03 11:32:36.0033 DEBUG Запрос: select id, socr, name, full_name, index, code 
+                              from codifiers.sp_kladr_tab
+                              where level_ter=@level order by name
+2017-02-03 11:32:36.0033 DEBUG Получено записей: 0
+2017-02-03 11:32:40.6346 DEBUG PatientFindForm ShowFilterByDoctor set to true
+2017-02-03 11:32:40.6346 DEBUG PatientFindForm OperatorId: 2470
+2017-02-03 11:32:40.6346 DEBUG PatientFindForm DoctorId: -1
+2017-02-03 11:32:41.2706 DEBUG _loggedOperator.DoctorId==-1
+2017-02-03 11:32:41.2916 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 11:32:41.2916 DEBUG Получено записей: 1
+2017-02-03 11:32:43.0077 DEBUG _loggedOperator.DoctorId:-1
+2017-02-03 11:32:54.4224 DEBUG Sql: SELECT d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.pens as "СНИЛС", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен" , case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d WHERE Lower(d.fam) LIKE @fam ORDER BY d.fam, d.nam, d.mid, d.date_born LIMIT 150;
+2017-02-03 11:32:54.4224 DEBUG SqlParams:
+2017-02-03 11:32:54.4254 DEBUG SqlParam @fam=снег%
+2017-02-03 11:32:58.5666 DEBUG Запрос: select * from fed_lgota_tab where pens like @snils;
+2017-02-03 11:32:58.5666 DEBUG Получено записей: 0
+2017-02-03 11:32:58.5816 DEBUG Запрос: select * from lgot_client_tab where dan_id = @id;
+2017-02-03 11:32:58.5816 DEBUG Получено записей: 0
+2017-02-03 16:08:59.1458 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 16:08:59.1959 DEBUG Получено записей: 1
+2017-02-03 16:09:03.8271 DEBUG Запрос: Select s.id, s.code, s.name from codifiers.sozstatus_tab s
+2017-02-03 16:09:03.8271 DEBUG Получено записей: 11
+2017-02-03 16:09:03.8441 DEBUG Запрос: Select u.id, u.code, u.name, u.doctor_id, u.otdel_id, u.age_from, u.age_for, u.flag_default, u.uchactok_type_id, u.lpu_id, u.sort, u.sex from codifiers.uchactok_tab u order by u.sort, u.name
+2017-02-03 16:09:03.8441 DEBUG Получено записей: 75
+2017-02-03 16:09:03.9021 DEBUG Запрос: select id, socr, name, full_name, index, code 
+                              from codifiers.sp_kladr_tab
+                              where level_ter=@level order by name
+2017-02-03 16:09:03.9021 DEBUG Получено записей: 0
+2017-02-03 16:09:11.4226 DEBUG PatientFindForm ShowFilterByDoctor set to true
+2017-02-03 16:09:11.4226 DEBUG PatientFindForm OperatorId: 2470
+2017-02-03 16:09:11.4226 DEBUG PatientFindForm DoctorId: -1
+2017-02-03 16:09:11.9376 DEBUG _loggedOperator.DoctorId==-1
+2017-02-03 16:09:13.5747 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 16:09:13.5747 DEBUG Получено записей: 1
+2017-02-03 16:09:13.6277 DEBUG _loggedOperator.DoctorId:-1
+2017-02-03 16:09:30.7437 DEBUG Sql: SELECT d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.pens as "СНИЛС", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен" , case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d WHERE Lower(d.fam) LIKE @fam ORDER BY d.fam, d.nam, d.mid, d.date_born LIMIT 150;
+2017-02-03 16:09:30.7437 DEBUG SqlParams:
+2017-02-03 16:09:30.7437 DEBUG SqlParam @fam=снег%
+2017-02-03 16:09:35.5319 DEBUG Запрос: select * from fed_lgota_tab where pens like @snils;
+2017-02-03 16:09:35.5319 DEBUG Получено записей: 0
+2017-02-03 16:09:35.5449 DEBUG Запрос: select * from lgot_client_tab where dan_id = @id;
+2017-02-03 16:09:35.5449 DEBUG Получено записей: 0
+2017-02-03 16:13:41.1470 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 16:13:41.1940 DEBUG Получено записей: 2
+2017-02-03 16:13:45.2712 DEBUG Запрос: Select s.id, s.code, s.name from codifiers.sozstatus_tab s
+2017-02-03 16:13:45.2712 DEBUG Получено записей: 11
+2017-02-03 16:13:45.2872 DEBUG Запрос: Select u.id, u.code, u.name, u.doctor_id, u.otdel_id, u.age_from, u.age_for, u.flag_default, u.uchactok_type_id, u.lpu_id, u.sort, u.sex from codifiers.uchactok_tab u order by u.sort, u.name
+2017-02-03 16:13:45.2942 DEBUG Получено записей: 75
+2017-02-03 16:13:45.3462 DEBUG Запрос: select id, socr, name, full_name, index, code 
+                              from codifiers.sp_kladr_tab
+                              where level_ter=@level order by name
+2017-02-03 16:13:45.3462 DEBUG Получено записей: 0
+2017-02-03 16:13:50.8315 DEBUG PatientFindForm ShowFilterByDoctor set to true
+2017-02-03 16:13:50.8325 DEBUG PatientFindForm OperatorId: 403001
+2017-02-03 16:13:50.8325 DEBUG PatientFindForm DoctorId: -1
+2017-02-03 16:13:51.3216 DEBUG _loggedOperator.DoctorId==-1
+2017-02-03 16:13:53.0177 DEBUG Запрос: SELECT DISTINCT code_access, name, description 
+                            FROM users_access_view WHERE users_id = @id
+2017-02-03 16:13:53.0177 DEBUG Получено записей: 2
+2017-02-03 16:13:53.0637 DEBUG _loggedOperator.DoctorId:-1
+2017-02-03 16:14:00.9941 DEBUG Sql: SELECT d.dan_id as "Id", d.fam as "Фамилия", d.nam as "Имя", d.mid as "Отчество", d.date_born as "Дата рождения", case when d.ser_pol is null then d.num_pol else d.ser_pol ||' '|| d.num_pol end as "Полис", d.pens as "СНИЛС", d.address as "Адрес", case when spolref='2301001' then true else false end as "Прикреплен" , case when strcom_region_id='0300000000000' then false else true end as "Иногородний" FROM dan_tab d WHERE Lower(d.fam) LIKE @fam ORDER BY d.fam, d.nam, d.mid, d.date_born LIMIT 150;
+2017-02-03 16:14:00.9941 DEBUG SqlParams:
+2017-02-03 16:14:00.9941 DEBUG SqlParam @fam=снег%
+2017-02-03 16:14:05.7574 DEBUG Запрос: select * from fed_lgota_tab where pens like @snils;
+2017-02-03 16:14:05.7574 DEBUG Получено записей: 0
+2017-02-03 16:14:05.7694 DEBUG Запрос: select * from lgot_client_tab where dan_id = @id;
+2017-02-03 16:14:05.7694 DEBUG Получено записей: 0

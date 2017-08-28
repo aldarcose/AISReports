@@ -1,0 +1,778 @@
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ARMPlugin.dll
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ARMPlugin.pdb
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\ARMPlugin\bin\Debug\SharedPlugin.dll
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\ARMPlugin\bin\Debug\SharedPlugin.pdb
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\ARMPlugin\bin\Debug\SharedUtils.dll
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\ARMPlugin\bin\Debug\SharedDbWorker.dll
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Model.dll
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Npgsql.dll
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Mono.Security.dll
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\ARMPlugin\bin\Debug\SharedUtils.pdb
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\ARMPlugin\bin\Debug\SharedDbWorker.pdb
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Model.pdb
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Npgsql.xml
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\Npgsql.resources.dll
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\Npgsql.resources.dll
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\ARMPlugin\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\ARMPlugin\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\ARMPlugin\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ARMPlugin.dll.CodeAnalysisLog.xml
+C:\Users\tsb\documents\visual studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ARMPlugin.dll.lastcodeanalysissucceeded
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\plugins\ARMPlugin.dll
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\plugins\ARMPlugin.pdb
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.csprojResolveAssemblyReference.cache
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.AddNewTalonForm.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.AddNewVisitForm.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.AddServiceForm.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ARMControl.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DoctorServiceControl.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.EditDiagnForm.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.MkbSelectForm.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ProvidedServicesControl.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ReceptPrintForm.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RecipeForm.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.TAPControl.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.Properties.Resources.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.csproj.GenerateResource.Cache
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.dll.licenses
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.dll
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.pdb
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.LabResearchControl.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.AddOrderConfirmForm.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.AddOrderForm.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.LabOrderReport.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RecipeReport.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ImageReport.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RecipeReport_okud3108805.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RecipePrintConfirmation.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.VisitResultReport.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.PrintNprForm.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.NprReport.resources
+C:\Users\tsb\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RecipeEditListForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\plugins\NLog.config
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\plugins\ARMPlugin.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\plugins\bin\Debug\plugins\ARMPlugin.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.csprojResolveAssemblyReference.cache
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.AddNewTalonForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.AddNewVisitForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.AddOrderConfirmForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.AddOrderForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.AddServiceForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ARMControl.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DispenseryControl.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DoctorQueue.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DoctorServiceControl.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DopDispControl.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DopDispDiagnosForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DopDispDiagnosListForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DopDispResultsForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.EditDiagnForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DispenseryEditForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.LocalLgotaForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.SeakLeaveAddWorkForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.SeakLeaveContinueForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.SeakLeaveControl.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.SeakLeavePrintForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.SickLeaveEditForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.VaccinationControl.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.VaccinationEditItemForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ReestForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RegistryHistoryForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RegistryWaitingListForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RegistryWaitingListItemForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.VisitDrugForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.VisitRecipesControl.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.HospReport.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ImageReport.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.LabOrderReport.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.LabResearchControl.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.MkbSelectForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.NprReport.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.PrintNprForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ProvidedServicesControl.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ReceptPrintForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RecipeEditListForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RecipeForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RecipePrintConfirmation.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.Reports.MRTReport.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RecipeReport_okud3108805.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ReferralControl.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ReferralForm.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ReferralReport.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.TAPControl.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RecipeReport.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.VisitResultReport.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.Properties.Resources.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.BakReport.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.Reports.ReferralReport_057u_04.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.Reports.RegistryTalonReport.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.Reports.VaccinationReport.resources
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.csproj.GenerateResource.Cache
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.dll.licenses
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Reports\Patterns\blist.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\NLog.config
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ARMPlugin.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ARMPlugin.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DbCaching.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Data.v14.2.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.DataAccess.v14.2.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Images.v14.2.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Printing.v14.2.Core.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Sparkline.v14.2.Core.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Utils.v14.2.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Xpo.v14.2.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraBars.v14.2.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraEditors.v14.2.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraGrid.v14.2.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraLayout.v14.2.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraNavBar.v14.2.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraPrinting.v14.2.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraTreeList.v14.2.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Model.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\NetrikaServices.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\PrintFormTesting.exe
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\SharedDbWorker.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\SharedPlugin.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\SharedPrintWorker.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\SharedUtils.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\NLog.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Dapper.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Dapper.SimpleCRUD.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\itextsharp.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Npgsql.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\HtmlRenderer.WinForms.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\HtmlRenderer.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\TFOmsServices.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DbCaching.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Model.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\NetrikaServices.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\PrintFormTesting.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\SharedDbWorker.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\SharedPrintWorker.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\SharedUtils.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\SharedPlugin.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Data.v14.2.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.DataAccess.v14.2.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Printing.v14.2.Core.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Sparkline.v14.2.Core.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Utils.v14.2.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Xpo.v14.2.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraBars.v14.2.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraEditors.v14.2.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraGrid.v14.2.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraLayout.v14.2.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraNavBar.v14.2.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraPrinting.v14.2.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraTreeList.v14.2.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\NLog.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Dapper.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Dapper.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Dapper.SimpleCRUD.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Dapper.SimpleCRUD.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Npgsql.xml
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\HtmlRenderer.WinForms.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\HtmlRenderer.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\TFOmsServices.pdb
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.Data.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.Data.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Data.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Data.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.DataAccess.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.DataAccess.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.DataAccess.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.DataAccess.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.Printing.v14.2.Core.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.Printing.v14.2.Core.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Printing.v14.2.Core.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Printing.v14.2.Core.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.Sparkline.v14.2.Core.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.Sparkline.v14.2.Core.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Sparkline.v14.2.Core.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Sparkline.v14.2.Core.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.Utils.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.Utils.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Utils.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Utils.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.Xpo.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.Xpo.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Xpo.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Xpo.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraBars.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraBars.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraBars.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraBars.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraEditors.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraEditors.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraEditors.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraEditors.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraGrid.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraGrid.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraGrid.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraGrid.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraLayout.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraLayout.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraLayout.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraLayout.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraNavBar.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraNavBar.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraNavBar.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraNavBar.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraPrinting.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraPrinting.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraPrinting.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraPrinting.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraTreeList.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraTreeList.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraTreeList.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraTreeList.v14.2.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\Npgsql.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\Npgsql.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.dll
+C:\Users\SlavaB\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Reports\Patterns\blist.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\NLog.config
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ARMPlugin.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ARMPlugin.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DbCaching.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Data.v17.1.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.DataAccess.v17.1.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Images.v17.1.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Pdf.v17.1.Core.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Printing.v17.1.Core.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Sparkline.v17.1.Core.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Utils.v17.1.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Xpo.v17.1.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraBars.v17.1.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraEditors.v17.1.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraGrid.v17.1.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraLayout.v17.1.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraNavBar.v17.1.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraPrinting.v17.1.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraTreeList.v17.1.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Model.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\NetrikaServices.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\PrintFormTesting.exe
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\SharedDbWorker.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\SharedPlugin.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\SharedPrintWorker.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\SharedUtils.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\NLog.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Dapper.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Dapper.SimpleCRUD.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\itextsharp.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Npgsql.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\HtmlRenderer.WinForms.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\HtmlRenderer.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\TFOmsServices.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Mono.Security.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DbCaching.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Model.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\NetrikaServices.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\PrintFormTesting.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\SharedDbWorker.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\SharedPrintWorker.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\SharedUtils.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\SharedPlugin.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Data.v17.1.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.DataAccess.v17.1.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Pdf.v17.1.Core.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Printing.v17.1.Core.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Sparkline.v17.1.Core.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Utils.v17.1.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.Xpo.v17.1.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraBars.v17.1.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraEditors.v17.1.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraGrid.v17.1.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraLayout.v17.1.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraNavBar.v17.1.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraPrinting.v17.1.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\DevExpress.XtraTreeList.v17.1.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\NLog.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Dapper.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Dapper.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Dapper.SimpleCRUD.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Dapper.SimpleCRUD.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\Npgsql.xml
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\HtmlRenderer.WinForms.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\HtmlRenderer.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\TFOmsServices.pdb
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.Data.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.Data.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Data.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Data.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.DataAccess.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.DataAccess.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.DataAccess.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.DataAccess.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Pdf.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Printing.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.Sparkline.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.Sparkline.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Sparkline.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Sparkline.v17.1.Core.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.Utils.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.Utils.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Utils.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Utils.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.Xpo.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.Xpo.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Xpo.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Xpo.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraBars.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraBars.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraBars.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraBars.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraEditors.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraEditors.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraEditors.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraEditors.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraGrid.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraGrid.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraGrid.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraGrid.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraLayout.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraLayout.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraLayout.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraLayout.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraNavBar.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraNavBar.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraNavBar.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraNavBar.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraPrinting.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraPrinting.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraPrinting.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraPrinting.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraTreeList.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraTreeList.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraTreeList.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraTreeList.v17.1.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\de\Npgsql.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\es\Npgsql.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.csprojResolveAssemblyReference.cache
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.AddNewTalonForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.AddNewVisitForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.AddOrderConfirmForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.AddOrderForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.AddServiceForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ARMControl.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DispenseryControl.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DoctorQueue.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DoctorServiceControl.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DopDispControl.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DopDispDiagnosForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DopDispDiagnosListForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DopDispResultsForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.EditDiagnForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DispenseryEditForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.LocalLgotaForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.SeakLeaveAddWorkForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.SeakLeaveContinueForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.SeakLeaveControl.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.SeakLeavePrintForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.SickLeaveEditForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.VaccinationControl.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.VaccinationEditItemForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ReestForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RegistryHistoryForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RegistryWaitingListForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RegistryWaitingListItemForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.VisitDrugForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.VisitRecipesControl.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.HospReport.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ImageReport.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.LabOrderReport.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.LabResearchControl.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.MkbSelectForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.NprReport.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.PrintNprForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ProvidedServicesControl.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ReceptPrintForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RecipeEditListForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RecipeForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RecipePrintConfirmation.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.Reports.MRTReport.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RecipeReport_okud3108805.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ReferralControl.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ReferralForm.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ReferralReport.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.TAPControl.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RecipeReport.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.VisitResultReport.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.Properties.Resources.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.BakReport.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.Reports.ReferralReport_057u_04.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.Reports.RegistryTalonReport.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.Reports.VaccinationReport.resources
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.csproj.GenerateResource.Cache
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.dll.licenses
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.dll
+C:\Users\Munko\Documents\Visual Studio 2013\Projects\plugins\ARMPlugin\obj\Debug\ARMPlugin.pdb
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\App.config
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\Reports\Patterns\blist.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\NLog.config
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ARMPlugin.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ARMPlugin.pdb
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DbCaching.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Charts.v17.1.Core.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.CodeParser.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Data.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.DataAccess.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.DataAccess.v17.1.UI.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.ExpressApp.Reports.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.ExpressApp.ReportsV2.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.ExpressApp.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Images.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Office.v17.1.Core.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Pdf.v17.1.Core.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.PivotGrid.v17.1.Core.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Printing.v17.1.Core.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.RichEdit.v17.1.Core.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.RichEdit.v17.1.Export.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Snap.v17.1.Core.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Snap.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Snap.v17.1.Extensions.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Sparkline.v17.1.Core.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Utils.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Utils.v17.1.UI.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Xpo.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraBars.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraCharts.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraCharts.v17.1.Extensions.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraCharts.v17.1.UI.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraCharts.v17.1.Wizard.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraEditors.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraGauges.v17.1.Core.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraGrid.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraLayout.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraNavBar.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraPivotGrid.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraPrinting.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraReports.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraReports.v17.1.Extensions.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraRichEdit.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraRichEdit.v17.1.Extensions.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraScheduler.v17.1.Core.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraScheduler.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraScheduler.v17.1.Reporting.Extensions.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraTreeList.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraVerticalGrid.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\Model.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\NetrikaServices.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\PrintFormTesting.exe
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\SharedDbWorker.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\SharedPlugin.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\SharedPrintWorker.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\SharedUtils.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\Dapper.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\NLog.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\Dapper.SimpleCRUD.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraPdfViewer.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\itextsharp.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\Npgsql.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\HtmlRenderer.WinForms.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\HtmlRenderer.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\TFOmsServices.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Diagram.v17.1.Core.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraDiagram.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Persistent.Base.v17.1.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraScheduler.v17.1.Reporting.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Pdf.v17.1.Drawing.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\Mono.Security.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DbCaching.pdb
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\Model.pdb
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\NetrikaServices.pdb
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\PrintFormTesting.pdb
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\SharedDbWorker.pdb
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\SharedPrintWorker.pdb
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\SharedUtils.pdb
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\SharedPlugin.pdb
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Data.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.DataAccess.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.DataAccess.v17.1.UI.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.ExpressApp.Reports.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.ExpressApp.ReportsV2.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.ExpressApp.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Office.v17.1.Core.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.PivotGrid.v17.1.Core.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Pdf.v17.1.Core.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Printing.v17.1.Core.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.RichEdit.v17.1.Core.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Snap.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Snap.v17.1.Core.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Snap.v17.1.Extensions.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Sparkline.v17.1.Core.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Utils.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Utils.v17.1.UI.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Xpo.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraBars.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraCharts.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraCharts.v17.1.UI.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraCharts.v17.1.Wizard.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraEditors.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraGauges.v17.1.Core.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraGrid.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraLayout.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraNavBar.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraPivotGrid.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraPrinting.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraReports.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraReports.v17.1.Extensions.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraRichEdit.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraRichEdit.v17.1.Extensions.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraScheduler.v17.1.Reporting.Extensions.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraScheduler.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraScheduler.v17.1.Core.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraTreeList.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraVerticalGrid.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\Dapper.pdb
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\Dapper.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\NLog.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\Dapper.SimpleCRUD.pdb
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\Dapper.SimpleCRUD.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraPdfViewer.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\Npgsql.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\HtmlRenderer.WinForms.pdb
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\HtmlRenderer.pdb
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\TFOmsServices.pdb
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Diagram.v17.1.Core.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraDiagram.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Persistent.Base.v17.1.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.XtraScheduler.v17.1.Reporting.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\DevExpress.Pdf.v17.1.Drawing.xml
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.Data.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.Data.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Data.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Data.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.DataAccess.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.DataAccess.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.DataAccess.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.DataAccess.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.DataAccess.v17.1.UI.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.DataAccess.v17.1.UI.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.DataAccess.v17.1.UI.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.DataAccess.v17.1.UI.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.ExpressApp.Reports.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.ExpressApp.Reports.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.ExpressApp.Reports.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.ExpressApp.Reports.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.ExpressApp.ReportsV2.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.ExpressApp.ReportsV2.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.ExpressApp.ReportsV2.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.ExpressApp.ReportsV2.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.ExpressApp.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.ExpressApp.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.ExpressApp.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.ExpressApp.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.Office.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.Office.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Office.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Office.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.PivotGrid.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.PivotGrid.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.PivotGrid.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.PivotGrid.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.Pdf.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.Pdf.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Pdf.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Pdf.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.Printing.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.Printing.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Printing.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Printing.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.RichEdit.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.RichEdit.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.RichEdit.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.RichEdit.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.Snap.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.Snap.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Snap.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Snap.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.Snap.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.Snap.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Snap.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Snap.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.Snap.v17.1.Extensions.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.Snap.v17.1.Extensions.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Snap.v17.1.Extensions.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Snap.v17.1.Extensions.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.Sparkline.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.Sparkline.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Sparkline.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Sparkline.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.Utils.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.Utils.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Utils.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Utils.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.Utils.v17.1.UI.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.Utils.v17.1.UI.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Utils.v17.1.UI.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Utils.v17.1.UI.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.Xpo.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.Xpo.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Xpo.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Xpo.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraBars.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraBars.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraBars.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraBars.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraCharts.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraCharts.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraCharts.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraCharts.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraCharts.v17.1.Wizard.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraCharts.v17.1.Wizard.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraCharts.v17.1.Wizard.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraCharts.v17.1.Wizard.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraEditors.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraEditors.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraEditors.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraEditors.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraGauges.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraGauges.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraGauges.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraGauges.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraGrid.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraGrid.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraGrid.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraGrid.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraLayout.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraLayout.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraLayout.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraLayout.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraNavBar.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraNavBar.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraNavBar.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraNavBar.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraPivotGrid.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraPivotGrid.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraPivotGrid.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraPivotGrid.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraPrinting.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraPrinting.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraPrinting.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraPrinting.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraReports.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraReports.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraReports.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraReports.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraReports.v17.1.Extensions.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraReports.v17.1.Extensions.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraReports.v17.1.Extensions.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraReports.v17.1.Extensions.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraRichEdit.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraRichEdit.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraRichEdit.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraRichEdit.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraRichEdit.v17.1.Extensions.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraRichEdit.v17.1.Extensions.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraRichEdit.v17.1.Extensions.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraRichEdit.v17.1.Extensions.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraScheduler.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraScheduler.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraScheduler.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraScheduler.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraScheduler.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraScheduler.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraScheduler.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraScheduler.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraTreeList.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraTreeList.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraTreeList.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraTreeList.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraVerticalGrid.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraVerticalGrid.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraVerticalGrid.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraVerticalGrid.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraPdfViewer.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraPdfViewer.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraPdfViewer.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraPdfViewer.v17.1.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\Npgsql.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\Npgsql.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\fi\Npgsql.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\fr\Npgsql.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\Npgsql.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\zh-CN\Npgsql.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.Diagram.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.Diagram.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.Diagram.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.Diagram.v17.1.Core.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\de\DevExpress.XtraScheduler.v17.1.Reporting.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\es\DevExpress.XtraScheduler.v17.1.Reporting.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ja\DevExpress.XtraScheduler.v17.1.Reporting.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\bin\Debug\ru\DevExpress.XtraScheduler.v17.1.Reporting.resources.dll
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.csprojResolveAssemblyReference.cache
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.AddNewTalonForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.AddNewVisitForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.AddOrderConfirmForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.AddOrderForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.AddServiceForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ARMControl.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DispenseryControl.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DoctorQueue.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DoctorServiceControl.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DopDispControl.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DopDispDiagnosForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DopDispDiagnosListForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DopDispResultsForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.EditDiagnForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DispenseryEditForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.LocalLgotaForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.SeakLeaveAddWorkForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.SeakLeaveContinueForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.SeakLeaveControl.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.SeakLeavePrintForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.SickLeaveEditForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.VaccinationControl.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.VaccinationEditItemForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ReestForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RegistryHistoryForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RegistryWaitingListForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RegistryWaitingListItemForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.VisitDrugForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.VisitRecipesControl.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.HospReport.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ImageReport.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.LabOrderReport.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.LabResearchControl.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.MkbSelectForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.NprReport.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.PrintNprForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ProvidedServicesControl.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ReceptPrintForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RecipeEditListForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RecipeForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RecipePrintConfirmation.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.Reports.MRTReport.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RecipeReport_okud3108805.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ReferralControl.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ReferralForm.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.ReferralReport.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.TAPControl.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.RecipeReport.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.VisitResultReport.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.Properties.Resources.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.BakReport.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.Reports.ReferralReport_057u_04.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.Reports.RegistryTalonReport.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.Reports.VaccinationReport.resources
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.csproj.GenerateResource.Cache
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.dll.licenses
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.dll
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.pdb
+D:\programs\GP1\plugins\ARMPlugin\obj\Debug\ARMPlugin.FormsAndControls.DopDispQuestionsForm.resources
