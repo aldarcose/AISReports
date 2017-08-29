@@ -157,10 +157,11 @@ namespace Reports
                 {
                     // В ячейке находится скалярная функция (запрос)
                     var funcQuery = FindQuery(xlFieldValue);
-                    return funcQuery.ExecuteScalarSQL(
-                        query.FieldNames, 
-                        dbResult.Fields, 
-                        ExtractParameterValues(xlFieldValue));
+                    if (funcQuery != null)
+                        return funcQuery.ExecuteScalarSQL(
+                            query.FieldNames,
+                            dbResult.Fields,
+                            ExtractParameterValues(xlFieldValue));
                 }
                 string searchFormat = xlColNum == 0 ? "#{0}" : "#:{0}:";
                 int index = query.FieldNames.FindIndex(fn =>

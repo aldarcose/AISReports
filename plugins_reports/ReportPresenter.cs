@@ -56,7 +56,7 @@ namespace Reports
 
         private void OnCompleteReport(object sender, RunWorkerCompletedEventArgs e)
         {
-            waitForm.Close();
+            waitForm.Dispose();
             IWorkbook workBook = (IWorkbook)e.Result;
             openSaveFileForm = new OpenSaveFileForm(workBook);
             openSaveFileForm.ShowDialog();
