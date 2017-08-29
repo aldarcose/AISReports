@@ -69,7 +69,7 @@ namespace Reports
         {
             int progress = 0;
             pc.SetStatus(string.Format("Обработка данных... ({0})", sheet.Name));
-            if (!queries.Any(q => !q.IsScalar && q.FieldNames.Count > 1))
+            if (!queries.Any(q => q.FieldNames != null && q.FieldNames.Count > 1))
                 pc.SetMaximum(sheet.UsedCells.Length);
 
             int i = 0;
@@ -81,7 +81,7 @@ namespace Reports
                     var query = FindQuery(cell.Value);
                     if (query == null)
                     {
-                        ReplaceWithParameterValues(cell);
+                        ReplaceWithParameterValues(cell); i++;
                         continue;
                     }
                     if (query.NonQuery)
@@ -103,7 +103,7 @@ namespace Reports
                     }
                 }
 
-                if (!queries.Any(q => q.FieldNames.Count > 1))
+                if (!queries.Any(q => q.FieldNames != null && q.FieldNames.Count > 1))
                     pc.SetProgress(progress++);
 
                 i++;
@@ -184,6 +184,15 @@ namespace Reports
                 pc.SetProgress(progress++);
                 i++;
             }
+
+            for (j = 0; j < lastColNum; j++ )
+                if (sheet.Rows[i].Columns[j].Value.StartsWith("=SUM", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    string addressLocal = sheet.Rows[i].Columns[j].AddressLocal;
+                    char columnChar = addressLocal[0];
+                    sheet.Rows[i].Columns[j].Formula = string.Format("=SUM({0}{1}:{2}{3})",
+                        columnChar, lastRowNum, columnChar, i);
+                }
 
             // Количество новых ячеек
             return results.Count * query.FieldNames.Count;
