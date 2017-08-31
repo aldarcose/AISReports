@@ -36,7 +36,7 @@ namespace SharedDbWorker
         /// Opens connection
         /// </summary>
         /// <returns>True if opened</returns>
-        bool Open();
+        bool Open(IProgressControl pc);
 
         /// <summary>
         /// Closes connection
@@ -54,5 +54,7 @@ namespace SharedDbWorker
         void SetMaximum(int maximum);
 
         void SetProgress(int progress);
+
+        string Status { get; }
     }
 }

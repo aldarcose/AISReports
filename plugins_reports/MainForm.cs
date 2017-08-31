@@ -12,7 +12,7 @@ using System.Diagnostics;
 
 namespace Reports
 {
-    public partial class MainForm : Form
+    public partial class MainForm : Form, IMainForm
     {
         public MainForm()
         {
@@ -67,7 +67,7 @@ namespace Reports
                 parsForm.Report = report;
                 parsForm.Text = report.Name;
                 parsForm.Value = new ReportParameterCollection(report.Parameters);
-                var presenter = new ReportPresenter(parsForm);
+                var presenter = new ReportPresenter(parsForm, this);
                 parsForm.ShowDialog();
             }
         }
@@ -77,8 +77,29 @@ namespace Reports
             IEnumerable<string> files = Directory.GetFiles(Path.GetTempPath(), "*.*", SearchOption.TopDirectoryOnly)
                 .Where(s => s.EndsWith(".xls") || s.EndsWith(".xlsx"));
 
-            foreach (string file in files)
-                File.Delete(file);
+            try
+            {
+                foreach (string file in files)
+                    File.Delete(file);
+            }
+            catch (Exception) { }
         }
+
+        public void Disable()
+        {
+            this.InvokeIfNeeded(() => Enabled = false);
+        }
+
+        public void Enable()
+        {
+            this.InvokeIfNeeded(() => Enabled = true);
+        }
+    }
+
+    public interface IMainForm
+    {
+        void Disable();
+
+        void Enable();
     }
 }

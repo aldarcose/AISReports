@@ -1,6 +1,7 @@
 ﻿using SharedDbWorker;
 using SharedDbWorker.Classes;
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -104,10 +105,10 @@ namespace Reports.Controls
 
             if (results == null || results.Count == 0) 
                 return;
-            
-            foreach (var dbResult in results) 
-                list.Add(dbResult);
 
+            var orderedResults = Utils.IsNumericType(results[0].Fields[0]) ? results.OrderBy(r => r.Fields[0]).ToList() : results;
+            foreach (var dbResult in orderedResults) 
+                list.Add(dbResult);
             SetObjects(list);
         }
 

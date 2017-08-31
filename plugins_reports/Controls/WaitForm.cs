@@ -14,6 +14,8 @@ namespace Reports.Controls
 {
     public partial class WaitForm : Form, IProgressControl
     {
+        private string status;
+
         public WaitForm()
         {
             InitializeComponent();
@@ -40,15 +42,12 @@ namespace Reports.Controls
             this.InvokeIfNeeded(() => progressBar1.Value = progress);
         }
 
-        // Disable close(x) button
-        private const int CP_NOCLOSE_BUTTON = 0x200;
-        protected override CreateParams CreateParams
+        public string Status
         {
-            get
-            {
-                CreateParams myCp = base.CreateParams;
-                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
-                return myCp;
+            get 
+            { 
+                this.InvokeIfNeeded(() => status = toolStripStatusLabel1.Text);
+                return status; 
             }
         }
     }

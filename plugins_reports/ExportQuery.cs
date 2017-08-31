@@ -173,31 +173,37 @@ namespace Reports
             string innerSql_ = innerSQL;
             if (parameterValues != null)
             {
-                if (localParameterNames.Count != parameterValues.Length)
-                    throw new InvalidOperationException(
-                        string.Format("Запрос {0}: Количество значений и количество названий параметров не совпадают", name));
-
-                var pairs = new Dictionary<string, string>();
-                foreach (string paramValue in parameterValues)
+                if (localParameterNames.Count == parameterValues.Length)
                 {
-                    int i = Array.IndexOf(parameterValues, paramValue);
-                    string pameterKey = localParameterNames[i];
-                    pairs[pameterKey] = paramValue;
+                    var pairs = new Dictionary<string, string>();
+                    for (int i = 0; i < localParameterNames.Count; i++)
+                    {
+                        string pameterKey = localParameterNames[i];
+                        pairs[pameterKey] = parameterValues[i];
+                    }
+
+                    foreach (KeyValuePair<string, string> pair in pairs)
+                        SetParameter(pair.Key, pair.Value, true);
+                }
+                else if (localParameterNames.Count == 1)
+                {
+                    SetParameter(localParameterNames[0], string.Join(",", parameterValues), true);
+                }
+                else
+                    throw new InvalidOperationException(
+                            string.Format("Запрос {0}: Количество значений и количество названий параметров не совпадают", name));
+            }
+
+            // Дополнительные параметры из другого запроса O_o
+            if (additionalParamNames != null)
+                for (int i = 0; i < additionalParamNames.Count; i++)
+                {
+                    SetParameter(
+                        string.Format(":{0}:", additionalParamNames[i]),
+                        Utils.ToString(additionalParamValues[i]),
+                        true);
                 }
 
-                foreach (KeyValuePair<string, string> pair in pairs)
-                    SetParameter(pair.Key, pair.Value, true);
-
-                // Дополнительные параметры из другого запроса O_o
-                if (additionalParamNames != null)
-                    for (int i = 0; i < additionalParamNames.Count; i++)
-                    {
-                        SetParameter(
-                            string.Format(":{0}:", additionalParamNames[i]),
-                            Utils.ToString(additionalParamValues[i]), 
-                            true);
-                    }
-            }
             object result;
             using (var db = new DbWorker())
             {

@@ -152,6 +152,10 @@ namespace Reports
             Func<DbResult, int, int, object> GetValue = (dbResult, xlRowNum, xlColNum) =>
             {
                 fieldPositions.TryGetValue(xlColNum, out xlFieldValue);
+                
+                // В ячейке формула
+                if (xlFieldValue.StartsWith("="))
+                    return EvaluateFormula(xlFieldValue, xlRowNum);
 
                 if (xlFieldValue.StartsWith("#") && !xlFieldValue.Equals(string.Format("#{0}", query.Name)))
                 {
@@ -189,13 +193,32 @@ namespace Reports
                 if (sheet.Rows[i].Columns[j].Value.StartsWith("=SUM", StringComparison.InvariantCultureIgnoreCase))
                 {
                     string addressLocal = sheet.Rows[i].Columns[j].AddressLocal;
-                    char columnChar = addressLocal[0];
+                    string column = GetColumn(addressLocal);
                     sheet.Rows[i].Columns[j].Formula = string.Format("=SUM({0}{1}:{2}{3})",
-                        columnChar, lastRowNum, columnChar, i);
+                        column, lastRowNum, column, i);
                 }
 
             // Количество новых ячеек
             return results.Count * query.FieldNames.Count;
+        }
+
+        private string GetColumn(string addressLocal)
+        {
+            return string.Join("", addressLocal.Where(c => Char.IsLetter(c)));
+        }
+
+        private string EvaluateFormula(string formula, int rowNum)
+        {
+            var chuncks = formula.Split('+');
+            if (chuncks.Length != 0)
+            {
+                var result = new List<string>();
+                foreach (var chunk in chuncks)
+                    result.Add(string.Format("{0}{1}", GetColumn(chunk), rowNum + 1));
+
+                return "=" + string.Join("+", result);
+            }
+            return formula;
         }
         
         /// <inheritdoc/>

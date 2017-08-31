@@ -6,29 +6,32 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
+using System.Threading;
 
 namespace Reports
 {
     public class ReportPresenter
     {
-        private IReportParametersForm view;
+        private IReportParametersForm parameters;
         private BackgroundWorker worker;
         private ReportLoader reportLoader;
         private IOperation export;
         private ExcelEngine excelEngine;
         private WaitForm waitForm;
         private OpenSaveFileForm openSaveFileForm;
+        private IMainForm mainForm;
+        private Object dialogLock = new object();
 
-        public ReportPresenter(IReportParametersForm view)
+        public ReportPresenter(IReportParametersForm parameters, IMainForm mainForm)
         {
-            this.view = view;
-            view.OK += view_OK;
+            this.parameters = parameters;
+            this.mainForm = mainForm;
+            parameters.OK += view_OK;
             this.worker = new BackgroundWorker();
             this.worker.DoWork += new DoWorkEventHandler(OnExecuteReport);
             this.worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(OnCompleteReport);
             this.worker.WorkerReportsProgress = true;
-
-            this.waitForm = new WaitForm();
+            
             InitExport();
         }
 
@@ -36,15 +39,20 @@ namespace Reports
         {
             excelEngine = new ExcelEngine();
             reportLoader = new ReportLoader(excelEngine);
-            reportLoader.Load(view.Report.Id);
+            reportLoader.Load(parameters.Report.Id);
             export = new ExcelExport(reportLoader.WorkBook);
             export.SetQueries(reportLoader.ExportQueries);
         }
 
         private void view_OK(object sender, ParametersValuesEventArgs e)
         {
-            worker.RunWorkerAsync(e.ParametersValues);
-            waitForm.ShowDialog();
+            if (!worker.IsBusy)
+            {
+                mainForm.Disable();
+                waitForm = new WaitForm();
+                waitForm.Show();
+                worker.RunWorkerAsync(e.ParametersValues);
+            }
         }
 
         private void OnExecuteReport(object sender, DoWorkEventArgs e)
@@ -56,11 +64,17 @@ namespace Reports
 
         private void OnCompleteReport(object sender, RunWorkerCompletedEventArgs e)
         {
-            waitForm.Dispose();
+            waitForm.Close();
             IWorkbook workBook = (IWorkbook)e.Result;
-            openSaveFileForm = new OpenSaveFileForm(workBook);
-            openSaveFileForm.ShowDialog();
+
+            lock (dialogLock)
+            {
+                openSaveFileForm = new OpenSaveFileForm(workBook);
+                openSaveFileForm.ShowDialog();
+            }
+            
             reportLoader.Dispose();
+            mainForm.Enable();
         }
     }
 }

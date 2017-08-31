@@ -10,17 +10,15 @@ using System.Text.RegularExpressions;
 
 namespace SharedDbWorker
 {
+    // todo: Рефакторинг. добавить текущее подключение.
     public class DbWorker : IDbWorker, IDisposable
     {
         private static Logger _logger = LogManager.GetCurrentClassLogger();
-
-        //public const string AisConnectionString =
-            //"Server=192.168.16.187;Port=9999;User Id=munkokizh;Password=15101986;Database=ais_buryat;Pooling=true;ApplicationName=plugins;Timeout=30";
         public const string Gp1rbConnectionString =
             "Server=192.168.16.253;Port=5432;User Id=munkokizh;Password=15101986;Database=gp1rb;ApplicationName=plugins;";
         
-
         private static string _connectionString = BuildConnectionString();
+        private static List<NpgsqlConnection> lst;
         
         private static string BuildConnectionString()
         {
@@ -28,12 +26,13 @@ namespace SharedDbWorker
             var dbPort = AppSettings.Get("DbPort");
             if (dbAddr!=null && dbPort!=null)
                 return string.Format("Server={0};Port={1};User Id=munkokizh;Password=15101986;Database=ais_buryat;Pooling=true;MinPoolSize=1;MaxPoolSize=50;ApplicationName=plugins;Timeout=30;CommandTimeout=0;", dbAddr, dbPort);
-                //return string.Format("Server={0};Port={1};User Id=postgres;Password=postgres;Database=ais;Pooling=true;MinPoolSize=1;MaxPoolSize=50;ApplicationName=plugins;Timeout=30", dbAddr, dbPort);
-                //return string.Format("Server={0};Port={1};User Id=munkokizh;Password=15101986;Database=ais;Pooling=true;MinPoolSize=1;MaxPoolSize=50;ApplicationName=plugins;Timeout=30;CommandTimeout=0;", dbAddr, dbPort);
             else
                 return "Server=192.168.16.253;Port=5432;User Id=munkokizh;Password=15101986;Database=ais_buryat;Pooling=true;MinPoolSize=1;MaxPoolSize=50;ApplicationName=plugins;Timeout=30;CommandTimeout=0;";
-                //return string.Format("Server={0};Port={1};User Id=postgres;Password=postgres;Database=ais;Pooling=true;MinPoolSize=1;MaxPoolSize=50;ApplicationName=plugins;Timeout=30", "127.0.0.1", "5432");
-                //return string.Format("Server={0};Port={1};User Id=munkokizh;Password=15101986;Database=ais;Pooling=true;MinPoolSize=1;MaxPoolSize=50;ApplicationName=plugins;Timeout=30;CommandTimeout=0;", "192.168.16.253", "5432");
+        }
+
+        static DbWorker()
+        {
+            lst = new List<NpgsqlConnection>();
         }
         
         public static string ConnectionString
@@ -43,7 +42,8 @@ namespace SharedDbWorker
 
         public IDbConnection Connection
         {
-            get {
+            get 
+            {
                 return Open() ? _conn : null;
             }
         }
@@ -107,7 +107,6 @@ namespace SharedDbWorker
             {
                 using (var cmd = _conn.CreateCommand())
                 {
-                    //cmd.AllResultTypesAreUnknown = true;
                     cmd.CommandText = query.Sql;
                     foreach (var commandParam in query.CommandParams)
                     {
@@ -225,7 +224,7 @@ namespace SharedDbWorker
         public List<DbResult> GetResults(DbQuery query, IProgressControl pc = null)
         {
             var results = new List<DbResult>();
-            if (Open())
+            if (Open(pc))
             {
                 using (var cmd = _conn.CreateCommand())
                 {
@@ -278,7 +277,7 @@ namespace SharedDbWorker
         }
 
 
-        public bool Open()
+        public bool Open(IProgressControl pc = null)
         {
             _conn = new NpgsqlConnection(ConnectionString);
             bool error = false;
@@ -296,6 +295,8 @@ namespace SharedDbWorker
 
             if (error)
             {
+                string status = pc != null ? pc.Status : null;
+                if (pc != null) pc.SetStatus("Реконнект...");
                 // Делаем 3 попытки реконнекта с интервалом в 10 секунд
                 Thread.Sleep(3000);
                 Exception exception = null;
@@ -305,6 +306,8 @@ namespace SharedDbWorker
                     {
                         error = false;
                         ReConnect();
+                        if (pc != null) pc.SetStatus(status);
+                        break;
                     }
                     catch(Exception ex)
                     {
@@ -313,7 +316,13 @@ namespace SharedDbWorker
                         exception = ex;
                     }
                 }
-                if (error) throw exception;
+
+                if (pc != null) pc.SetStatus("Ошибка реконнекта");
+                if (error)
+                {
+                    _logger.Error("Failed open connection after 3 times: {0}", exception.Message);
+                    throw exception;
+                }
             }
             return true;
         }
