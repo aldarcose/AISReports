@@ -120,8 +120,9 @@ namespace Reports
                 else if  (fieldNames.Count == 1)
                 {
                     this.isScalar = true;
-                    ParseFuncParamNames();
                 }
+
+                ParseFuncParamNames();
             }
             else if (rawSQL.IndexOf(" ") < 0) // Пустой запрос
             {
@@ -165,30 +166,39 @@ namespace Reports
             }
         }
 
+        private void SetLocalParameterValues(params string[] localParameterValues)
+        {
+            var pairs = new Dictionary<string, string>();
+            for (int i = 0; i < localParameterNames.Count; i++)
+            {
+                string pameterKey = localParameterNames[i];
+                pairs[pameterKey] = localParameterValues[i].Trim('"');
+            }
+
+            foreach (KeyValuePair<string, string> pair in pairs)
+            {
+                SetParameter(string.Format(":{0}:", pair.Key), pair.Value, true);
+                SetParameter(pair.Key, pair.Value, true);
+            }
+        }
+
         public object ExecuteScalarSQL(
             Connection conn,
             List<string> additionalParamNames, 
             List<object> additionalParamValues, 
-            params string[] parameterValues)
+            params string[] localParameterValues)
         {
-            string innerSql_ = innerSQL;
-            if (parameterValues != null)
+            string savedInnerSql = innerSQL;
+            if (localParameterValues != null)
             {
-                if (localParameterNames.Count == parameterValues.Length)
+                if (localParameterNames.Count == localParameterValues.Length)
                 {
-                    var pairs = new Dictionary<string, string>();
-                    for (int i = 0; i < localParameterNames.Count; i++)
-                    {
-                        string pameterKey = localParameterNames[i];
-                        pairs[pameterKey] = parameterValues[i].Trim('"');
-                    }
-
-                    foreach (KeyValuePair<string, string> pair in pairs)
-                        SetParameter(pair.Key, pair.Value, true);
+                    SetLocalParameterValues(localParameterValues);
                 }
                 else if (localParameterNames.Count == 1)
                 {
-                    SetParameter(localParameterNames[0], string.Join(",", parameterValues).Trim('"'), true);
+                    SetParameter(localParameterNames[0], 
+                        string.Join(",", localParameterValues).Trim('"'), true);
                 }
                 else
                 {
@@ -200,10 +210,12 @@ namespace Reports
             if (additionalParamNames != null)
                 for (int i = 0; i < additionalParamNames.Count; i++)
                 {
-                    SetParameter(
-                        string.Format(":{0}:", additionalParamNames[i]),
-                        Utils.ToString(additionalParamValues[i]),
-                        true);
+                    string valueText = Utils.ToString(additionalParamValues[i]);
+                    string key1 = string.Format(":{0}:", additionalParamNames[i]);
+                    string key2 = additionalParamNames[i];
+
+                    SetParameter(key1, valueText, true);
+                    SetParameter(key2, valueText, true);
                 }
 
             var q = new DbQuery(name);
@@ -211,17 +223,39 @@ namespace Reports
             object result = conn.GetScalarResult(q);
             // Возврат значений локальных параметров
             localParameters.Clear();
-            innerSQL = innerSql_;
+            innerSQL = savedInnerSql;
 
             return result;
         }
 
-        public List<DbResult> SelectSimple(Connection conn, IProgressControl pc)
+        public List<DbResult> SelectSimple(
+            Connection conn, IProgressControl pc, 
+            params string[] localParameterValues)
         {
+            string savedInnerSql = innerSQL;
             List<DbResult> results = null;
             var q = new DbQuery(name);
+            if (localParameterValues != null)
+            {
+                if (localParameterNames.Count == localParameterValues.Length)
+                {
+                    SetLocalParameterValues(localParameterValues);
+                }
+                else if (localParameterNames.Count == 1)
+                {
+                    SetParameter(localParameterNames[0],
+                        string.Join(",", localParameterValues).Trim('"'), true);
+                }
+                else
+                {
+                    return null;
+                }
+            }
+
             q.Sql = innerSQL;
             results = conn.GetResults(q, pc);
+            innerSQL = savedInnerSql;
+
             return results;
         }
 

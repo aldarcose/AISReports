@@ -61,11 +61,19 @@ namespace Reports
 
         private string[] ExtractParameterValues(string text)
         {
+            HashSet<string> hashSet = new HashSet<string>();
+
             string paramsText = text.Contains("(") ?
                             text.Substring(text.IndexOf("(") + 1, 
                             text.LastIndexOf(")") - text.IndexOf("(") - 1) 
                             : null;
-            return paramsText != null ? paramsText.Split(',') : null;
+
+            if (paramsText == null) return null;
+
+            foreach (string value in paramsText.Split(','))
+                hashSet.Add(value.Trim().TrimStart(':').TrimEnd(':'));
+
+            return hashSet.ToArray();
         }
 
         private void ProcessWorkSheet(IProgressControl pc, IWorksheet sheet)
@@ -87,6 +95,8 @@ namespace Reports
                         ReplaceWithParameterValues(cell); i++;
                         continue;
                     }
+                    // Дополнительные параметры
+                    string[] localParVals = ExtractParameterValues(cell.Value);
                     if (query.NonQuery)
                     {
                         query.ExecuteNonQuery(conn);
@@ -98,12 +108,12 @@ namespace Reports
                     }
                     else if (query.IsScalar)
                     {
-                        cell.Value2 = query.ExecuteScalarSQL(conn, null, null, ExtractParameterValues(cell.Value));
+                        cell.Value2 = query.ExecuteScalarSQL(conn, null, null, localParVals);
                     }
                     else
                     {
                         // Иначе списочный тип
-                        i += ProcessWorkSheetList(pc, sheet, query);
+                        i += ProcessWorkSheetList(pc, sheet, query, localParVals);
                     }
                 }
 
@@ -114,21 +124,26 @@ namespace Reports
             }
         }
 
-        private int ProcessWorkSheetList(IProgressControl pc, IWorksheet sheet, ExportQuery query)
+        private int ProcessWorkSheetList(
+            IProgressControl pc, IWorksheet sheet, ExportQuery query,
+            params string[] localParameterValues)
         {
             pc.SetStatus("Инициализация запроса...");
-            List<DbResult> results = query.SelectSimple(conn, pc);
+            List<DbResult> results = query.SelectSimple(conn, pc, localParameterValues);
             pc.SetStatus("Идет обработка данных...");
 
-            int lastColNum = 0;
-            int lastRowNum = 0;
+            int firstColNum = 0;
+            int firstRowNum = 0;
             foreach (var cell in sheet.UsedCells)
             {
-                if (string.IsNullOrEmpty(cell.Value)) continue;
+                string value = cell.Value;
                 
-                if (cell.Value.Equals(string.Format("#{0}", query.Name)))
+                if (string.IsNullOrEmpty(value)) continue;
+                
+                if (value.Equals(string.Format("#{0}", query.Name)) ||
+                    value.IndexOf(string.Format("#{0}(", query.Name)) >= 0)
                 {
-                    lastRowNum = cell.LastRow;
+                    firstRowNum = cell.LastRow;
                     break;
                 }
                 else if (cell.Value.StartsWith("#"))
@@ -141,17 +156,17 @@ namespace Reports
             string xlFieldValue;
             Dictionary<int, string> fieldPositions = new Dictionary<int, string>();
             int j = 0;
-            while (j < sheet.Rows[lastRowNum-1].Columns.Length && 
-                sheet.Rows[lastRowNum-1].Columns[j].Value != string.Empty)
+            while (j < sheet.Rows[firstRowNum-1].Columns.Length && 
+                sheet.Rows[firstRowNum-1].Columns[j].Value != string.Empty)
             {
-                fieldPositions[j] = sheet.Rows[lastRowNum - 1].Columns[j].Value;
+                fieldPositions[j] = sheet.Rows[firstRowNum - 1].Columns[j].Value;
                 j++;
             }
-            lastColNum = j;
+            firstColNum = j;
 
-            sheet.DeleteRow(lastRowNum);
+            sheet.DeleteRow(firstRowNum);
             if (results.Count != 0)
-                sheet.InsertRow(lastRowNum, results.Count);
+                sheet.InsertRow(firstRowNum, results.Count);
 
             Func<DbResult, int, int, object> GetValue = (dbResult, xlRowNum, xlColNum) =>
             {
@@ -174,17 +189,19 @@ namespace Reports
                 string searchFormat = xlColNum == 0 ? "#{0}" : "#:{0}:";
                 int index = query.FieldNames.FindIndex(fn =>
                     xlFieldValue.Equals(string.Format(searchFormat, fn)));
-                if (index < 0 || dbResult.Fields[index].Equals("$id"))
-                    return xlRowNum - lastRowNum + 2;
+
+                if (index < 0) return xlFieldValue;
+                if (dbResult.Fields[index].Equals("$id")) 
+                    return xlRowNum - firstRowNum + 2;
                 return dbResult.Fields[index];
             };
 
             pc.SetProgress(0);
-            int i = lastRowNum - 1;
+            int i = firstRowNum - 1;
             int progress = 0;
             foreach (DbResult result in results)
             {
-                for (j = 0; j < lastColNum; j++)
+                for (j = 0; j < firstColNum; j++)
                 {
                     sheet.Rows[i].Columns[j].Value2 = GetValue(result, i, j);
                     sheet.Rows[i].Columns[j].BorderAround(ExcelLineStyle.Thin);
@@ -193,13 +210,13 @@ namespace Reports
                 i++;
             }
 
-            for (j = 0; j < lastColNum; j++ )
+            for (j = 0; j < firstColNum; j++ )
                 if (sheet.Rows[i].Columns[j].Value.StartsWith("=SUM", StringComparison.InvariantCultureIgnoreCase))
                 {
                     string addressLocal = sheet.Rows[i].Columns[j].AddressLocal;
                     string column = GetColumn(addressLocal);
                     sheet.Rows[i].Columns[j].Formula = string.Format("=SUM({0}{1}:{2}{3})",
-                        column, lastRowNum, column, i);
+                        column, firstRowNum, column, i);
                 }
 
             // Количество новых ячеек
