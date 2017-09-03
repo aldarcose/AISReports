@@ -16,9 +16,11 @@ namespace Reports
         private List<ExportQuery> queries;
         private IWorkbook workBook;
         private Dictionary<string, string> paramValues;
+        private Connection conn;
 
-        public ExcelExport(IWorkbook workBook)
+        public ExcelExport(Connection conn, IWorkbook workBook)
         {
+            this.conn = conn;
             this.workBook = workBook;
         }
 
@@ -53,14 +55,15 @@ namespace Reports
 
         private ExportQuery FindQuery(string text)
         {
-            return queries.FirstOrDefault(q => text.IndexOf(q.Name) > 0);
+            var chuncks = text.TrimStart('#').Split('(');
+            return queries.FirstOrDefault(q => q.Name.Equals(chuncks[0]));
         }
 
         private string[] ExtractParameterValues(string text)
         {
             string paramsText = text.Contains("(") ?
                             text.Substring(text.IndexOf("(") + 1, 
-                            text.IndexOf(")") - text.IndexOf("(") - 1) 
+                            text.LastIndexOf(")") - text.IndexOf("(") - 1) 
                             : null;
             return paramsText != null ? paramsText.Split(',') : null;
         }
@@ -86,7 +89,8 @@ namespace Reports
                     }
                     if (query.NonQuery)
                     {
-                        query.ExecuteNonQuery();
+                        query.ExecuteNonQuery(conn);
+                        cell.Value2 = null;
                     }
                     else if (query.IsEmpty)
                     {
@@ -94,7 +98,7 @@ namespace Reports
                     }
                     else if (query.IsScalar)
                     {
-                        cell.Value2 = query.ExecuteScalarSQL(null, null, ExtractParameterValues(cell.Value));
+                        cell.Value2 = query.ExecuteScalarSQL(conn, null, null, ExtractParameterValues(cell.Value));
                     }
                     else
                     {
@@ -113,7 +117,7 @@ namespace Reports
         private int ProcessWorkSheetList(IProgressControl pc, IWorksheet sheet, ExportQuery query)
         {
             pc.SetStatus("Инициализация запроса...");
-            List<DbResult> results = query.SelectSimple(pc);
+            List<DbResult> results = query.SelectSimple(conn, pc);
             pc.SetStatus("Идет обработка данных...");
 
             int lastColNum = 0;
@@ -162,7 +166,7 @@ namespace Reports
                     // В ячейке находится скалярная функция (запрос)
                     var funcQuery = FindQuery(xlFieldValue);
                     if (funcQuery != null)
-                        return funcQuery.ExecuteScalarSQL(
+                        return funcQuery.ExecuteScalarSQL(conn,
                             query.FieldNames,
                             dbResult.Fields,
                             ExtractParameterValues(xlFieldValue));

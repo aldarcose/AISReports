@@ -30,13 +30,13 @@ namespace SharedDbWorker
         /// <summary>
         /// Executes Reader Command
         /// </summary>
-        List<DbResult> GetResults(DbQuery query, IProgressControl pc);
+        List<DbResult> GetResults(DbQuery query);
 
         /// <summary>
         /// Opens connection
         /// </summary>
         /// <returns>True if opened</returns>
-        bool Open(IProgressControl pc);
+        bool Open();
 
         /// <summary>
         /// Closes connection

@@ -202,29 +202,10 @@ namespace SharedDbWorker
             return result;
         }
 
-        /// <summary>
-        /// Получить количество объектов в запросе
-        /// </summary>
-        /// <param name="querySql">Запрос</param>
-        /// <returns></returns>
-        private int GetCountObjects(string querySql)
-        {
-            int result = 0;
-            using (IDbCommand getCountCmd = _conn.CreateCommand())
-            {
-                int indexOfOrderBy = querySql.LastIndexOf("order by", StringComparison.InvariantCultureIgnoreCase);
-                if (indexOfOrderBy > 0)
-                    querySql = querySql.Substring(0, indexOfOrderBy);
-                getCountCmd.CommandText = string.Format("select count(*) from ({0}) t", querySql);
-                result = Convert.ToInt32(getCountCmd.ExecuteScalar());
-            }
-            return result;
-        }
-
-        public List<DbResult> GetResults(DbQuery query, IProgressControl pc = null)
+        public List<DbResult> GetResults(DbQuery query)
         {
             var results = new List<DbResult>();
-            if (Open(pc))
+            if (Open())
             {
                 using (var cmd = _conn.CreateCommand())
                 {
@@ -233,13 +214,6 @@ namespace SharedDbWorker
                     foreach (var commandParam in query.CommandParams)
                     {
                         cmd.Parameters.AddWithValue(commandParam.Key, commandParam.Value);
-                    }
-
-                    if (pc != null)
-                    {
-                        int total = GetCountObjects(query.Sql);
-                        pc.SetMaximum(total);
-                        pc.SetStatus("Идет выполнение запроса...");
                     }
 
                     int index = 0;
@@ -265,7 +239,6 @@ namespace SharedDbWorker
                         }
 
                         index++;
-                        if (pc != null) pc.SetProgress(index);
                         results.Add(res);
                     }
 
@@ -277,10 +250,9 @@ namespace SharedDbWorker
         }
 
 
-        public bool Open(IProgressControl pc = null)
+        public bool Open()
         {
             _conn = new NpgsqlConnection(ConnectionString);
-            bool error = false;
             try
             {
                 _conn.Open();
@@ -290,48 +262,9 @@ namespace SharedDbWorker
                 _logger.Error("Cannot open connection: {0}", ex.Message);
 
                 NpgsqlConnection.ClearAllPools();
-                error = true;
-            }
-
-            if (error)
-            {
-                string status = pc != null ? pc.Status : null;
-                if (pc != null) pc.SetStatus("Реконнект...");
-                // Делаем 3 попытки реконнекта с интервалом в 10 секунд
-                Thread.Sleep(3000);
-                Exception exception = null;
-                for (int i = 0; i < 3; i++)
-                {
-                    try
-                    {
-                        error = false;
-                        ReConnect();
-                        if (pc != null) pc.SetStatus(status);
-                        break;
-                    }
-                    catch(Exception ex)
-                    {
-                        error = true;
-                        Thread.Sleep(10000);
-                        exception = ex;
-                    }
-                }
-
-                if (pc != null) pc.SetStatus("Ошибка реконнекта");
-                if (error)
-                {
-                    _logger.Error("Failed open connection after 3 times: {0}", exception.Message);
-                    throw exception;
-                }
+                throw ex;
             }
             return true;
-        }
-
-        private void ReConnect()
-        {
-            Close();
-            _conn = new NpgsqlConnection(ConnectionString);
-            _conn.Open();
         }
 
         public void Close()

@@ -9,6 +9,7 @@ using System.Threading;
 using Reports.Controls;
 using System.Drawing;
 using System.Diagnostics;
+using SharedDbWorker;
 
 namespace Reports
 {
@@ -67,7 +68,7 @@ namespace Reports
                 parsForm.Report = report;
                 parsForm.Text = report.Name;
                 parsForm.Value = new ReportParameterCollection(report.Parameters);
-                var presenter = new ReportPresenter(parsForm, this);
+                var presenter = new ReportPresenter(new Connection(ConnectionParameters.Instance), parsForm, this);
                 parsForm.ShowDialog();
             }
         }

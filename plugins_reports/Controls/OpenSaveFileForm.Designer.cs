@@ -75,6 +75,7 @@
             this.Controls.Add(this.OpenFileButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "OpenSaveFileForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Открыть/Сохранить файл";
             this.ResumeLayout(false);
 

@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\AppSettings.cs" />
+    <Compile Include="Classes\Connection.cs" />
     <Compile Include="Classes\DbWorker.cs" />
     <Compile Include="Classes\DbQuery.cs" />
     <Compile Include="Classes\DbResult.cs" />

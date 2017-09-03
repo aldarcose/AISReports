@@ -166,6 +166,7 @@ namespace Reports
         }
 
         public object ExecuteScalarSQL(
+            Connection conn,
             List<string> additionalParamNames, 
             List<object> additionalParamValues, 
             params string[] parameterValues)
@@ -179,7 +180,7 @@ namespace Reports
                     for (int i = 0; i < localParameterNames.Count; i++)
                     {
                         string pameterKey = localParameterNames[i];
-                        pairs[pameterKey] = parameterValues[i];
+                        pairs[pameterKey] = parameterValues[i].Trim('"');
                     }
 
                     foreach (KeyValuePair<string, string> pair in pairs)
@@ -187,11 +188,12 @@ namespace Reports
                 }
                 else if (localParameterNames.Count == 1)
                 {
-                    SetParameter(localParameterNames[0], string.Join(",", parameterValues), true);
+                    SetParameter(localParameterNames[0], string.Join(",", parameterValues).Trim('"'), true);
                 }
                 else
-                    throw new InvalidOperationException(
-                            string.Format("Запрос {0}: Количество значений и количество названий параметров не совпадают", name));
+                {
+                    return null;
+                }
             }
 
             // Дополнительные параметры из другого запроса O_o
@@ -204,14 +206,9 @@ namespace Reports
                         true);
                 }
 
-            object result;
-            using (var db = new DbWorker())
-            {
-                var q = new DbQuery(name);
-                q.Sql = innerSQL;
-                result = db.GetScalarResult(q);
-            }
-
+            var q = new DbQuery(name);
+            q.Sql = innerSQL;
+            object result = conn.GetScalarResult(q);
             // Возврат значений локальных параметров
             localParameters.Clear();
             innerSQL = innerSql_;
@@ -219,26 +216,20 @@ namespace Reports
             return result;
         }
 
-        public List<DbResult> SelectSimple(IProgressControl pc)
+        public List<DbResult> SelectSimple(Connection conn, IProgressControl pc)
         {
             List<DbResult> results = null;
-            using (var db = new DbWorker())
-            {
-                var q = new DbQuery(name);
-                q.Sql = innerSQL;
-                results = db.GetResults(q, pc);
-            }
+            var q = new DbQuery(name);
+            q.Sql = innerSQL;
+            results = conn.GetResults(q, pc);
             return results;
         }
 
-        public void ExecuteNonQuery()
+        public void ExecuteNonQuery(Connection conn)
         {
-            using (var db = new DbWorker())
-            {
-                var q = new DbQuery(string.Empty);
-                q.Sql = innerSQL;
-                db.Execute(q);
-            }
+            var q = new DbQuery(string.Empty);
+            q.Sql = innerSQL;
+            conn.ExecuteStatement(q);
         }
     }
 }

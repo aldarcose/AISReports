@@ -7,11 +7,14 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace Reports
 {
     public class ReportPresenter
     {
+        // Соединение с базой данных
+        private Connection conn;
         private IReportParametersForm parameters;
         private BackgroundWorker worker;
         private ReportLoader reportLoader;
@@ -22,8 +25,9 @@ namespace Reports
         private IMainForm mainForm;
         private Object dialogLock = new object();
 
-        public ReportPresenter(IReportParametersForm parameters, IMainForm mainForm)
+        public ReportPresenter(Connection conn, IReportParametersForm parameters, IMainForm mainForm)
         {
+            this.conn = conn;
             this.parameters = parameters;
             this.mainForm = mainForm;
             parameters.OK += view_OK;
@@ -40,7 +44,7 @@ namespace Reports
             excelEngine = new ExcelEngine();
             reportLoader = new ReportLoader(excelEngine);
             reportLoader.Load(parameters.Report.Id);
-            export = new ExcelExport(reportLoader.WorkBook);
+            export = new ExcelExport(conn, reportLoader.WorkBook);
             export.SetQueries(reportLoader.ExportQueries);
         }
 
@@ -65,16 +69,15 @@ namespace Reports
         private void OnCompleteReport(object sender, RunWorkerCompletedEventArgs e)
         {
             waitForm.Close();
+            conn.Dispose();
             IWorkbook workBook = (IWorkbook)e.Result;
-
-            lock (dialogLock)
-            {
-                openSaveFileForm = new OpenSaveFileForm(workBook);
-                openSaveFileForm.ShowDialog();
-            }
             
-            reportLoader.Dispose();
             mainForm.Enable();
+
+            openSaveFileForm = new OpenSaveFileForm(workBook);
+            openSaveFileForm.ShowDialog((Form)mainForm);
+
+            reportLoader.Dispose();
         }
     }
 }
