@@ -128,8 +128,6 @@ namespace Reports
             }
         }
 
-
-
         private int ProcessWorkSheetList(
             IProgressControl pc, IWorksheet sheet, ExportQuery query,
             params string[] localParameterValues)
