@@ -5,6 +5,7 @@ using System.Linq;
 using SharedDbWorker.Classes;
 using Syncfusion.XlsIO;
 using SharedDbWorker;
+using System.Text.RegularExpressions;
 
 namespace Reports
 {
@@ -86,17 +87,20 @@ namespace Reports
             int i = 0;
             while (i < sheet.UsedCells.Count())
             {
-                IRange cell = sheet.UsedCells[i];
-                if (!string.IsNullOrEmpty(cell.Value) && cell.Value.StartsWith("#"))
+                IRange cell = sheet.UsedCells[i]; string cellValue = cell.Value;
+                if (!string.IsNullOrEmpty(cellValue) && cellValue.StartsWith("#"))
                 {
-                    var query = FindQuery(cell.Value);
+                    if (cellValue.StartsWith("#=")) 
+                        cell.Value2 = EvaluateFormula(cell.Column, cell.Row, cellValue);
+
+                    var query = FindQuery(cellValue);
                     if (query == null)
                     {
                         ReplaceWithParameterValues(cell); i++;
                         continue;
                     }
                     // Дополнительные параметры
-                    string[] localParVals = ExtractParameterValues(cell.Value);
+                    string[] localParVals = ExtractParameterValues(cellValue);
                     if (query.NonQuery)
                     {
                         query.ExecuteNonQuery(conn);
@@ -123,6 +127,8 @@ namespace Reports
                 i++;
             }
         }
+
+
 
         private int ProcessWorkSheetList(
             IProgressControl pc, IWorksheet sheet, ExportQuery query,
@@ -240,6 +246,39 @@ namespace Reports
                 return "=" + string.Join("+", result);
             }
             return formula;
+        }
+
+        private string EvaluateFormula(int colNum, int rowNum, string cellValue)
+        {
+            List<string> list = new List<string>();
+
+            cellValue = cellValue.Remove(0, 2);
+            string[] chuncks = cellValue.Split('+');
+
+            foreach (var chunk in chuncks)
+            {
+                int colShift = chunk.EndsWith("C") ? 0 : Int32.Parse(Regex.Match(chunk, @"\d+").Value);
+                int rowShift = chunk.StartsWith("RC") ? 0 : Int32.Parse(Regex.Match(chunk, @"\d+").Value);
+                list.Add(string.Format("{0}{1}", GetExcelColumnName(colNum - colShift), rowNum - rowShift));
+            }
+
+            return "=" + string.Join("+", list);
+        }
+
+        private string GetExcelColumnName(int columnNumber)
+        {
+            int dividend = columnNumber;
+            string columnName = String.Empty;
+            int modulo;
+
+            while (dividend > 0)
+            {
+                modulo = (dividend - 1) % 26;
+                columnName = Convert.ToChar(65 + modulo).ToString() + columnName;
+                dividend = (int)((dividend - modulo) / 26);
+            }
+
+            return columnName;
         }
         
         /// <inheritdoc/>
