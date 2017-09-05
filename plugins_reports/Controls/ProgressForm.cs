@@ -12,23 +12,20 @@ using System.Windows.Forms;
 
 namespace Reports.Controls
 {
-    public partial class WaitForm : Form, IProgressControl
+    public partial class ProgressForm : Form, IProgressControl
     {
         private string status;
 
-        public WaitForm()
+        public ProgressForm()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.progressBar1.Style = ProgressBarStyle.Marquee;
         }
 
         public void SetStatus(string text)
         {
-            this.InvokeIfNeeded(() => toolStripStatusLabel1.Text = text);
+            this.InvokeIfNeeded(() => label2.Text = text);
         }
 
         public void SetMaximum(int maximum)
@@ -40,15 +37,6 @@ namespace Reports.Controls
         public void SetProgress(int progress)
         {
             this.InvokeIfNeeded(() => progressBar1.Value = progress);
-        }
-
-        public string Status
-        {
-            get 
-            { 
-                this.InvokeIfNeeded(() => status = toolStripStatusLabel1.Text);
-                return status; 
-            }
         }
     }
 }

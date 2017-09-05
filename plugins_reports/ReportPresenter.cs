@@ -20,7 +20,7 @@ namespace Reports
         private ReportLoader reportLoader;
         private IOperation export;
         private ExcelEngine excelEngine;
-        private WaitForm waitForm;
+        private ProgressForm progressForm;
         private OpenSaveFileForm openSaveFileForm;
         private IMainForm mainForm;
         private Object dialogLock = new object();
@@ -53,8 +53,9 @@ namespace Reports
             if (!worker.IsBusy)
             {
                 mainForm.Disable();
-                waitForm = new WaitForm();
-                waitForm.Show();
+                progressForm = new ProgressForm();
+                progressForm.Owner = (Form)mainForm;
+                progressForm.Show();
                 worker.RunWorkerAsync(e.ParametersValues);
             }
         }
@@ -63,12 +64,12 @@ namespace Reports
         {
             var paramValues = e.Argument as Dictionary<string, string>;
             export.InitParameters(paramValues);
-            e.Result = export.Execute(waitForm);
+            e.Result = export.Execute(progressForm);
         }
 
         private void OnCompleteReport(object sender, RunWorkerCompletedEventArgs e)
         {
-            waitForm.Close();
+            progressForm.Close();
             conn.Dispose();
             IWorkbook workBook = (IWorkbook)e.Result;
             

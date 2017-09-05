@@ -54,7 +54,5 @@ namespace SharedDbWorker
         void SetMaximum(int maximum);
 
         void SetProgress(int progress);
-
-        string Status { get; }
     }
 }

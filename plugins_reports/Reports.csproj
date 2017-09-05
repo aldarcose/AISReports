@@ -111,11 +111,11 @@
     <Compile Include="Controls\VerticalLayoutPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controls\WaitForm.cs">
+    <Compile Include="Controls\ProgressForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controls\WaitForm.Designer.cs">
-      <DependentUpon>WaitForm.cs</DependentUpon>
+    <Compile Include="Controls\ProgressForm.Designer.cs">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ExcelExport.cs" />
     <Compile Include="ExportQuery.cs" />
@@ -152,8 +152,8 @@
     <EmbeddedResource Include="Controls\ParametersForm.resx">
       <DependentUpon>ParametersForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\WaitForm.resx">
-      <DependentUpon>WaitForm.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\ProgressForm.resx">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
