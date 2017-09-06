@@ -14,8 +14,6 @@ namespace Reports.Controls
 {
     public partial class ProgressForm : Form, IProgressControl
     {
-        private string status;
-
         public ProgressForm()
         {
             InitializeComponent();
