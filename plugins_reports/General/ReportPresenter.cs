@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Reports
@@ -23,7 +24,6 @@ namespace Reports
         private ProgressForm progressForm;
         private OpenSaveFileForm openSaveFileForm;
         private IMainForm mainForm;
-        private Object dialogLock = new object();
 
         public ReportPresenter(Connection conn, IReportParametersForm parameters, IMainForm mainForm)
         {
@@ -35,8 +35,15 @@ namespace Reports
             this.worker.DoWork += new DoWorkEventHandler(OnExecuteReport);
             this.worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(OnCompleteReport);
             this.worker.WorkerReportsProgress = true;
-            
-            InitExport();
+
+            var lf = new LoadingForm
+            {
+                WaitForThis = new Task(() =>
+                {
+                    InitExport();
+                })
+            };
+            lf.ShowDialog();
         }
 
         private void InitExport()

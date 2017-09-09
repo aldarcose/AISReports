@@ -89,6 +89,12 @@
     </Compile>
     <Compile Include="Controls\IParameter.cs" />
     <Compile Include="Controls\IReportParametersForm.cs" />
+    <Compile Include="Controls\LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\OpenSaveFileForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,13 +123,13 @@
     <Compile Include="Controls\ProgressForm.Designer.cs">
       <DependentUpon>ProgressForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExcelExport.cs" />
-    <Compile Include="ExportQuery.cs" />
-    <Compile Include="IOperation.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="General\ExcelExport.cs" />
+    <Compile Include="General\ExportQuery.cs" />
+    <Compile Include="General\IOperation.cs" />
+    <Compile Include="Controls\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Controls\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Misc\ReportsLoader.cs" />
@@ -131,9 +137,9 @@
     <Compile Include="Misc\Utils.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReportManager.cs" />
+    <Compile Include="General\ReportManager.cs" />
     <Compile Include="Misc\ReportsSchema.cs" />
-    <Compile Include="ReportPresenter.cs" />
+    <Compile Include="General\ReportPresenter.cs" />
     <EmbeddedResource Include="Controls\Edits\FloatPeriodEdit.resx">
       <DependentUpon>FloatPeriodEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Edits\PeriodEdit.resx">
       <DependentUpon>PeriodEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\OpenSaveFileForm.resx">
       <DependentUpon>OpenSaveFileForm.cs</DependentUpon>
@@ -155,7 +164,7 @@
     <EmbeddedResource Include="Controls\ProgressForm.resx">
       <DependentUpon>ProgressForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Controls\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />

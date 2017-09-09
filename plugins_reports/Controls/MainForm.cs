@@ -23,7 +23,15 @@ namespace Reports
 
         private void InitTreeView()
         {
-            ReportSchema schema = ReportManager.Instance.LoadDbReportSchema();
+            ReportSchema schema = null;
+            var lf = new LoadingForm
+            {
+                WaitForThis = new System.Threading.Tasks.Task(() =>
+                {
+                    schema = ReportManager.Instance.LoadDbReportSchema();
+                })
+            };
+            lf.ShowDialog();
             if (schema == null) return;
             foreach (var folder in schema.Folders)
             {
