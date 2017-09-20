@@ -113,6 +113,12 @@
     <Compile Include="Controls\ParametersForm.Designer.cs">
       <DependentUpon>ParametersForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ReportDesigner\ReportDesignerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportDesigner\ReportDesignerForm.Designer.cs">
+      <DependentUpon>ReportDesignerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\VerticalLayout.cs" />
     <Compile Include="Controls\VerticalLayoutPanel.cs">
       <SubType>Component</SubType>

@@ -42,23 +42,32 @@ namespace Reports
 
     public class Report
     {
+        private int id;
+        private string name;
+        private bool isDesigned;
+        private List<ReportParameter> parameters;
+
         public Report()
         {
-            Parameters = new List<ReportParameter>();
+            this.parameters = new List<ReportParameter>();
         }
 
-        public Report(int id, string name)
+        public Report(int id, string name, bool isDesigned)
             : this()
         {
-            this.Id = id;
-            this.Name = name;
+            this.id = id;
+            this.name = name;
+            this.isDesigned = isDesigned;
         }
 
-        public int Id { get; set; }
+        public int Id { get { return id; } }
 
-        public string Name { get; set; }
+        public string Name { get { return name; } }
 
-        public List<ReportParameter> Parameters { get; set; }
+        /// <summary>Отчет выполнен с помощью мастера отчетов</summary>
+        public bool IsDesigned { get { return isDesigned; } }
+
+        public List<ReportParameter> Parameters { get { return parameters; } }
     }
 
     public class ReportParameter
@@ -79,12 +88,17 @@ namespace Reports
             switch (text)
             {
                 case "date" : return ReportParameterType.Date;
-                case "date_period" : return ReportParameterType.Period;
+                case "date_period" : case "datetime_period" : return ReportParameterType.Period;
                 case "int_period": return ReportParameterType.IntPeriod;
                 case "float_period": return ReportParameterType.FloatPeriod;
                 case "select": return ReportParameterType.Query;
                 case "select2": return ReportParameterType.Enum;
                 case "text": return ReportParameterType.Text;
+                case "boolean": return ReportParameterType.Boolean;
+                case "check": return ReportParameterType.CheckExpression;
+                case "text_period": return ReportParameterType.VarText;
+                case "diagn": return ReportParameterType.Diagn;
+                case "time_period": return ReportParameterType.TimePeriod;
                 default:
                     return ReportParameterType.Unknown;
             }
@@ -118,7 +132,7 @@ namespace Reports
         /// <summary>Дата</summary>
         Date = 1,
 
-        /// <summary>Период</summary>
+        /// <summary>Период между дат</summary>
         Period = 2,
 
         /// <summary>Отрезок целых чисел</summary>
@@ -135,5 +149,37 @@ namespace Reports
 
         /// <summary>Текст</summary>
         Text = 7,
+
+        /// <summary>
+        /// Логический тип
+        /// </summary>
+        /// <remarks>
+        /// Используется в мастере отчетов. Выражения для "True" и "False" разделяются через строку '~|~'.
+        /// </remarks>
+        Boolean = 8,
+
+        /// <summary>
+        /// Выражение
+        /// </summary>
+        /// <remarks>
+        /// Используется в мастере отчетов. Похоже на тип Boolean, с тем лишь отличием что здесь присутствует выражение только 
+        /// при значении "True".
+        /// </remarks>
+        CheckExpression = 9,
+
+        /// <summary>
+        /// Текст с вариантами
+        /// </summary>
+        VarText = 10,
+
+        /// <summary>
+        /// Временной период
+        /// </summary>
+        TimePeriod = 11,
+
+        /// <summary>
+        /// Диагноз по МКБ
+        /// </summary>
+        Diagn = 12,
     }
 }

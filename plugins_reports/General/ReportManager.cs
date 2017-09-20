@@ -30,6 +30,7 @@ namespace Reports
                      , desk
                      , period_xml
                      , 1 as level
+                     , poles_xml is not null as isdesigned
                from  public.stat_tab
                where parent_id = -1
                union all
@@ -39,6 +40,7 @@ namespace Reports
                      , a.desk
                      , a.period_xml
                      , t.level + 1 as level
+                     , a.poles_xml is not null as isdesigned
                from public.stat_tab a
                join t on a.parent_id = t.stat_id
                )
@@ -47,6 +49,7 @@ namespace Reports
                   , level
                   , desk
                   , period_xml
+                  , isdesigned
             from t
             order by hierarchy";
         #endregion
@@ -88,6 +91,7 @@ namespace Reports
                 int id = (int)dbReport.Fields[0];
                 int parent_id = (int)dbReport.Fields[1];
                 int level = (int)dbReport.Fields[2];
+                bool isDesignedReport = (bool)dbReport.Fields[5];
 
                 string paramsText = ParseParameters(paramsData);
                 if (!string.IsNullOrEmpty(paramsText))
@@ -96,7 +100,7 @@ namespace Reports
                     if (paramsText.Equals("NULL") || paramsText.Equals(Environment.NewLine))
                         continue;
 
-                    var report = new Report(id, entryName);
+                    var report = new Report(id, entryName, isDesignedReport);
                     List<ReportParameter> parameters = ParseParameters(paramsText);
                     if (parameters == null) continue;
                     report.Parameters.AddRange(parameters);
@@ -153,11 +157,12 @@ namespace Reports
             
             foreach (XElement el in paramsDoc.Root.Elements("panel"))
             {
-                // Пропуск отчетов сделанных на мастере отчетов
-                if (el.Attribute("sections") != null) return null;
-
                 XAttribute sqlAttr = el.Attribute("sql");
                 string typeText = el.Attribute("type").Value;
+                
+                if (string.IsNullOrEmpty(typeText))
+                    continue;
+
                 ReportParameterType pType = ReportParameter.ParseParameterType(typeText);
                 if (pType == ReportParameterType.Unknown)
                     throw new InvalidOperationException(string.Format("Неизвестный тип параметра: {0}", typeText));

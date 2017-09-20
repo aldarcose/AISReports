@@ -72,12 +72,21 @@ namespace Reports
             Report report = tag as Report;
             if (report != null)
             {
-                var parsForm = new ParametersForm();
-                parsForm.Report = report;
-                parsForm.Text = report.Name;
-                parsForm.Value = new ReportParameterCollection(report.Parameters);
-                var presenter = new ReportPresenter(new Connection(ConnectionParameters.Instance), parsForm, this);
-                parsForm.ShowDialog();
+                var connection = new Connection(ConnectionParameters.Instance);
+                if (!report.IsDesigned)
+                {
+                    var parsForm = new ParametersForm();
+                    parsForm.Report = report;
+                    parsForm.Text = report.Name;
+                    parsForm.Value = new ReportParameterCollection(report.Parameters);
+                    var presenter = new ReportPresenter(connection, parsForm, this);
+                    parsForm.ShowDialog();
+                }
+                else
+                {
+                    var reportDesignerForm = new ReportDesignerForm();
+                    reportDesignerForm.ShowDialog();
+                }
             }
         }
 
