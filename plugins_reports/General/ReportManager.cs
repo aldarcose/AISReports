@@ -30,7 +30,6 @@ namespace Reports
                      , desk
                      , period_xml
                      , 1 as level
-                     , poles_xml is not null as isdesigned
                from  public.stat_tab
                where parent_id = -1
                union all
@@ -40,7 +39,6 @@ namespace Reports
                      , a.desk
                      , a.period_xml
                      , t.level + 1 as level
-                     , a.poles_xml is not null as isdesigned
                from public.stat_tab a
                join t on a.parent_id = t.stat_id
                )
@@ -49,7 +47,6 @@ namespace Reports
                   , level
                   , desk
                   , period_xml
-                  , isdesigned
             from t
             order by hierarchy";
         #endregion
@@ -72,15 +69,15 @@ namespace Reports
             ReportSchema schema = new ReportSchema();
             // Загрузка отчетов
             var dbReports = LoadDbReports();
-            
+
             Dictionary<int, Folder> folders = new Dictionary<int, Folder>();
             Folder tempFolder;
             Func<int, Folder> GetFolder = id =>
-                {
-                    if (!folders.TryGetValue(id, out tempFolder))
-                        return null;
-                    return tempFolder;
-                };
+            {
+                if (!folders.TryGetValue(id, out tempFolder))
+                    return null;
+                return tempFolder;
+            };
 
             foreach (var dbReport in dbReports)
             {
@@ -91,20 +88,23 @@ namespace Reports
                 int id = (int)dbReport.Fields[0];
                 int parent_id = (int)dbReport.Fields[1];
                 int level = (int)dbReport.Fields[2];
-                bool isDesignedReport = (bool)dbReport.Fields[5];
 
-                string paramsText = ParseParameters(paramsData);
+                string paramsText = GetStringParameters(paramsData);
                 if (!string.IsNullOrEmpty(paramsText))
                 {
                     // Пропуск пустых отчетов
                     if (paramsText.Equals("NULL") || paramsText.Equals(Environment.NewLine))
                         continue;
 
-                    var report = new Report(id, entryName, isDesignedReport);
-                    List<ReportParameter> parameters = ParseParameters(paramsText);
-                    if (parameters == null) continue;
-                    report.Parameters.AddRange(parameters);
+                    bool isDesignedReport = false;
+                    var report = new Report(id, entryName);
+                    List<ReportParameter> parameters = ParseParameters(paramsText, ref isDesignedReport);
+                    if (parameters == null)
+                        continue;
                     
+                    report.IsDesigned = isDesignedReport;
+                    report.Parameters.AddRange(parameters);
+
                     if (level == 1)
                         schema.Reports.Add(report);
                     else
@@ -121,7 +121,7 @@ namespace Reports
                     folders[id] = folder;
                 }
             }
-            
+
             // Корневые папки
             foreach (Folder fldr in folders.Values)
             {
@@ -131,14 +131,14 @@ namespace Reports
             return schema;
         }
 
-        private string ParseParameters(object paramsData)
+        private string GetStringParameters(object paramsData)
         {
             if (paramsData == DBNull.Value) return null;
             var byteArray = (byte[])paramsData;
             return Encoding.UTF8.GetString(byteArray);
         }
 
-        private List<ReportParameter> ParseParameters(string paramsText)
+        private List<ReportParameter> ParseParameters(string paramsText, ref bool isDesignedReport)
         {
             var result = new List<ReportParameter>();
             XDocument paramsDoc = null;
@@ -146,7 +146,7 @@ namespace Reports
             {
                 paramsDoc = XDocument.Parse(paramsText);
             }
-            catch(Exception)
+            catch (Exception)
             {
                 // workaround: Data at the root level is invalid. Line 1, position 1
                 string byteOrderMarkUtf8 = Encoding.UTF8.GetString(Encoding.UTF8.GetPreamble());
@@ -154,23 +154,42 @@ namespace Reports
                     paramsText = paramsText.Remove(0, byteOrderMarkUtf8.Length);
                 paramsDoc = XDocument.Parse(paramsText);
             }
-            
+
+            XElement firstElement = paramsDoc.Root.Elements("panel").FirstOrDefault();
+            isDesignedReport = firstElement != null ? firstElement.Attribute("sections") != null : false;
+
             foreach (XElement el in paramsDoc.Root.Elements("panel"))
             {
                 XAttribute sqlAttr = el.Attribute("sql");
                 string typeText = el.Attribute("type").Value;
-                
                 if (string.IsNullOrEmpty(typeText))
+                {
+                    if (isDesignedReport)
+                        result.Add(new ReportParameter(null, el.Attribute("title").Value, ReportParameterType.Unknown, null));
                     continue;
+                }
+
+                var groupNameAttribute = el.Attribute("groupName");
+                string groupName = isDesignedReport && groupNameAttribute != null ? groupNameAttribute.Value : null;
+                string comparedExpr = isDesignedReport ? el.Attribute("define").Value : null;
 
                 ReportParameterType pType = ReportParameter.ParseParameterType(typeText);
                 if (pType == ReportParameterType.Unknown)
                     throw new InvalidOperationException(string.Format("Неизвестный тип параметра: {0}", typeText));
-                result.Add(new ReportParameter(
-                    el.Attribute("name").Value,
-                    el.Attribute("title").Value,
-                    pType, sqlAttr != null ? el.Attribute("sql").Value : null));
+
+                var parameter = isDesignedReport ? 
+                    new ReportParameter(
+                        el.Attribute("name").Value, 
+                        el.Attribute("title").Value, 
+                        pType, sqlAttr != null ? el.Attribute("sql").Value : null, groupName, comparedExpr) :
+                    new ReportParameter(
+                        el.Attribute("name").Value, 
+                        el.Attribute("title").Value,
+                        pType, sqlAttr != null ? el.Attribute("sql").Value : null);
+
+                result.Add(parameter);
             }
+
             return result;
         }
     }

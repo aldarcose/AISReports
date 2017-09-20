@@ -73,18 +73,19 @@ namespace Reports
             if (report != null)
             {
                 var connection = new Connection(ConnectionParameters.Instance);
+                var paramerCollection = new ReportParameterCollection(report.Parameters);
                 if (!report.IsDesigned)
                 {
                     var parsForm = new ParametersForm();
                     parsForm.Report = report;
                     parsForm.Text = report.Name;
-                    parsForm.Value = new ReportParameterCollection(report.Parameters);
+                    parsForm.Value = paramerCollection;
                     var presenter = new ReportPresenter(connection, parsForm, this);
                     parsForm.ShowDialog();
                 }
                 else
                 {
-                    var reportDesignerForm = new ReportDesignerForm();
+                    var reportDesignerForm = new ReportDesignerForm(paramerCollection);
                     reportDesignerForm.ShowDialog();
                 }
             }

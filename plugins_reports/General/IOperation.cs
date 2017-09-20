@@ -8,7 +8,7 @@ namespace Reports
     {
         IWorkbook Execute(IProgressControl pc);
 
-        void SetQueries(List<ExportQuery> list);
+        void SetQueries(List<ReportQuery> list);
 
         void InitParameters(Dictionary<string, string> paramValues);
     }

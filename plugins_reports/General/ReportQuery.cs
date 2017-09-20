@@ -6,7 +6,7 @@ using SharedDbWorker.Classes;
 
 namespace Reports
 {
-    public class ExportQuery
+    public class ReportQuery
     {
         private Dictionary<string, string> globalParameters = new Dictionary<string, string>();
         private Dictionary<string, string> localParameters = new Dictionary<string, string>();
@@ -21,9 +21,9 @@ namespace Reports
         private List<string> fieldNames;
 
         /// <summary>Название</summary>
-        public string Name 
-        { 
-            get { return name; } 
+        public string Name
+        {
+            get { return name; }
         }
 
         /// <summary>Тело запроса</summary>
@@ -71,7 +71,7 @@ namespace Reports
             this.innerSQL = innerSQL.Replace(key, value);
         }
 
-        public ExportQuery(string rawSQL, List<ExportQuery> previousQueries)
+        public ReportQuery(string rawSQL, List<ReportQuery> previousQueries)
         {
             this.rawSQL = NormalizeSQL(rawSQL);
             ParseSQL(previousQueries);
@@ -97,27 +97,27 @@ namespace Reports
             return isFunc ? result.Substring(0, result.IndexOf("(")) : result;
         }
 
-        private void ParseSQL(List<ExportQuery> previousQueries)
+        private void ParseSQL(List<ReportQuery> previousQueries)
         {
             if (rawSQL.IndexOf(";") > 0)
             {
                 this.nonQuery = true;
                 this.name = rawSQL.Split(' ').First();
                 this.innerSQL = rawSQL.Replace(name, string.Empty);
-            } 
+            }
             else if (rawSQL.IndexOf("select", StringComparison.InvariantCultureIgnoreCase) >= 0)
             {
                 this.innerSQL = rawSQL.Substring(rawSQL.IndexOf("select",
                     StringComparison.InvariantCultureIgnoreCase));
                 this.name = GetQueryPrefix(rawSQL, "select");
                 this.fieldNames = SqlParser.ParseSqlFields(innerSQL);
-               
+
                 if (fieldNames.Count > 1)
                 {
                     // Первое поле запроса имеет название самого запроса
                     fieldNames[0] = name;
                 }
-                else if  (fieldNames.Count == 1)
+                else if (fieldNames.Count == 1)
                 {
                     this.isScalar = true;
                 }
@@ -184,8 +184,8 @@ namespace Reports
 
         public object ExecuteScalarSQL(
             Connection conn,
-            List<string> additionalParamNames, 
-            List<object> additionalParamValues, 
+            List<string> additionalParamNames,
+            List<object> additionalParamValues,
             params string[] localParameterValues)
         {
             string savedInnerSql = innerSQL;
@@ -197,7 +197,7 @@ namespace Reports
                 }
                 else if (localParameterNames.Count == 1)
                 {
-                    SetParameter(localParameterNames[0], 
+                    SetParameter(localParameterNames[0],
                         string.Join(",", localParameterValues).Trim('"'), true);
                 }
                 else
@@ -229,7 +229,7 @@ namespace Reports
         }
 
         public List<DbResult> SelectSimple(
-            Connection conn, IProgressControl pc, 
+            Connection conn, IProgressControl pc,
             params string[] localParameterValues)
         {
             string savedInnerSql = innerSQL;

@@ -44,7 +44,6 @@ namespace Reports
     {
         private int id;
         private string name;
-        private bool isDesigned;
         private List<ReportParameter> parameters;
 
         public Report()
@@ -52,12 +51,11 @@ namespace Reports
             this.parameters = new List<ReportParameter>();
         }
 
-        public Report(int id, string name, bool isDesigned)
+        public Report(int id, string name)
             : this()
         {
             this.id = id;
             this.name = name;
-            this.isDesigned = isDesigned;
         }
 
         public int Id { get { return id; } }
@@ -65,22 +63,41 @@ namespace Reports
         public string Name { get { return name; } }
 
         /// <summary>Отчет выполнен с помощью мастера отчетов</summary>
-        public bool IsDesigned { get { return isDesigned; } }
+        public bool IsDesigned { get; set; }
 
         public List<ReportParameter> Parameters { get { return parameters; } }
     }
 
     public class ReportParameter
     {
-        public ReportParameter() { }
+        private string name;
+        private string caption;
+        private ReportParameterType type;
+        private string sql;
+        private string groupName;
+        private string comparedExpression;
+
 
         public ReportParameter(
-            string name, string caption, ReportParameterType type, string sql) 
+            string name, string caption, 
+            ReportParameterType type, 
+            string sql) 
         {
-            this.Name = name;
-            this.Caption = caption;
-            this.Type = type;
-            this.Sql = sql;
+            this.name = name;
+            this.caption = caption;
+            this.type = type;
+            this.sql = sql;
+        }
+
+        public ReportParameter(
+            string name, string caption, 
+            ReportParameterType type, 
+            string sql, string groupName, 
+            string comparedExpression)
+            : this(name, caption, type, sql)
+        {
+            this.groupName = groupName;
+            this.comparedExpression = comparedExpression;
         }
 
         public static ReportParameterType ParseParameterType(string text)
@@ -104,13 +121,35 @@ namespace Reports
             }
         }
 
-        public string Name { get; set; }
+        public string Name 
+        { 
+            get { return name; } 
+        }
 
-        public string Caption { get; set; }
+        public string Caption 
+        {
+            get { return caption; } 
+        }
 
-        public ReportParameterType Type { get; set; }
+        public ReportParameterType Type 
+        { 
+            get { return type; } 
+        }
 
-        public string Sql { get; set; }
+        public string Sql 
+        { 
+            get { return sql; } 
+        }
+
+        public string GroupName 
+        { 
+            get { return groupName; } 
+        }
+
+        public string ComparedExpression 
+        { 
+            get { return comparedExpression; } 
+        }
     }
 
     public class ReportParameterCollection : List<ReportParameter>

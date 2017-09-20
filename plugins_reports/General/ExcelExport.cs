@@ -14,7 +14,7 @@ namespace Reports
     /// </summary>
     public class ExcelExport : IOperation
     {
-        private List<ExportQuery> queries;
+        private List<ReportQuery> queries;
         private IWorkbook workBook;
         private Dictionary<string, string> paramValues;
         private Connection conn;
@@ -25,9 +25,9 @@ namespace Reports
             this.workBook = workBook;
         }
 
-        public void SetQueries(List<ExportQuery> list)
+        public void SetQueries(List<ReportQuery> list)
         {
-            queries = new List<ExportQuery>();
+            queries = new List<ReportQuery>();
             queries.AddRange(list);
         }
 
@@ -54,7 +54,7 @@ namespace Reports
             cell.Value = result;
         }
 
-        private ExportQuery FindQuery(string text)
+        private ReportQuery FindQuery(string text)
         {
             var chuncks = text.TrimStart('#').Split('(');
             return queries.FirstOrDefault(q => q.Name.Equals(chuncks[0]));
@@ -129,7 +129,7 @@ namespace Reports
         }
 
         private int ProcessWorkSheetList(
-            IProgressControl pc, IWorksheet sheet, ExportQuery query,
+            IProgressControl pc, IWorksheet sheet, ReportQuery query,
             params string[] localParameterValues)
         {
             pc.SetStatus("Инициализация запроса...");

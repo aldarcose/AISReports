@@ -65,8 +65,10 @@
             this.groupBox1.Controls.Add(this.splitContainer1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1022, 494);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1363, 608);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Условия выборки";
@@ -74,7 +76,8 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(3, 16);
+            this.splitContainer1.Location = new System.Drawing.Point(4, 19);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -84,8 +87,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.parametersGridView);
-            this.splitContainer1.Size = new System.Drawing.Size(1016, 475);
-            this.splitContainer1.SplitterDistance = 384;
+            this.splitContainer1.Size = new System.Drawing.Size(1355, 585);
+            this.splitContainer1.SplitterDistance = 512;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -97,20 +101,22 @@
             this.tableLayoutPanel1.Controls.Add(this.parametersTreeView, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(384, 475);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(512, 585);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // closeButton
             // 
             this.closeButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.closeButton.Location = new System.Drawing.Point(3, 437);
+            this.closeButton.Location = new System.Drawing.Point(4, 538);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(378, 35);
+            this.closeButton.Size = new System.Drawing.Size(504, 43);
             this.closeButton.TabIndex = 1;
             this.closeButton.Text = "Закрыть";
             this.closeButton.UseVisualStyleBackColor = true;
@@ -119,9 +125,10 @@
             // nextButton
             // 
             this.nextButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nextButton.Location = new System.Drawing.Point(3, 397);
+            this.nextButton.Location = new System.Drawing.Point(4, 488);
+            this.nextButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(378, 34);
+            this.nextButton.Size = new System.Drawing.Size(504, 42);
             this.nextButton.TabIndex = 0;
             this.nextButton.Text = "Далее >>";
             this.nextButton.UseVisualStyleBackColor = true;
@@ -130,9 +137,10 @@
             // parametersTreeView
             // 
             this.parametersTreeView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parametersTreeView.Location = new System.Drawing.Point(3, 3);
+            this.parametersTreeView.Location = new System.Drawing.Point(4, 4);
+            this.parametersTreeView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.parametersTreeView.Name = "parametersTreeView";
-            this.parametersTreeView.Size = new System.Drawing.Size(378, 388);
+            this.parametersTreeView.Size = new System.Drawing.Size(504, 476);
             this.parametersTreeView.TabIndex = 0;
             // 
             // parametersGridView
@@ -140,8 +148,9 @@
             this.parametersGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.parametersGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.parametersGridView.Location = new System.Drawing.Point(0, 0);
+            this.parametersGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.parametersGridView.Name = "parametersGridView";
-            this.parametersGridView.Size = new System.Drawing.Size(628, 475);
+            this.parametersGridView.Size = new System.Drawing.Size(838, 585);
             this.parametersGridView.TabIndex = 0;
             // 
             // groupBox2
@@ -149,8 +158,10 @@
             this.groupBox2.Controls.Add(this.splitContainer2);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1022, 494);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(1363, 608);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Поля в результирущей выборке";
@@ -158,7 +169,8 @@
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(3, 16);
+            this.splitContainer2.Location = new System.Drawing.Point(4, 19);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer2.Name = "splitContainer2";
             // 
             // splitContainer2.Panel1
@@ -168,8 +180,9 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.fieldsGridView);
-            this.splitContainer2.Size = new System.Drawing.Size(1016, 475);
-            this.splitContainer2.SplitterDistance = 338;
+            this.splitContainer2.Size = new System.Drawing.Size(1355, 585);
+            this.splitContainer2.SplitterDistance = 440;
+            this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -183,6 +196,7 @@
             this.tableLayoutPanel2.Controls.Add(this.fieldsTreeView, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -190,15 +204,16 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(338, 475);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(440, 585);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // showQueryButton
             // 
             this.showQueryButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.showQueryButton.Location = new System.Drawing.Point(3, 314);
+            this.showQueryButton.Location = new System.Drawing.Point(4, 385);
+            this.showQueryButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.showQueryButton.Name = "showQueryButton";
-            this.showQueryButton.Size = new System.Drawing.Size(332, 35);
+            this.showQueryButton.Size = new System.Drawing.Size(432, 43);
             this.showQueryButton.TabIndex = 0;
             this.showQueryButton.Text = "Запрос";
             this.showQueryButton.UseVisualStyleBackColor = true;
@@ -206,9 +221,10 @@
             // previousButton
             // 
             this.previousButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.previousButton.Location = new System.Drawing.Point(3, 355);
+            this.previousButton.Location = new System.Drawing.Point(4, 436);
+            this.previousButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.previousButton.Name = "previousButton";
-            this.previousButton.Size = new System.Drawing.Size(332, 35);
+            this.previousButton.Size = new System.Drawing.Size(432, 43);
             this.previousButton.TabIndex = 1;
             this.previousButton.Text = "<< Назад";
             this.previousButton.UseVisualStyleBackColor = true;
@@ -217,9 +233,10 @@
             // buttonOK
             // 
             this.buttonOK.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonOK.Location = new System.Drawing.Point(3, 396);
+            this.buttonOK.Location = new System.Drawing.Point(4, 487);
+            this.buttonOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(332, 35);
+            this.buttonOK.Size = new System.Drawing.Size(432, 43);
             this.buttonOK.TabIndex = 2;
             this.buttonOK.Text = "Создать отчет";
             this.buttonOK.UseVisualStyleBackColor = true;
@@ -227,9 +244,10 @@
             // closeButton2
             // 
             this.closeButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.closeButton2.Location = new System.Drawing.Point(3, 437);
+            this.closeButton2.Location = new System.Drawing.Point(4, 538);
+            this.closeButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.closeButton2.Name = "closeButton2";
-            this.closeButton2.Size = new System.Drawing.Size(332, 35);
+            this.closeButton2.Size = new System.Drawing.Size(432, 43);
             this.closeButton2.TabIndex = 3;
             this.closeButton2.Text = "Закрыть";
             this.closeButton2.UseVisualStyleBackColor = true;
@@ -238,9 +256,10 @@
             // fieldsTreeView
             // 
             this.fieldsTreeView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fieldsTreeView.Location = new System.Drawing.Point(3, 3);
+            this.fieldsTreeView.Location = new System.Drawing.Point(4, 4);
+            this.fieldsTreeView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fieldsTreeView.Name = "fieldsTreeView";
-            this.fieldsTreeView.Size = new System.Drawing.Size(332, 305);
+            this.fieldsTreeView.Size = new System.Drawing.Size(432, 373);
             this.fieldsTreeView.TabIndex = 4;
             // 
             // fieldsGridView
@@ -248,17 +267,19 @@
             this.fieldsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.fieldsGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fieldsGridView.Location = new System.Drawing.Point(0, 0);
+            this.fieldsGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fieldsGridView.Name = "fieldsGridView";
-            this.fieldsGridView.Size = new System.Drawing.Size(674, 475);
+            this.fieldsGridView.Size = new System.Drawing.Size(910, 585);
             this.fieldsGridView.TabIndex = 0;
             // 
             // ReportDesignerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1022, 494);
+            this.ClientSize = new System.Drawing.Size(1363, 608);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ReportDesignerForm";
             this.Text = "Параметры";
             this.Load += new System.EventHandler(this.Form1_Load);

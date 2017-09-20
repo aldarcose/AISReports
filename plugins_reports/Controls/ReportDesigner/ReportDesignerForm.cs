@@ -14,12 +14,40 @@ namespace Reports.Controls
     /// </summary>
     public partial class ReportDesignerForm : Form
     {
-        List<GroupBox> groupList = new List<GroupBox>();
-        int index;
+        private List<GroupBox> groupList = new List<GroupBox>();
+        private int index;
+        private ReportParameterCollection parameters;
 
-        public ReportDesignerForm()
+        public ReportDesignerForm(ReportParameterCollection parameters)
         {
             InitializeComponent();
+            this.parameters = parameters;
+
+            InitParametersTreeView();
+        }
+
+        private void InitParametersTreeView()
+        {
+            foreach (var parameterGroup in parameters.Where(p => string.IsNullOrEmpty(p.Name)))
+            {
+                TreeNode parameterGroupNode = new TreeNode(parameterGroup.Caption);
+                parametersTreeView.Nodes.Add(parameterGroupNode);
+                PopulateParametersTreeView(parameterGroup.Caption,
+                    parameters.Where(p => p.GroupName == parameterGroup.Caption),
+                    parameterGroupNode);
+            }
+        }
+
+        private void PopulateParametersTreeView(
+            string groupName, IEnumerable<ReportParameter> groupParameters, TreeNode nodeToAdd)
+        {
+            TreeNode parameterTreeNode;
+            foreach (var parameter in groupParameters)
+            {
+                parameterTreeNode = new TreeNode(parameter.Caption);
+                parameterTreeNode.Tag = parameters;
+                nodeToAdd.Nodes.Add(parameterTreeNode);
+            }
         }
 
         private void nextButton_Click(object sender, EventArgs e)

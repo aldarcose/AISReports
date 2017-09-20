@@ -52,7 +52,7 @@ namespace Reports
             reportLoader = new ReportLoader(excelEngine);
             reportLoader.Load(parameters.Report.Id);
             export = new ExcelExport(conn, reportLoader.WorkBook);
-            export.SetQueries(reportLoader.ExportQueries);
+            export.SetQueries(reportLoader.ReportQueries);
         }
 
         private void view_OK(object sender, ParametersValuesEventArgs e)
@@ -79,7 +79,7 @@ namespace Reports
             progressForm.Close();
             conn.Dispose();
             IWorkbook workBook = (IWorkbook)e.Result;
-            
+
             mainForm.Enable();
 
             openSaveFileForm = new OpenSaveFileForm(workBook);
