@@ -139,6 +139,10 @@ namespace Reports.Controls
                             result[string.Format(":{0}_1_:", par.Name)] = new Tuple<string, object>(enumText, text);
                             result[string.Format(":{0}_2_:", par.Name)] = new Tuple<string, object>(enumText, text);
                             break;
+                        case ReportParameterType.VarText:
+                            var varText = (Tuple<ComparisonType, string>)value;
+                            result[string.Format(":{0}_1_:", par.Name)] = new Tuple<string, object>(null, varText);
+                            break;
                     }
                 }
                 else 

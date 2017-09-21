@@ -99,7 +99,7 @@ namespace Reports.Controls
                         {
                             var firstParameterValue = parameterValues.First();
                             object value = firstParameterValue.Value.Item2;
-                            parametersVM.Add(new ParameterViewModel(parameter, object));
+                            parametersVM.Add(new ParameterViewModel(parameter, value));
                         }
                     };
                     parameterForm.ShowDialog();
@@ -210,7 +210,13 @@ namespace Reports.Controls
                 case ReportParameterType.Enum:
                 case ReportParameterType.Text:
                 case ReportParameterType.VarText:
-                    return value.ToString();
+                    var varText = (Tuple<ComparisonType, string>)value;
+                    ComparisonType compType = varText.Item1;
+                    string text = varText.Item2;
+                    string description = Utils.GetEnumDescription(compType);
+                    if (compType == ComparisonType.IsEmpty || compType == ComparisonType.IsNotEmty)
+                        return description;
+                    return string.Format("{0} {1}", description, text);
                 case ReportParameterType.Boolean:
                     return (bool)value ? "Да" : "Нет";
                 case ReportParameterType.Date :

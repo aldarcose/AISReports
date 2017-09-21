@@ -87,6 +87,12 @@
     <Compile Include="Controls\Edits\PeriodEdit.Designer.cs">
       <DependentUpon>PeriodEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Edits\VarTextEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Edits\VarTextEdit.Designer.cs">
+      <DependentUpon>VarTextEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\IParameter.cs" />
     <Compile Include="Controls\IReportParametersForm.cs" />
     <Compile Include="Controls\LoadingForm.cs">
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Edits\PeriodEdit.resx">
       <DependentUpon>PeriodEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Edits\VarTextEdit.resx">
+      <DependentUpon>VarTextEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>

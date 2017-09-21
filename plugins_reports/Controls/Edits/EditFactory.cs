@@ -23,6 +23,7 @@ namespace Reports.Controls
                 case ReportParameterType.FloatPeriod: return new FloatPeriodEdit();
                 case ReportParameterType.Period: return new PeriodEdit();
                 case ReportParameterType.Text: return new TextBox();
+                case ReportParameterType.VarText: return new VarTextEdit();
                 case ReportParameterType.Boolean: return new CheckBox();
                 case ReportParameterType.TimePeriod :
                     var edit = new PeriodEdit(); edit.SetFormat(DateTimePickerFormat.Time);
