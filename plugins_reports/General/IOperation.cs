@@ -1,5 +1,6 @@
 ﻿using SharedDbWorker;
 using Syncfusion.XlsIO;
+using System;
 using System.Collections.Generic;
 
 namespace Reports
@@ -10,6 +11,6 @@ namespace Reports
 
         void SetQueries(List<ReportQuery> list);
 
-        void InitParameters(Dictionary<string, string> paramValues);
+        void InitParameters(Dictionary<string, Tuple<string, object>> paramValues);
     }
 }

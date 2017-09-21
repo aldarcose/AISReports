@@ -12,6 +12,12 @@ namespace Reports.Controls
             InitializeComponent();
         }
 
+        public void SetFormat(DateTimePickerFormat format)
+        {
+            dateInEdit.Format = format;
+            dateOutEdit.Format = format;
+        }
+
         /// <summary>Дата с</summary>
         public DateTime DateIn
         {

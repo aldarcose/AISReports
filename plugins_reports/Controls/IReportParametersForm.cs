@@ -13,15 +13,15 @@ namespace Reports
 
     public class ParametersValuesEventArgs : EventArgs
     {
-        private Dictionary<string, string> parametersValues;
+        private Dictionary<string, Tuple<string, object>> parametersValues;
 
         public ParametersValuesEventArgs(
-            Dictionary<string, string> parametersValues)
+            Dictionary<string, Tuple<string, object>> parametersValues)
         {
             this.parametersValues = parametersValues;
         }
 
-        public Dictionary<string, string> ParametersValues
+        public Dictionary<string, Tuple<string, object>> ParametersValues
         {
             get { return parametersValues; }
         }

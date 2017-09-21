@@ -76,7 +76,7 @@ namespace Reports
         private string sql;
         private string groupName;
         private string comparedExpression;
-
+        private List<string> tables;
 
         public ReportParameter(
             string name, string caption, 
@@ -93,11 +93,12 @@ namespace Reports
             string name, string caption, 
             ReportParameterType type, 
             string sql, string groupName, 
-            string comparedExpression)
+            string comparedExpression, string sections)
             : this(name, caption, type, sql)
         {
             this.groupName = groupName;
             this.comparedExpression = comparedExpression;
+            this.tables = new List<string>(sections.Split(';'));
         }
 
         public static ReportParameterType ParseParameterType(string text)
@@ -111,9 +112,9 @@ namespace Reports
                 case "select": return ReportParameterType.Query;
                 case "select2": return ReportParameterType.Enum;
                 case "text": return ReportParameterType.Text;
+                case "text_period": return ReportParameterType.VarText;
                 case "boolean": return ReportParameterType.Boolean;
                 case "check": return ReportParameterType.CheckExpression;
-                case "text_period": return ReportParameterType.VarText;
                 case "diagn": return ReportParameterType.Diagn;
                 case "time_period": return ReportParameterType.TimePeriod;
                 default:
@@ -150,6 +151,11 @@ namespace Reports
         { 
             get { return comparedExpression; } 
         }
+
+        public List<string> Tables
+        {
+            get { return tables; }
+        }
     }
 
     public class ReportParameterCollection : List<ReportParameter>
@@ -157,6 +163,11 @@ namespace Reports
         public ReportParameterCollection(IList<ReportParameter> list)
             : base(list) 
         { 
+        }
+
+        public ReportParameterCollection(ReportParameter parameter)
+            : base(new List<ReportParameter>() { parameter })
+        {
         }
     }
 

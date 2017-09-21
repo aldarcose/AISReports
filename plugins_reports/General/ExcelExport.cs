@@ -16,7 +16,7 @@ namespace Reports
     {
         private List<ReportQuery> queries;
         private IWorkbook workBook;
-        private Dictionary<string, string> paramValues;
+        private Dictionary<string, Tuple<string, object>> paramValues;
         private Connection conn;
 
         public ExcelExport(Connection conn, IWorkbook workBook)
@@ -31,7 +31,7 @@ namespace Reports
             queries.AddRange(list);
         }
 
-        public void InitParameters(Dictionary<string, string> paramValues)
+        public void InitParameters(Dictionary<string, Tuple<string, object>> paramValues)
         {
             if (queries == null)
                 throw new InvalidOperationException("Queries is null");
@@ -39,7 +39,7 @@ namespace Reports
             {
                 if (string.IsNullOrEmpty(eQuery.InnerSql)) continue;
                 foreach (var pair in paramValues)
-                    eQuery.SetParameter(pair.Key, pair.Value);
+                    eQuery.SetParameter(pair.Key, pair.Value.Item1);
             }
             this.paramValues = paramValues;
         }
@@ -50,7 +50,7 @@ namespace Reports
             if (result.StartsWith("=")) return;
             foreach (var paramPair in paramValues)
                 if (result.IndexOf(paramPair.Key) >= 0)
-                    result = result.Replace(paramPair.Key, paramPair.Value);
+                    result = result.Replace(paramPair.Key, paramPair.Value.Item1);
             cell.Value = result;
         }
 

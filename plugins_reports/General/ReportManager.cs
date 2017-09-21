@@ -172,6 +172,7 @@ namespace Reports
                 var groupNameAttribute = el.Attribute("groupName");
                 string groupName = isDesignedReport && groupNameAttribute != null ? groupNameAttribute.Value : null;
                 string comparedExpr = isDesignedReport ? el.Attribute("define").Value : null;
+                string sections = isDesignedReport ? el.Attribute("sections").Value : null;
 
                 ReportParameterType pType = ReportParameter.ParseParameterType(typeText);
                 if (pType == ReportParameterType.Unknown)
@@ -180,8 +181,8 @@ namespace Reports
                 var parameter = isDesignedReport ? 
                     new ReportParameter(
                         el.Attribute("name").Value, 
-                        el.Attribute("title").Value, 
-                        pType, sqlAttr != null ? el.Attribute("sql").Value : null, groupName, comparedExpr) :
+                        el.Attribute("title").Value,
+                        pType, sqlAttr != null ? el.Attribute("sql").Value : null, groupName, comparedExpr, sections) :
                     new ReportParameter(
                         el.Attribute("name").Value, 
                         el.Attribute("title").Value,

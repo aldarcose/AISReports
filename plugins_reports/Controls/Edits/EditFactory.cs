@@ -15,7 +15,7 @@ namespace Reports.Controls
             if (parameter == null)
                 throw new ArgumentNullException("parameter");
 
-            ComboBoxEdit edit;
+            ComboBoxEdit comboBoxEdit;
             switch(parameter.Type)
             {
                 case ReportParameterType.Date: return new DateTimePicker();
@@ -23,10 +23,14 @@ namespace Reports.Controls
                 case ReportParameterType.FloatPeriod: return new FloatPeriodEdit();
                 case ReportParameterType.Period: return new PeriodEdit();
                 case ReportParameterType.Text: return new TextBox();
+                case ReportParameterType.Boolean: return new CheckBox();
+                case ReportParameterType.TimePeriod :
+                    var edit = new PeriodEdit(); edit.SetFormat(DateTimePickerFormat.Time);
+                    return edit;
                 case ReportParameterType.Query :
-                    edit = new ComboBoxEdit();
-                    edit.QuerySql = parameter.Sql;
-                    edit.ItemToText = o =>
+                    comboBoxEdit = new ComboBoxEdit();
+                    comboBoxEdit.QuerySql = parameter.Sql;
+                    comboBoxEdit.ItemToText = o =>
                         {
                             var result = (DbResult)o;
                             var obj = result.Fields[1];
@@ -34,17 +38,17 @@ namespace Reports.Controls
                                 return string.Empty;
                             return obj.ToString();
                         };
-                    edit.DoQuery();
-                    return edit;
+                    comboBoxEdit.DoQuery();
+                    return comboBoxEdit;
                 case ReportParameterType.Enum:
-                    edit = new ComboBoxEdit();
+                    comboBoxEdit = new ComboBoxEdit();
                     List<object> list = new List<object>();
                     var chuncks = parameter.Sql.Split(new string[] { "|" },
                         StringSplitOptions.RemoveEmptyEntries);
                     foreach (string s in chuncks)
                         list.Add(s);
 
-                    edit.ItemToText = o =>
+                    comboBoxEdit.ItemToText = o =>
                     {
                         string text = (string)o;
                         if (!string.IsNullOrEmpty(text))
@@ -52,8 +56,8 @@ namespace Reports.Controls
                                 text.Length - text.IndexOf("=") - 1);
                         return string.Empty;
                     };
-                    edit.SetObjects(list);
-                    return edit;
+                    comboBoxEdit.SetObjects(list);
+                    return comboBoxEdit;
             }
 
             throw new InvalidOperationException(

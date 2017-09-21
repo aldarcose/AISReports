@@ -93,10 +93,10 @@ namespace Reports.Controls
             }
         }
 
-        public Dictionary<string, string> GetParametersValues()
+        public Dictionary<string, Tuple<string, object>> GetParametersValues()
         {
             if (parametersData == null) return null;
-            var result = new Dictionary<string, string>();
+            var result = new Dictionary<string, Tuple<string, object>>();
             
             foreach (var par in parametersData)
             {
@@ -108,23 +108,27 @@ namespace Reports.Controls
                     {
                         case ReportParameterType.Period:
                             var datePeriod = (Tuple<DateTime, DateTime>)value;
-                            result[string.Format(":{0}_1_:", par.Name)] = string.Format("{0:yyyy-MM-dd}", datePeriod.Item1);
-                            result[string.Format(":{0}_2_:", par.Name)] = string.Format("{0:yyyy-MM-dd}", datePeriod.Item2);
+                            result[string.Format(":{0}_1_:", par.Name)] = new Tuple<string, object>(string.Format("{0:yyyy-MM-dd}", datePeriod.Item1), datePeriod);
+                            result[string.Format(":{0}_2_:", par.Name)] = new Tuple<string, object>(string.Format("{0:yyyy-MM-dd}", datePeriod.Item2), datePeriod);
+                            break;
+                        case ReportParameterType.TimePeriod:
+                            var timePeriod = (Tuple<DateTime, DateTime>)value;
+                            result[string.Format(":{0}_1_:", par.Name)] = new Tuple<string, object>(null, timePeriod);
                             break;
                         case ReportParameterType.FloatPeriod:
                             var floatPeriod = (Tuple<decimal, decimal>)value;
-                            result[string.Format(":{0}_1_:", par.Name)] = floatPeriod.Item1.ToString();
-                            result[string.Format(":{0}_2_:", par.Name)] = floatPeriod.Item2.ToString();
+                            result[string.Format(":{0}_1_:", par.Name)] = new Tuple<string, object>(floatPeriod.Item1.ToString(), floatPeriod);
+                            result[string.Format(":{0}_2_:", par.Name)] = new Tuple<string, object>(floatPeriod.Item2.ToString(), floatPeriod);
                             break;
                         case ReportParameterType.IntPeriod:
                             var intPeriod = (Tuple<int, int>)value;
-                            result[string.Format(":{0}_1_:", par.Name)] = intPeriod.Item1.ToString();
-                            result[string.Format(":{0}_2_:", par.Name)] = intPeriod.Item2.ToString();
+                            result[string.Format(":{0}_1_:", par.Name)] = new Tuple<string, object>(intPeriod.Item1.ToString(), intPeriod);
+                            result[string.Format(":{0}_2_:", par.Name)] = new Tuple<string, object>(intPeriod.Item2.ToString(), intPeriod);
                             break;
                         case ReportParameterType.Query:
                             var dbResult = (DbResult)value;
-                            result[string.Format(":{0}_1_:", par.Name)] = dbResult.Fields[0].ToString();
-                            result[string.Format(":{0}_2_:", par.Name)] = dbResult.Fields[1].ToString();
+                            result[string.Format(":{0}_1_:", par.Name)] = new Tuple<string, object>(dbResult.Fields[0].ToString(), dbResult);
+                            result[string.Format(":{0}_2_:", par.Name)] = new Tuple<string, object>(dbResult.Fields[1].ToString(), dbResult);
                             break;
                         case ReportParameterType.Enum:
                             string text = value.ToString();
@@ -132,21 +136,27 @@ namespace Reports.Controls
                             // Параметр перечислимого типа в выражении может быть
                             // слева или справа. В xml это никак не указано, поэтому
                             // выставляем сразу два значения.
-                            result[string.Format(":{0}_1_:", par.Name)] = enumText;
-                            result[string.Format(":{0}_2_:", par.Name)] = enumText;
+                            result[string.Format(":{0}_1_:", par.Name)] = new Tuple<string, object>(enumText, text);
+                            result[string.Format(":{0}_2_:", par.Name)] = new Tuple<string, object>(enumText, text);
                             break;
                     }
                 }
                 else 
                 {
-                    var textBox = edit.Control2 as TextBox;
-                    if (textBox != null)
-                        result[string.Format(":{0}_1_:", par.Name)] = textBox.Text;
-                    else
+                    switch(par.Type)
                     {
-                        var dateEdit = edit.Control2 as DateTimePicker;
-                        result[string.Format(":{0}_1_:", par.Name)] =
-                            string.Format("{0:yyyy-MM-dd}", dateEdit.Value);
+                        case ReportParameterType.Text:
+                            var textBox = edit.Control2 as TextBox;
+                            result[string.Format(":{0}_1_:", par.Name)] = new Tuple<string, object>(textBox.Text, textBox.Text);
+                            break;
+                        case ReportParameterType.Date:
+                            var dateEdit = edit.Control2 as DateTimePicker;
+                            result[string.Format(":{0}_1_:", par.Name)] = new Tuple<string, object>(string.Format("{0:yyyy-MM-dd}", dateEdit.Value), dateEdit.Value);
+                            break;
+                        case ReportParameterType.Boolean:
+                            var checkBox = edit.Control2 as CheckBox;
+                            result[string.Format(":{0}_1_:", par.Name)] = new Tuple<string, object>(null, checkBox.Checked);
+                            break;
                     }
                 }
             }

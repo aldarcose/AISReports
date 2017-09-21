@@ -69,7 +69,7 @@ namespace Reports
 
         private void OnExecuteReport(object sender, DoWorkEventArgs e)
         {
-            var paramValues = e.Argument as Dictionary<string, string>;
+            var paramValues = e.Argument as Dictionary<string, Tuple<string, object>>;
             export.InitParameters(paramValues);
             e.Result = export.Execute(progressForm);
         }
