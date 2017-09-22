@@ -33,10 +33,6 @@ namespace Reports.Controls
         public object Value
         {
             get { return new Tuple<DateTime, DateTime>(DateIn, DateOut); }
-            set
-            {
-
-            }
         }
     }
 }

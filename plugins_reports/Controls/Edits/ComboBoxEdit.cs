@@ -53,35 +53,6 @@ namespace Reports.Controls
                 }
                 return SelectedItem;
             }
-            set
-            {
-                if (value == null && Items.Count > 0)
-                {
-                    SelectedIndex = 0;
-                }
-                else if (itemToText != null)
-                {
-                    if (objects.Contains(value))
-                    {
-                        int indx = objects.IndexOf(value);
-                        SelectedIndex = indx;
-                    }
-                    else
-                    {
-                        SelectedIndex = -1;
-                        Text = ItemToText(value);
-                    }
-                }
-                else if (Items.Contains(value))
-                {
-                    SelectedItem = value;
-                }
-                else
-                {
-                    SelectedIndex = -1;
-                    Text = value.ToString();
-                }
-            }
         }
 
         public void DoQuery()

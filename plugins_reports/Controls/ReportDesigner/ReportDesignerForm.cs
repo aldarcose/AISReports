@@ -114,15 +114,15 @@ namespace Reports.Controls
             {
                 var hti = parametersGridView.HitTest(e.X, e.Y);
                 parametersGridView.ClearSelection();
-                if (hti.RowIndex > 0)
+                if (hti.RowIndex >= 0)
                     parametersGridView.Rows[hti.RowIndex].Selected = true;
             }
         }
 
         private void DeleteParameterRow_Click(object sender, EventArgs e)
         {
-            Int32 rowToDelete = parametersGridView.Rows.GetFirstRow(DataGridViewElementStates.Selected);
-            if (rowToDelete > 0)
+            int rowToDelete = parametersGridView.Rows.GetFirstRow(DataGridViewElementStates.Selected);
+            if (rowToDelete >= 0)
             {
                 parametersGridView.Rows.RemoveAt(rowToDelete);
                 parametersGridView.ClearSelection();
@@ -135,7 +135,7 @@ namespace Reports.Controls
             {
                 var hti = fieldsGridView.HitTest(e.X, e.Y);
                 fieldsGridView.ClearSelection();
-                if (hti.RowIndex > 0)
+                if (hti.RowIndex >= 0)
                     fieldsGridView.Rows[hti.RowIndex].Selected = true;
             }
         }
@@ -143,7 +143,7 @@ namespace Reports.Controls
         private void DeleteFieldRow_Click(object sender, EventArgs e)
         {
             Int32 rowToDelete = fieldsGridView.Rows.GetFirstRow(DataGridViewElementStates.Selected);
-            if (rowToDelete> 0)
+            if (rowToDelete >= 0)
             {
                 fieldsGridView.Rows.RemoveAt(rowToDelete);
                 fieldsGridView.ClearSelection();
@@ -209,6 +209,7 @@ namespace Reports.Controls
             {
                 case ReportParameterType.Enum:
                 case ReportParameterType.Text:
+                    return value.ToString();
                 case ReportParameterType.VarText:
                     var varText = (Tuple<ComparisonType, string>)value;
                     ComparisonType compType = varText.Item1;

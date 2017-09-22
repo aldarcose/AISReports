@@ -52,9 +52,6 @@ namespace Reports.Controls
         public object Value
         {
             get { return new Tuple<ComparisonType, string>(ComparisonType, Text); }
-            set
-            {
-            }
         }
     }
 

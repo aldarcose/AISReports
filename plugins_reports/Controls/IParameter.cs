@@ -2,6 +2,6 @@
 {
     public interface IParameter
     {
-        object Value { get; set; }
+        object Value { get; }
     }
 }
