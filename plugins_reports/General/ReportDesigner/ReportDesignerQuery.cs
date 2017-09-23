@@ -19,11 +19,11 @@ namespace Reports
             {
                 this.innerSQL = rawSQL.Substring(rawSQL.IndexOf("join",
                     StringComparison.InvariantCultureIgnoreCase));
-                this.name = GetQueryName(rawSQL, "select");
+                this.name = GetQueryName(rawSQL, "join");
                 this.isJoinExpression = true;
             }
 
-            base.ParseSQL();
+            if (!isJoinExpression) base.ParseSQL();
         }
 
         public bool IsJoinExpression

@@ -30,12 +30,6 @@ namespace Reports.Controls
             set { parameters.Value = value; }
         }
 
-        public Report Report
-        {
-            get { return report; }
-            set { report = value; }
-        }
-
         private void OkButton_Click(object sender, EventArgs e)
         {
             var parsValues = parameters.GetParametersValues();

@@ -24,12 +24,14 @@ namespace Reports
         private ProgressForm progressForm;
         private OpenSaveFileForm openSaveFileForm;
         private IMainForm mainForm;
+        private Report report;
 
-        public ReportPresenter(Connection conn, IReportParametersForm parameters, IMainForm mainForm)
+        public ReportPresenter(Connection conn, IReportParametersForm parameters, IMainForm mainForm, Report report)
         {
             this.conn = conn;
             this.parameters = parameters;
             this.mainForm = mainForm;
+            this.report = report;
             parameters.OK += view_OK;
             this.worker = new BackgroundWorker();
             this.worker.DoWork += new DoWorkEventHandler(OnExecuteReport);
@@ -50,7 +52,7 @@ namespace Reports
         {
             excelEngine = new ExcelEngine();
             reportLoader = new ReportLoader(excelEngine);
-            reportLoader.Load(parameters.Report.Id);
+            reportLoader.Load(report.Id);
             export = new ExcelExport(conn, reportLoader.WorkBook);
             export.SetQueries(reportLoader.ReportQueries);
         }

@@ -82,7 +82,8 @@ namespace Reports
             var ctor = type.GetConstructor(new[] { typeof(string), typeof(List<T>) });
             if (ctor != null)
                 return (T)ctor.Invoke(new object[] { rawSql, previousQueris });
-
+            
+            ctor = type.GetConstructor(new[] { typeof(string) });
             return (T)ctor.Invoke(new object[] { rawSql });;
         }
 
@@ -176,7 +177,7 @@ namespace Reports
             string text = Encoding.UTF8.GetString(byteArray);
             if (text == "NULL") return null;
 
-            XDocument fieldsDoc; 
+            XDocument fieldsDoc = null; 
             try
             {
                 fieldsDoc = XDocument.Parse(text);
@@ -190,7 +191,7 @@ namespace Reports
                 queriesDoc = XDocument.Parse(text);
             }
 
-            foreach (XElement el in queriesDoc.Root.Elements("panel"))
+            foreach (XElement el in fieldsDoc.Root.Elements("panel"))
             {
                 result.Add(new ReportField(
                     el.Attribute("name").Value,

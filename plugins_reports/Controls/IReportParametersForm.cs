@@ -6,7 +6,6 @@ namespace Reports
     public interface IReportParametersForm
     {
         ReportParameterCollection Value { get; set; }
-        Report Report { get; set; }
 
         event EventHandler<ParametersValuesEventArgs> OK;
     }

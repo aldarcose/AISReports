@@ -77,15 +77,16 @@ namespace Reports
                 if (!report.IsDesigned)
                 {
                     var parsForm = new ParametersForm();
-                    parsForm.Report = report;
                     parsForm.Text = report.Name;
                     parsForm.Value = paramerCollection;
-                    var presenter = new ReportPresenter(connection, parsForm, this);
+                    var presenter = new ReportPresenter(connection, parsForm, this, report);
                     parsForm.ShowDialog();
                 }
                 else
                 {
                     var reportDesignerForm = new ReportDesignerForm(paramerCollection);
+                    var presenter = new ReportDesignerPresenter(
+                        connection, this, reportDesignerForm, report);
                     reportDesignerForm.ShowDialog();
                 }
             }

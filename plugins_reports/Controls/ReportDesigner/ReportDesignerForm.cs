@@ -12,14 +12,16 @@ namespace Reports.Controls
     /// <summary>
     /// Форма мастера отчетов
     /// </summary>
-    public partial class ReportDesignerForm : Form
+    public partial class ReportDesignerForm : Form, IReportDesignerForm
     {
         private List<GroupBox> groupList = new List<GroupBox>();
         private int index;
         private ReportParameterCollection parameterCollection;
+        private IList<ReportField> reportFields;
 
         #region Bindings
         BindingList<ParameterViewModel> parametersVM = new BindingList<ParameterViewModel>();
+        BindingList<FieldViewModel> fieldsVM = new BindingList<FieldViewModel>();
         #endregion
 
         public ReportDesignerForm(ReportParameterCollection parameterCollection)
@@ -28,9 +30,18 @@ namespace Reports.Controls
             this.parameterCollection = parameterCollection;
             // bindings
             parametersGridView.DataSource = parametersVM;
+            fieldsGridView.DataSource = fieldsVM;
 
             InitParametersTreeView();
         }
+
+        public void SetReportFields(IList<ReportField> reportFields)
+        {
+            this.reportFields = reportFields;
+            InitFieldsTreeView();
+        }
+
+        #region Init Tree Views
 
         private void InitParametersTreeView()
         {
@@ -55,6 +66,32 @@ namespace Reports.Controls
                 nodeToAdd.Nodes.Add(parameterTreeNode);
             }
         }
+
+        private void InitFieldsTreeView()
+        {
+            foreach (var fieldGroup in reportFields.Where(f => string.IsNullOrEmpty(f.Name)))
+            {
+                TreeNode fieldGroupNode = new TreeNode(fieldGroup.Caption);
+                fieldsTreeView.Nodes.Add(fieldGroupNode);
+                PopulateFieldsTreeView(fieldGroup.Caption,
+                    reportFields.Where(p => p.GroupCaption == fieldGroup.Caption),
+                    fieldGroupNode);
+            }
+        }
+
+        private void PopulateFieldsTreeView(
+            string groupName, IEnumerable<ReportField> groupFields, TreeNode nodeToAdd)
+        {
+            TreeNode fieldTreeNode;
+            foreach (var field in groupFields)
+            {
+                fieldTreeNode = new TreeNode(field.Caption);
+                fieldTreeNode.Tag = field;
+                nodeToAdd.Nodes.Add(fieldTreeNode);
+            }
+        }
+
+        #endregion
 
         private void nextButton_Click(object sender, EventArgs e)
         {
@@ -162,6 +199,24 @@ namespace Reports.Controls
         }
     }
 
+    #region ViewModels
+
+    public class FieldViewModel
+    {
+        private ReportField field;
+
+        public FieldViewModel(ReportField field)
+        {
+            this.field = field;
+        }
+
+        [DisplayName("Название поля")]
+        public string Caption
+        {
+            get { return field.Caption; }
+        }
+    }
+
     public class ParameterViewModel
     {
         private ReportParameter parameter;
@@ -239,5 +294,12 @@ namespace Reports.Controls
             }
             return null;
         }
+    }
+
+    #endregion
+
+    public interface IReportDesignerForm
+    {
+        void SetReportFields(IList<ReportField> reportFields);
     }
 }
