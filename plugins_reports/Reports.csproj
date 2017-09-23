@@ -214,10 +214,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{b2168a85-ddb5-40e6-ae30-22964fbf7a5c}</Project>
-      <Name>Model</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ShareDbWorker\SharedDbWorker.csproj">
       <Project>{fb191289-4266-4586-81c3-16fb78d810ba}</Project>
       <Name>SharedDbWorker</Name>
