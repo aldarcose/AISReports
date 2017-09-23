@@ -11,14 +11,15 @@ namespace Reports
         private Dictionary<string, string> globalParameters = new Dictionary<string, string>();
         private Dictionary<string, string> localParameters = new Dictionary<string, string>();
         private List<string> localParameterNames;
-        private string innerSQL;
-        private string rawSQL;
-        private string name;
+        protected string innerSQL;
+        protected string rawSQL;
+        protected string name;
         private bool isEmpty;
         private string emptyValue;
         private bool isScalar;
         private bool nonQuery;
         private List<string> fieldNames;
+        private List<ReportQuery> previousQueries;
 
         /// <summary>Название</summary>
         public string Name
@@ -62,6 +63,13 @@ namespace Reports
             get { return fieldNames; }
         }
 
+        public ReportQuery(string rawSQL, List<ReportQuery> previousQueries = null)
+        {
+            this.rawSQL = NormalizeSQL(rawSQL);
+            this.previousQueries = previousQueries;
+            ParseSQL();
+        }
+
         public void SetParameter(string key, string value, bool isLocal = false)
         {
             if (isLocal)
@@ -69,12 +77,6 @@ namespace Reports
             else
                 this.globalParameters[key] = value;
             this.innerSQL = innerSQL.Replace(key, value);
-        }
-
-        public ReportQuery(string rawSQL, List<ReportQuery> previousQueries)
-        {
-            this.rawSQL = NormalizeSQL(rawSQL);
-            ParseSQL(previousQueries);
         }
 
         private string NormalizeSQL(string sql)
@@ -89,15 +91,7 @@ namespace Reports
                 .Trim();
         }
 
-        private string GetQueryPrefix(string query, string indexOfText)
-        {
-            string result = query.Substring(0, query.IndexOf(indexOfText,
-                        StringComparison.InvariantCultureIgnoreCase)).Trim();
-            bool isFunc = result.Contains("(");
-            return isFunc ? result.Substring(0, result.IndexOf("(")) : result;
-        }
-
-        private void ParseSQL(List<ReportQuery> previousQueries)
+        protected virtual void ParseSQL()
         {
             if (rawSQL.IndexOf(";") > 0)
             {
@@ -109,7 +103,7 @@ namespace Reports
             {
                 this.innerSQL = rawSQL.Substring(rawSQL.IndexOf("select",
                     StringComparison.InvariantCultureIgnoreCase));
-                this.name = GetQueryPrefix(rawSQL, "select");
+                this.name = GetQueryName(rawSQL, "select");
                 this.fieldNames = SqlParser.ParseSqlFields(innerSQL);
 
                 if (fieldNames.Count > 1)
@@ -132,11 +126,12 @@ namespace Reports
             }
             else
             {
-                this.name = GetQueryPrefix(rawSQL, " ");
+                // Запрос содержит в себе другой запрос
+                this.name = GetQueryName(rawSQL, " ");
                 this.innerSQL = rawSQL.Substring(rawSQL.IndexOf(" ",
                     StringComparison.InvariantCultureIgnoreCase));
 
-                foreach (var exportQuery in previousQueries)
+                foreach (var exportQuery in previousQueries ?? new List<ReportQuery>())
                     if (innerSQL.IndexOf(exportQuery.Name, StringComparison.InvariantCultureIgnoreCase) > 0)
                     {
                         innerSQL = innerSQL.Remove(innerSQL.IndexOf("("), innerSQL.IndexOf(")") - innerSQL.IndexOf("(") + 1);
@@ -151,6 +146,14 @@ namespace Reports
                 }
                 this.isScalar = true;
             }
+        }
+
+        protected string GetQueryName(string query, string indexOfText)
+        {
+            string result = query.Substring(0, query.IndexOf(indexOfText,
+                        StringComparison.InvariantCultureIgnoreCase)).Trim();
+            bool isFunc = result.Contains("(");
+            return isFunc ? result.Substring(0, result.IndexOf("(")) : result;
         }
 
         private void ParseFuncParamNames()

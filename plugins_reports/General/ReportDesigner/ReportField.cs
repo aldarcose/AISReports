@@ -8,18 +8,21 @@ namespace Reports
     public class ReportField
     {
         private string name;
-        private string groupName;
+        private string caption;
+        private string groupCaption;
         private string expression;
         private List<string> tables;
 
         public ReportField(
             string name, 
-            string groupName, 
+            string caption,
+            string groupCaption, 
             string expression, 
             string sections)
         {
             this.name = name;
-            this.groupName = groupName;
+            this.caption = caption;
+            this.groupCaption = groupCaption;
             this.expression = expression;
             this.tables  = new List<string>(sections.Split(';')) ;
         }
@@ -29,9 +32,14 @@ namespace Reports
             get { return name; } 
         }
 
-        public string GroupName
+        public string Caption
         {
-            get { return groupName; }
+            get { return caption; }
+        }
+
+        public string GroupCaption
+        {
+            get { return groupCaption; }
         }
 
         public string Expression
