@@ -47,6 +47,8 @@
             this.closeButton2 = new System.Windows.Forms.Button();
             this.fieldsTreeView = new System.Windows.Forms.TreeView();
             this.fieldsGridView = new System.Windows.Forms.DataGridView();
+            this.fieldsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.DeleteFieldRow = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -62,6 +64,7 @@
             this.splitContainer2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fieldsGridView)).BeginInit();
+            this.fieldsContextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -69,9 +72,9 @@
             this.groupBox1.Controls.Add(this.splitContainer1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1363, 608);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -81,7 +84,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(4, 19);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -105,7 +108,7 @@
             this.tableLayoutPanel1.Controls.Add(this.parametersTreeView, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -118,7 +121,7 @@
             // 
             this.closeButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.closeButton.Location = new System.Drawing.Point(4, 538);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(4);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(502, 43);
             this.closeButton.TabIndex = 1;
@@ -130,7 +133,7 @@
             // 
             this.nextButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nextButton.Location = new System.Drawing.Point(4, 488);
-            this.nextButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nextButton.Margin = new System.Windows.Forms.Padding(4);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(502, 42);
             this.nextButton.TabIndex = 0;
@@ -142,7 +145,7 @@
             // 
             this.parametersTreeView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.parametersTreeView.Location = new System.Drawing.Point(4, 4);
-            this.parametersTreeView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.parametersTreeView.Margin = new System.Windows.Forms.Padding(4);
             this.parametersTreeView.Name = "parametersTreeView";
             this.parametersTreeView.Size = new System.Drawing.Size(502, 476);
             this.parametersTreeView.TabIndex = 0;
@@ -155,7 +158,7 @@
             this.parametersGridView.ContextMenuStrip = this.parametersContextMenuStrip;
             this.parametersGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.parametersGridView.Location = new System.Drawing.Point(0, 0);
-            this.parametersGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.parametersGridView.Margin = new System.Windows.Forms.Padding(4);
             this.parametersGridView.Name = "parametersGridView";
             this.parametersGridView.Size = new System.Drawing.Size(840, 585);
             this.parametersGridView.TabIndex = 0;
@@ -167,7 +170,7 @@
             this.parametersContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.DeleteParameterRow});
             this.parametersContextMenuStrip.Name = "contextMenuStrip1";
-            this.parametersContextMenuStrip.Size = new System.Drawing.Size(207, 56);
+            this.parametersContextMenuStrip.Size = new System.Drawing.Size(207, 28);
             // 
             // DeleteParameterRow
             // 
@@ -181,9 +184,9 @@
             this.groupBox2.Controls.Add(this.splitContainer2);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(1363, 608);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
@@ -193,7 +196,7 @@
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(4, 19);
-            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer2.Name = "splitContainer2";
             // 
             // splitContainer2.Panel1
@@ -219,7 +222,7 @@
             this.tableLayoutPanel2.Controls.Add(this.fieldsTreeView, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -234,18 +237,19 @@
             // 
             this.showQueryButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.showQueryButton.Location = new System.Drawing.Point(4, 385);
-            this.showQueryButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.showQueryButton.Margin = new System.Windows.Forms.Padding(4);
             this.showQueryButton.Name = "showQueryButton";
             this.showQueryButton.Size = new System.Drawing.Size(430, 43);
             this.showQueryButton.TabIndex = 0;
             this.showQueryButton.Text = "Запрос";
             this.showQueryButton.UseVisualStyleBackColor = true;
+            this.showQueryButton.Click += new System.EventHandler(this.showQueryButton_Click);
             // 
             // previousButton
             // 
             this.previousButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.previousButton.Location = new System.Drawing.Point(4, 436);
-            this.previousButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.previousButton.Margin = new System.Windows.Forms.Padding(4);
             this.previousButton.Name = "previousButton";
             this.previousButton.Size = new System.Drawing.Size(430, 43);
             this.previousButton.TabIndex = 1;
@@ -257,7 +261,7 @@
             // 
             this.buttonOK.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonOK.Location = new System.Drawing.Point(4, 487);
-            this.buttonOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonOK.Margin = new System.Windows.Forms.Padding(4);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(430, 43);
             this.buttonOK.TabIndex = 2;
@@ -268,7 +272,7 @@
             // 
             this.closeButton2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.closeButton2.Location = new System.Drawing.Point(4, 538);
-            this.closeButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.closeButton2.Margin = new System.Windows.Forms.Padding(4);
             this.closeButton2.Name = "closeButton2";
             this.closeButton2.Size = new System.Drawing.Size(430, 43);
             this.closeButton2.TabIndex = 3;
@@ -280,22 +284,39 @@
             // 
             this.fieldsTreeView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fieldsTreeView.Location = new System.Drawing.Point(4, 4);
-            this.fieldsTreeView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fieldsTreeView.Margin = new System.Windows.Forms.Padding(4);
             this.fieldsTreeView.Name = "fieldsTreeView";
             this.fieldsTreeView.Size = new System.Drawing.Size(430, 373);
             this.fieldsTreeView.TabIndex = 4;
+            this.fieldsTreeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.fieldsTreeView_NodeMouseDoubleClick);
             // 
             // fieldsGridView
             // 
             this.fieldsGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.fieldsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.fieldsGridView.ContextMenuStrip = this.fieldsContextMenuStrip;
             this.fieldsGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fieldsGridView.Location = new System.Drawing.Point(0, 0);
-            this.fieldsGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fieldsGridView.Margin = new System.Windows.Forms.Padding(4);
             this.fieldsGridView.Name = "fieldsGridView";
             this.fieldsGridView.Size = new System.Drawing.Size(912, 585);
             this.fieldsGridView.TabIndex = 0;
+            this.fieldsGridView.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.parametersGridView_DataBindingComplete);
             this.fieldsGridView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.fieldsGridView_MouseDown);
+            // 
+            // fieldsContextMenuStrip
+            // 
+            this.fieldsContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.DeleteFieldRow});
+            this.fieldsContextMenuStrip.Name = "fieldsContextMenuStrip";
+            this.fieldsContextMenuStrip.Size = new System.Drawing.Size(173, 28);
+            // 
+            // DeleteFieldRow
+            // 
+            this.DeleteFieldRow.Name = "DeleteFieldRow";
+            this.DeleteFieldRow.Size = new System.Drawing.Size(172, 24);
+            this.DeleteFieldRow.Text = "Удалить поле";
+            this.DeleteFieldRow.Click += new System.EventHandler(this.DeleteFieldRow_Click);
             // 
             // ReportDesignerForm
             // 
@@ -304,7 +325,7 @@
             this.ClientSize = new System.Drawing.Size(1363, 608);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReportDesignerForm";
             this.Text = "Параметры";
             this.Load += new System.EventHandler(this.ReportDesignerForm_Load);
@@ -323,6 +344,7 @@
             this.splitContainer2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fieldsGridView)).EndInit();
+            this.fieldsContextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -347,6 +369,8 @@
         private System.Windows.Forms.DataGridView fieldsGridView;
         private System.Windows.Forms.ContextMenuStrip parametersContextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem DeleteParameterRow;
+        private System.Windows.Forms.ContextMenuStrip fieldsContextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem DeleteFieldRow;
     }
 }
 

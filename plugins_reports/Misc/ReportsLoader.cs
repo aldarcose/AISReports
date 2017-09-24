@@ -76,12 +76,12 @@ namespace Reports
             return result;
         }
 
-        private T GetQueryObject(string rawSql, List<T> previousQueris)
+        private T GetQueryObject(string rawSql, List<T> previousQueries)
         {
             Type type = typeof(T);
             var ctor = type.GetConstructor(new[] { typeof(string), typeof(List<T>) });
             if (ctor != null)
-                return (T)ctor.Invoke(new object[] { rawSql, previousQueris });
+                return (T)ctor.Invoke(new object[] { rawSql, previousQueries });
             
             ctor = type.GetConstructor(new[] { typeof(string) });
             return (T)ctor.Invoke(new object[] { rawSql });;

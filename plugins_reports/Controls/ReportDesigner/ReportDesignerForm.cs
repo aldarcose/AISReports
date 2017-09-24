@@ -144,6 +144,13 @@ namespace Reports.Controls
             }
         }
 
+        private void fieldsTreeView_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            ReportField field = e.Node.Tag as ReportField;
+            if (field != null)
+                fieldsVM.Add(new FieldViewModel(field));
+        }
+
         #region DataGridViews context menu items
         private void parametersGridView_MouseDown(object sender, MouseEventArgs e)
         {
@@ -191,11 +198,16 @@ namespace Reports.Controls
         private void parametersGridView_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             DataGridView gridView = sender as DataGridView;
-            if (null != gridView)
+            if (gridView != null)
             {
                 foreach (DataGridViewRow r in gridView.Rows)
                     gridView.Rows[r.Index].HeaderCell.Value = (r.Index + 1).ToString();
             }
+        }
+
+        private void showQueryButton_Click(object sender, EventArgs e)
+        {
+            new QueryForm("").ShowDialog();
         }
     }
 

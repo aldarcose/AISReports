@@ -119,6 +119,12 @@
     <Compile Include="Controls\ParametersForm.Designer.cs">
       <DependentUpon>ParametersForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\QueryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\QueryForm.Designer.cs">
+      <DependentUpon>QueryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ReportDesigner\ReportDesignerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\QueryForm.resx">
+      <DependentUpon>QueryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ReportDesigner\ReportDesignerForm.resx">
       <DependentUpon>ReportDesignerForm.cs</DependentUpon>
