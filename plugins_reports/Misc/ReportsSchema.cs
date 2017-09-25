@@ -75,7 +75,7 @@ namespace Reports
         private ReportParameterType type;
         private string sql;
         private string groupName;
-        private string comparedExpression;
+        private string comparisonExpression;
         private List<string> tables;
 
         public ReportParameter(
@@ -97,7 +97,7 @@ namespace Reports
             : this(name, caption, type, sql)
         {
             this.groupName = groupName;
-            this.comparedExpression = comparedExpression;
+            this.comparisonExpression = comparedExpression;
             this.tables = new List<string>(sections.Split(';'));
         }
 
@@ -147,9 +147,9 @@ namespace Reports
             get { return groupName; } 
         }
 
-        public string ComparedExpression 
+        public string ComparisonExpression 
         { 
-            get { return comparedExpression; } 
+            get { return comparisonExpression; } 
         }
 
         public List<string> Tables

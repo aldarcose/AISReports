@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SharedDbWorker.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +19,7 @@ namespace Reports.Controls
         private int index;
         private ReportParameterCollection parameterCollection;
         private IList<ReportField> reportFields;
+        private IList<ReportDesignerQuery> reportQueries;
 
         #region Bindings
         BindingList<ParameterViewModel> parametersVM = new BindingList<ParameterViewModel>();
@@ -35,10 +37,17 @@ namespace Reports.Controls
             InitParametersTreeView();
         }
 
+        /// <contentfrom cref="IReportDesignerForm.SetReportFields" />
         public void SetReportFields(IList<ReportField> reportFields)
         {
             this.reportFields = reportFields;
             InitFieldsTreeView();
+        }
+
+        /// <contentfrom cref="IReportDesignerForm.SetReportQueries" />
+        public void SetReportQueries(IList<ReportDesignerQuery> reportQueries)
+        {
+            this.reportQueries = reportQueries;
         }
 
         #region Init Tree Views
@@ -123,7 +132,7 @@ namespace Reports.Controls
             if (parameter != null)
             {
                 if (parameter.Type == ReportParameterType.CheckExpression)
-                    parametersVM.Add(new ParameterViewModel(parameter, parameter.ComparedExpression, "Да"));
+                    parametersVM.Add(new ParameterViewModel(parameter, parameter.ComparisonExpression, "Да"));
                 else
                 {
                     var parameterForm = new ParametersForm();
@@ -207,7 +216,35 @@ namespace Reports.Controls
 
         private void showQueryButton_Click(object sender, EventArgs e)
         {
-            new QueryForm("").ShowDialog();
+            new QueryForm(ConstructQueryText()).ShowDialog();
+        }
+
+        private string ConstructQueryText()
+        {
+            HashSet<string> leftJoinTables = new HashSet<string>();
+            Dictionary<string, ReportDesignerQuery> queriesDict = reportQueries.ToDictionary(q => q.Name, q => q);
+            List<string> returnFields = new List<string>();
+            List<string> returnParameters = new List<string>();
+            List<string> leftJoins = new List<string>();
+
+            returnFields.AddRange(fieldsVM.Select(fVM => fVM.Expression));
+            returnParameters.AddRange(parametersVM.Select(pVM => pVM.Expression));
+
+            foreach (var table in fieldsVM.SelectMany(f => f.Tables))
+                leftJoinTables.Add(table);
+            foreach (var table in parametersVM.SelectMany(p => p.Tables))
+                leftJoinTables.Add(table);
+            leftJoins.AddRange(queriesDict.Where(q => leftJoinTables.Contains(q.Key)).Select(q => q.Value.InnerSql));
+
+            ReportDesignerQuery mainQuery = queriesDict["zapros"];
+            string queryText =
+                mainQuery.InnerSql
+                .Replace(":return_fields:", string.Join(", ", returnFields))
+                .Replace(":sections:", string.Join(" left join ", leftJoins))
+                .Replace(":where_section:", "where " + string.Join(" and ", returnParameters))
+                .Replace(":group_by_section:", "").Replace(":having_section:", "");
+
+            return queryText;
         }
     }
 
@@ -227,6 +264,18 @@ namespace Reports.Controls
         {
             get { return field.Caption; }
         }
+
+        [Browsable(false)]
+        public string Expression
+        {
+            get { return field.Expression; }
+        }
+
+        [Browsable(false)]
+        public List<string> Tables
+        {
+            get { return field.Tables; }
+        }
     }
 
     public class ParameterViewModel
@@ -234,6 +283,7 @@ namespace Reports.Controls
         private ReportParameter parameter;
         private object value;
         private string stringValue;
+        private string expression;
 
         public ParameterViewModel(ReportParameter parameter, object value)
         {
@@ -270,6 +320,23 @@ namespace Reports.Controls
             } 
         }
 
+        [Browsable(false)]
+        public string Expression
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(expression))
+                    expression = GetExpression();
+                return expression;
+            }
+        }
+
+        [Browsable(false)]
+        public List<string> Tables
+        {
+            get { return parameter.Tables; }
+        }
+
         private string ParseStringValue()
         {
             switch(parameter.Type)
@@ -302,7 +369,56 @@ namespace Reports.Controls
                     var floatPeriod = (Tuple<decimal, decimal>)value;
                     return string.Format("с {0:n2} по {1:n2}", floatPeriod.Item1, floatPeriod.Item2);
                 case ReportParameterType.Query:
-                    return ((SharedDbWorker.Classes.DbResult)value).Fields[1].ToString();
+                    return ((DbResult)value).Fields[1].ToString();
+            }
+            return null;
+        }
+
+        private string GetExpression()
+        {
+            switch (parameter.Type)
+            {
+                case ReportParameterType.Enum:
+                case ReportParameterType.Text:
+                    return string.Format("{0} = {1}", parameter.ComparisonExpression, value);
+                case ReportParameterType.VarText:
+                    var varText = (Tuple<ComparisonType, string>)value;
+                    ComparisonType compType = varText.Item1;
+                    string text = varText.Item2; string result = null;
+                    switch(compType)
+                    {
+                        case ComparisonType.IsEmpty: result = string.Format("{0} is null", parameter.ComparisonExpression); break;
+                        case ComparisonType.IsNotEmty: result = string.Format("{0} is not null", parameter.ComparisonExpression); break;
+                        case ComparisonType.Contains: result = string.Format("{0} like %{1}%", parameter.ComparisonExpression, text); break;
+                        case ComparisonType.EndsWith: result = string.Format("{0} like %{1}", parameter.ComparisonExpression, text); break;
+                        case ComparisonType.StartsWith: result = string.Format("{0} like {1}%", parameter.ComparisonExpression, text); break;
+                        case ComparisonType.Equels: result = string.Format("{0} = {1}", parameter.ComparisonExpression, text); break;
+                    }
+                    return result;
+                case ReportParameterType.Boolean:
+                    return string.Format("{0} = {1}", parameter.ComparisonExpression, (bool)value);
+                case ReportParameterType.CheckExpression:
+                    return parameter.ComparisonExpression;
+                case ReportParameterType.Date:
+                    return string.Format("{0} = {1:yyyy-MM-dd}", parameter.ComparisonExpression, (DateTime)value);
+                case ReportParameterType.Period:
+                    var datePeriod = (Tuple<DateTime, DateTime>)value;
+                    return string.Format("{0} >= {1:yyyy-MM-dd} and {0} <= {2:yyyy-MM-dd}",
+                        parameter.ComparisonExpression, datePeriod.Item1, datePeriod.Item2);
+                case ReportParameterType.TimePeriod:
+                    var timePeriod = (Tuple<DateTime, DateTime>)value;
+                    return string.Format("{0} >= {1:HH:mm:ss} and {0} <= {2:HH:mm:ss}",
+                        parameter.ComparisonExpression, timePeriod.Item1, timePeriod.Item2);
+                case ReportParameterType.IntPeriod:
+                    var intPeriod = (Tuple<int, int>)value;
+                    return string.Format("{0} >= {1} and {0} <= {2}", 
+                        parameter.ComparisonExpression, intPeriod.Item1, intPeriod.Item2);
+                case ReportParameterType.FloatPeriod:
+                    var floatPeriod = (Tuple<decimal, decimal>)value;
+                    return string.Format("{0} >= {1:n2} and {0} <= {2:n2}", 
+                        parameter.ComparisonExpression, floatPeriod.Item1, floatPeriod.Item2);
+                case ReportParameterType.Query:
+                    return string.Format("{0} = {1}", parameter.ComparisonExpression, ((DbResult)value).Fields[0]);
             }
             return null;
         }
@@ -313,5 +429,7 @@ namespace Reports.Controls
     public interface IReportDesignerForm
     {
         void SetReportFields(IList<ReportField> reportFields);
+
+        void SetReportQueries(IList<ReportDesignerQuery> reportQueries);
     }
 }

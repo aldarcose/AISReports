@@ -1,6 +1,7 @@
 ﻿using Reports.Controls;
 using SharedDbWorker;
 using Syncfusion.XlsIO;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading.Tasks;
 
@@ -47,6 +48,7 @@ namespace Reports
             loader = new ReportDesignerLoader(excelEngine);
             loader.Load(report.Id);
             view.SetReportFields(loader.ReportFields);
+            view.SetReportQueries(loader.ReportQueries);
         }
 
         private void OnExecuteReport(object sender, DoWorkEventArgs e)
