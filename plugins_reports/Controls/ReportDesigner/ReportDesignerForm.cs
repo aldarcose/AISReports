@@ -240,7 +240,7 @@ namespace Reports.Controls
             string queryText =
                 mainQuery.InnerSql
                 .Replace(":return_fields:", string.Join(", ", returnFields))
-                .Replace(":sections:", string.Join(" left join ", leftJoins))
+                .Replace(":sections:", string.Join(" ", leftJoins))
                 .Replace(":where_section:", "where " + string.Join(" and ", returnParameters))
                 .Replace(":group_by_section:", "").Replace(":having_section:", "");
 
@@ -389,25 +389,26 @@ namespace Reports.Controls
                     {
                         case ComparisonType.IsEmpty: result = string.Format("{0} is null", parameter.ComparisonExpression); break;
                         case ComparisonType.IsNotEmty: result = string.Format("{0} is not null", parameter.ComparisonExpression); break;
-                        case ComparisonType.Contains: result = string.Format("{0} like %{1}%", parameter.ComparisonExpression, text); break;
-                        case ComparisonType.EndsWith: result = string.Format("{0} like %{1}", parameter.ComparisonExpression, text); break;
-                        case ComparisonType.StartsWith: result = string.Format("{0} like {1}%", parameter.ComparisonExpression, text); break;
+                        case ComparisonType.Contains: result = string.Format("{0} like '%{1}%'", parameter.ComparisonExpression, text); break;
+                        case ComparisonType.EndsWith: result = string.Format("{0} like '%{1}'", parameter.ComparisonExpression, text); break;
+                        case ComparisonType.StartsWith: result = string.Format("{0} like '{1}%'", parameter.ComparisonExpression, text); break;
                         case ComparisonType.Equels: result = string.Format("{0} = {1}", parameter.ComparisonExpression, text); break;
                     }
                     return result;
                 case ReportParameterType.Boolean:
-                    return string.Format("{0} = {1}", parameter.ComparisonExpression, (bool)value);
+                    var chunks = parameter.ComparisonExpression.Split(new string[] { "~|~" }, StringSplitOptions.None);
+                    return (bool)value ? chunks[0] : chunks[1];
                 case ReportParameterType.CheckExpression:
                     return parameter.ComparisonExpression;
                 case ReportParameterType.Date:
-                    return string.Format("{0} = {1:yyyy-MM-dd}", parameter.ComparisonExpression, (DateTime)value);
+                    return string.Format("{0} = '{1:yyyy-MM-dd}'", parameter.ComparisonExpression, (DateTime)value);
                 case ReportParameterType.Period:
                     var datePeriod = (Tuple<DateTime, DateTime>)value;
-                    return string.Format("{0} >= {1:yyyy-MM-dd} and {0} <= {2:yyyy-MM-dd}",
+                    return string.Format("{0} >= '{1:yyyy-MM-dd}' and {0} <= '{2:yyyy-MM-dd}'",
                         parameter.ComparisonExpression, datePeriod.Item1, datePeriod.Item2);
                 case ReportParameterType.TimePeriod:
                     var timePeriod = (Tuple<DateTime, DateTime>)value;
-                    return string.Format("{0} >= {1:HH:mm:ss} and {0} <= {2:HH:mm:ss}",
+                    return string.Format("{0} >= '{1:HH:mm:ss}' and {0} <= '{2:HH:mm:ss}'",
                         parameter.ComparisonExpression, timePeriod.Item1, timePeriod.Item2);
                 case ReportParameterType.IntPeriod:
                     var intPeriod = (Tuple<int, int>)value;

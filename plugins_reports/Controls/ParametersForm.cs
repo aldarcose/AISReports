@@ -8,7 +8,6 @@ namespace Reports.Controls
     public partial class ParametersForm : Form, IReportParametersForm
     {
         private ParametersView parameters;
-        private Report report;
 
         public ParametersForm()
         {

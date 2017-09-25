@@ -6,6 +6,7 @@ namespace Reports
     public class ReportDesignerQuery : ReportQuery
     {
         private bool isJoinExpression;
+        private const string LEFTJOINEXPR = "left join";
 
         public ReportDesignerQuery(string rawSQL)
             : base(rawSQL)
@@ -15,11 +16,11 @@ namespace Reports
         /// <inheritdoc/>
         protected override void ParseSQL()
         {
-            if (rawSQL.IndexOf("join", StringComparison.InvariantCultureIgnoreCase) >= 0)
+            if (rawSQL.IndexOf(LEFTJOINEXPR, StringComparison.InvariantCultureIgnoreCase) >= 0)
             {
-                this.innerSQL = rawSQL.Substring(rawSQL.IndexOf("join",
+                this.innerSQL = rawSQL.Substring(rawSQL.IndexOf(LEFTJOINEXPR,
                     StringComparison.InvariantCultureIgnoreCase));
-                this.name = GetQueryName(rawSQL, "join");
+                this.name = GetQueryName(rawSQL, LEFTJOINEXPR);
                 this.isJoinExpression = true;
             }
 

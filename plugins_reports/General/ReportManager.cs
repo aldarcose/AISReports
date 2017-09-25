@@ -178,6 +178,10 @@ namespace Reports
                 if (pType == ReportParameterType.Unknown)
                     throw new InvalidOperationException(string.Format("Неизвестный тип параметра: {0}", typeText));
 
+                // В мастере отчетов заменяем текстовый тип на текст с вариантами
+                if (isDesignedReport && pType == ReportParameterType.Text)
+                    pType = ReportParameterType.VarText;
+
                 var parameter = isDesignedReport ? 
                     new ReportParameter(
                         el.Attribute("name").Value, 
