@@ -34,29 +34,33 @@
             // 
             // cbOperationType
             // 
+            this.cbOperationType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbOperationType.FormattingEnabled = true;
-            this.cbOperationType.Location = new System.Drawing.Point(3, 3);
+            this.cbOperationType.Location = new System.Drawing.Point(2, 2);
+            this.cbOperationType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbOperationType.Name = "cbOperationType";
-            this.cbOperationType.Size = new System.Drawing.Size(136, 24);
+            this.cbOperationType.Size = new System.Drawing.Size(103, 21);
             this.cbOperationType.TabIndex = 0;
             // 
             // textBox
             // 
             this.textBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox.Location = new System.Drawing.Point(145, 4);
+            this.textBox.Location = new System.Drawing.Point(109, 3);
+            this.textBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(173, 22);
+            this.textBox.Size = new System.Drawing.Size(131, 20);
             this.textBox.TabIndex = 1;
             // 
             // VarTextEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.cbOperationType);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "VarTextEdit";
-            this.Size = new System.Drawing.Size(324, 33);
+            this.Size = new System.Drawing.Size(243, 27);
             this.ResumeLayout(false);
             this.PerformLayout();
 
