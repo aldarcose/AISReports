@@ -147,16 +147,6 @@ namespace Reports
             get { return querySQL; }
         }
 
-        public Dictionary<string, ReportDesignerQuery> QueriesDict
-        {
-            get 
-            { 
-                if(queriesDict == null)
-                    queriesDict = ReportQueries.ToDictionary(q => q.Name, q => q);
-                return queriesDict; 
-            }
-        }
-
         public List<ReportField> ReportFields
         {
             get { return fields; }

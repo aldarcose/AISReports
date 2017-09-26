@@ -129,35 +129,44 @@ namespace Reports.Controls
         private void parametersTreeView_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             ReportParameter parameter = e.Node.Tag as ReportParameter;
-            if (parameter != null)
+            if (parameter == null) return;
+            if (parametersVM.Any(pvm => pvm.Name == parameter.Name))
             {
-                if (parameter.Type == ReportParameterType.CheckExpression)
-                    parametersVM.Add(new ParameterViewModel(parameter, parameter.ComparisonExpression, "Да"));
-                else
+                MessageBox.Show("Параметр уже добавлен", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (parameter.Type == ReportParameterType.CheckExpression)
+                parametersVM.Add(new ParameterViewModel(parameter, parameter.ComparisonExpression, "Да"));
+            else
+            {
+                var parameterForm = new ParametersForm();
+                parameterForm.Text = "Параметры выборки";
+                parameterForm.Value = new ReportParameterCollection(parameter);
+                parameterForm.OK += (s_, e_) =>
                 {
-                    var parameterForm = new ParametersForm();
-                    parameterForm.Text = "Параметры выборки";
-                    parameterForm.Value = new ReportParameterCollection(parameter);
-                    parameterForm.OK += (s_, e_) =>
+                    Dictionary<string, Tuple<string, object>> parameterValues = e_.ParametersValues;
+                    if (parameterValues != null && parameterValues.Any())
                     {
-                        Dictionary<string, Tuple<string, object>> parameterValues = e_.ParametersValues;
-                        if (parameterValues != null && parameterValues.Any())
-                        {
-                            var firstParameterValue = parameterValues.First();
-                            object value = firstParameterValue.Value.Item2;
-                            parametersVM.Add(new ParameterViewModel(parameter, value));
-                        }
-                    };
-                    parameterForm.ShowDialog();
-                }
+                        var firstParameterValue = parameterValues.First();
+                        object value = firstParameterValue.Value.Item2;
+                        parametersVM.Add(new ParameterViewModel(parameter, value));
+                    }
+                };
+                parameterForm.ShowDialog();
             }
         }
 
         private void fieldsTreeView_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             ReportField field = e.Node.Tag as ReportField;
-            if (field != null)
-                fieldsVM.Add(new FieldViewModel(field));
+            if (field == null) return;
+            if (fieldsVM.Any(fv => fv.Name == field.Name))
+            {
+                MessageBox.Show("Поле уже добавлено", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            fieldsVM.Add(new FieldViewModel(field));
         }
 
         #region DataGridViews context menu items
@@ -276,6 +285,12 @@ namespace Reports.Controls
         {
             get { return field.Tables; }
         }
+
+        [Browsable(false)]
+        public string Name
+        {
+            get { return field.Name; }
+        }
     }
 
     public class ParameterViewModel
@@ -283,7 +298,6 @@ namespace Reports.Controls
         private ReportParameter parameter;
         private object value;
         private string stringValue;
-        private string expression;
 
         public ParameterViewModel(ReportParameter parameter, object value)
         {
@@ -323,12 +337,13 @@ namespace Reports.Controls
         [Browsable(false)]
         public string Expression
         {
-            get
-            {
-                if (string.IsNullOrEmpty(expression))
-                    expression = GetExpression();
-                return expression;
-            }
+            get { return GetExpression(); }
+        }
+
+        [Browsable(false)]
+        public string Name
+        {
+            get { return parameter.Name; }
         }
 
         [Browsable(false)]
@@ -389,9 +404,9 @@ namespace Reports.Controls
                     {
                         case ComparisonType.IsEmpty: result = string.Format("{0} is null", parameter.ComparisonExpression); break;
                         case ComparisonType.IsNotEmty: result = string.Format("{0} is not null", parameter.ComparisonExpression); break;
-                        case ComparisonType.Contains: result = string.Format("{0} like '%{1}%'", parameter.ComparisonExpression, text); break;
-                        case ComparisonType.EndsWith: result = string.Format("{0} like '%{1}'", parameter.ComparisonExpression, text); break;
-                        case ComparisonType.StartsWith: result = string.Format("{0} like '{1}%'", parameter.ComparisonExpression, text); break;
+                        case ComparisonType.Contains: result = string.Format("upper({0}) like upper('%{1}%')", parameter.ComparisonExpression, text); break;
+                        case ComparisonType.EndsWith: result = string.Format("upper({0}) like upper('%{1}')", parameter.ComparisonExpression, text); break;
+                        case ComparisonType.StartsWith: result = string.Format("upper({0}) like upper('{1}%')", parameter.ComparisonExpression, text); break;
                         case ComparisonType.Equels: result = string.Format("{0} = {1}", parameter.ComparisonExpression, text); break;
                     }
                     return result;
@@ -419,7 +434,10 @@ namespace Reports.Controls
                     return string.Format("{0} >= {1:n2} and {0} <= {2:n2}", 
                         parameter.ComparisonExpression, floatPeriod.Item1, floatPeriod.Item2);
                 case ReportParameterType.Query:
-                    return string.Format("{0} = {1}", parameter.ComparisonExpression, ((DbResult)value).Fields[0]);
+                    var id = ((DbResult)value).Fields[0];
+                    if (id.GetType() == typeof(String))
+                        return string.Format("{0} = '{1}'", parameter.ComparisonExpression, id);
+                    return string.Format("{0} = {1}", parameter.ComparisonExpression, id);
             }
             return null;
         }
