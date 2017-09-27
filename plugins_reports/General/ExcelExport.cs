@@ -14,10 +14,10 @@ namespace Reports
     /// </summary>
     public class ExcelExport : IOperation
     {
+        protected Connection conn;
+        protected IWorkbook workBook;
         private List<ReportQuery> queries;
-        private IWorkbook workBook;
         private Dictionary<string, Tuple<string, object>> paramValues;
-        private Connection conn;
 
         public ExcelExport(Connection conn, IWorkbook workBook)
         {
@@ -263,7 +263,7 @@ namespace Reports
             return "=" + string.Join("+", list);
         }
 
-        private string GetExcelColumnName(int columnNumber)
+        protected string GetExcelColumnName(int columnNumber)
         {
             int dividend = columnNumber;
             string columnName = String.Empty;
@@ -280,7 +280,7 @@ namespace Reports
         }
         
         /// <inheritdoc/>
-        public IWorkbook Execute(IProgressControl pc)
+        public virtual IWorkbook Execute(IProgressControl pc)
         {
             foreach (IWorksheet sheet in workBook.Worksheets)
                 if (sheet.UsedCells.Length != 0)

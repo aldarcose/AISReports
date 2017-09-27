@@ -25,4 +25,38 @@ namespace Reports
             get { return parametersValues; }
         }
     }
+
+    public class ReportDesignerEventArgs : ParametersValuesEventArgs
+    {
+        private string sqlQuery;
+        private IList<ReportField> selectedFields;
+        private IDictionary<string, string> parametersStringValues;
+
+        public ReportDesignerEventArgs(
+            Dictionary<string, Tuple<string, object>> parametersValues, 
+            IList<ReportField> selectedFields,
+            IDictionary<string, string> parametersStringValues,
+            string sqlQuery)
+            : base(parametersValues)
+        {
+            this.selectedFields = selectedFields;
+            this.parametersStringValues = parametersStringValues;
+            this.sqlQuery = sqlQuery;
+        }
+
+        public IList<ReportField> SelectedFields
+        {
+            get { return selectedFields; }
+        }
+
+        public IDictionary<string, string> ParametersStringValues
+        {
+            get { return parametersStringValues; }
+        }
+
+        public string SqlQuery
+        {
+            get { return sqlQuery; }
+        }
+    }
 }

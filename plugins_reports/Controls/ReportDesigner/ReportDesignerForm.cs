@@ -41,6 +41,13 @@ namespace Reports.Controls
         public void SetReportFields(IList<ReportField> reportFields)
         {
             this.reportFields = reportFields;
+            if (reportFields.Count == 0)
+            {
+                groupBox2.Hide();
+                nextButton.Text = "Создать отчет";
+                nextButton.Click -= nextButton_Click;
+                nextButton.Click += buttonOK_Click;
+            }
             InitFieldsTreeView();
         }
 
@@ -49,6 +56,9 @@ namespace Reports.Controls
         {
             this.reportQueries = reportQueries;
         }
+
+        /// <contentfrom cref="IReportDesignerForm.CreateReport" />
+        public event EventHandler<ReportDesignerEventArgs> CreateReport;
 
         #region Init Tree Views
 
@@ -255,6 +265,17 @@ namespace Reports.Controls
 
             return queryText;
         }
+
+        private void buttonOK_Click(object sender, EventArgs e)
+        {
+            if (CreateReport != null)
+                CreateReport(this, new ReportDesignerEventArgs(null,
+                    new List<ReportField>(fieldsVM.Select(f => f.Field)),
+                    new Dictionary<string, string>(parametersVM.ToDictionary(p => p.Caption, p => p.StringValue)),
+                    ConstructQueryText()));
+
+            DialogResult = DialogResult.OK;
+        }
     }
 
     #region ViewModels
@@ -291,6 +312,12 @@ namespace Reports.Controls
         {
             get { return field.Name; }
         }
+
+        [Browsable(false)]
+        public ReportField Field
+        {
+            get { return field; }
+        }
     }
 
     public class ParameterViewModel
@@ -298,6 +325,7 @@ namespace Reports.Controls
         private ReportParameter parameter;
         private object value;
         private string stringValue;
+        private string expression;
 
         public ParameterViewModel(ReportParameter parameter, object value)
         {
@@ -337,7 +365,12 @@ namespace Reports.Controls
         [Browsable(false)]
         public string Expression
         {
-            get { return GetExpression(); }
+            get 
+            {
+                if (string.IsNullOrEmpty(expression))
+                    expression = GetExpression();
+                return expression; 
+            }
         }
 
         [Browsable(false)]
@@ -450,5 +483,7 @@ namespace Reports.Controls
         void SetReportFields(IList<ReportField> reportFields);
 
         void SetReportQueries(IList<ReportDesignerQuery> reportQueries);
+
+        event EventHandler<ReportDesignerEventArgs> CreateReport;
     }
 }

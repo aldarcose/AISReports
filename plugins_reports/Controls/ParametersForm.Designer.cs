@@ -38,17 +38,19 @@
             this.panelParameters.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelParameters.Location = new System.Drawing.Point(7, 8);
+            this.panelParameters.Location = new System.Drawing.Point(5, 6);
+            this.panelParameters.Margin = new System.Windows.Forms.Padding(2);
             this.panelParameters.Name = "panelParameters";
-            this.panelParameters.Size = new System.Drawing.Size(489, 242);
+            this.panelParameters.Size = new System.Drawing.Size(367, 197);
             this.panelParameters.TabIndex = 0;
             // 
             // ButtonOk
             // 
             this.ButtonOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonOk.Location = new System.Drawing.Point(291, 256);
+            this.ButtonOk.Location = new System.Drawing.Point(218, 208);
+            this.ButtonOk.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonOk.Name = "ButtonOk";
-            this.ButtonOk.Size = new System.Drawing.Size(94, 34);
+            this.ButtonOk.Size = new System.Drawing.Size(70, 28);
             this.ButtonOk.TabIndex = 1;
             this.ButtonOk.Text = "OK";
             this.ButtonOk.UseVisualStyleBackColor = true;
@@ -57,9 +59,10 @@
             // ButtonCancel
             // 
             this.ButtonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonCancel.Location = new System.Drawing.Point(397, 256);
+            this.ButtonCancel.Location = new System.Drawing.Point(298, 208);
+            this.ButtonCancel.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonCancel.Name = "ButtonCancel";
-            this.ButtonCancel.Size = new System.Drawing.Size(94, 34);
+            this.ButtonCancel.Size = new System.Drawing.Size(70, 28);
             this.ButtonCancel.TabIndex = 2;
             this.ButtonCancel.Text = "Отмена";
             this.ButtonCancel.UseVisualStyleBackColor = true;
@@ -67,12 +70,13 @@
             // 
             // ParametersForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(501, 297);
+            this.ClientSize = new System.Drawing.Size(376, 241);
             this.Controls.Add(this.ButtonCancel);
             this.Controls.Add(this.ButtonOk);
             this.Controls.Add(this.panelParameters);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ParametersForm";
             this.Text = "ParametersForm";
             this.ResumeLayout(false);
