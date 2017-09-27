@@ -245,6 +245,7 @@ namespace Reports.Controls
             List<string> returnFields = new List<string>();
             List<string> returnParameters = new List<string>();
             List<string> leftJoins = new List<string>();
+            List<string> groupingFields  =new List<string>();
 
             returnFields.AddRange(fieldsVM.Select(fVM => fVM.Expression));
             returnParameters.AddRange(parametersVM.Select(pVM => pVM.Expression));
@@ -255,13 +256,19 @@ namespace Reports.Controls
                 leftJoinTables.Add(table);
             leftJoins.AddRange(queriesDict.Where(q => leftJoinTables.Contains(q.Key)).Select(q => q.Value.InnerSql));
 
+            if (fieldsVM.Any(f => f.Field.IsGrouping))
+                groupingFields.AddRange(fieldsVM.Where(f => !f.Field.IsGrouping).Select(fVM => fVM.Expression));
+            string groupBySection = null;
+            if (groupingFields.Any())
+                groupBySection = "group by " + string.Join(", ", groupingFields);
+
             ReportDesignerQuery mainQuery = queriesDict["zapros"];
             string queryText =
                 mainQuery.InnerSql
                 .Replace(":return_fields:", string.Join(", ", returnFields))
                 .Replace(":sections:", string.Join(" ", leftJoins))
                 .Replace(":where_section:", "where " + string.Join(" and ", returnParameters))
-                .Replace(":group_by_section:", "").Replace(":having_section:", "");
+                .Replace(":group_by_section:", groupBySection).Replace(":having_section:", "");
 
             return queryText;
         }

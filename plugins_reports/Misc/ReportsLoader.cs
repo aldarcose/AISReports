@@ -181,13 +181,15 @@ namespace Reports
                 queriesDoc = XDocument.Parse(text);
             }
 
+            bool isGrouping;
             foreach (XElement el in fieldsDoc.Root.Elements("panel"))
             {
+                bool.TryParse(el.Attribute("isGrouping").Value, out isGrouping);
                 result.Add(new ReportField(
                     el.Attribute("name").Value,
                     el.Attribute("title").Value,
                     el.Attribute("groupName") != null ? el.Attribute("groupName").Value : null,
-                    el.Attribute("define").Value,
+                    el.Attribute("define").Value, isGrouping,
                     el.Attribute("sections").Value));
             }
 

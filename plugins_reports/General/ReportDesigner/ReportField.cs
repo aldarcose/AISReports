@@ -10,6 +10,7 @@ namespace Reports
         private string name;
         private string caption;
         private string groupCaption;
+        private bool isGrouping;
         private string expression;
         private List<string> tables;
 
@@ -18,12 +19,14 @@ namespace Reports
             string caption,
             string groupCaption, 
             string expression, 
+            bool isGrouping,
             string sections)
         {
             this.name = name;
             this.caption = caption;
             this.groupCaption = groupCaption;
             this.expression = expression;
+            this.isGrouping = isGrouping;
             this.tables  = new List<string>(sections.Split(';')) ;
         }
 
@@ -45,6 +48,11 @@ namespace Reports
         public string Expression
         {
             get { return expression; }
+        }
+
+        public bool IsGrouping
+        {
+            get { return isGrouping; }
         }
 
         public List<string> Tables
