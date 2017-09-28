@@ -68,6 +68,12 @@
     <Compile Include="Controls\Edits\ComboBoxEdit.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\Edits\DiagnosisEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Edits\DiagnosisEdit.Designer.cs">
+      <DependentUpon>DiagnosisEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Edits\EditFactory.cs" />
     <Compile Include="Controls\Edits\FloatPeriodEdit.cs">
       <SubType>UserControl</SubType>
@@ -162,6 +168,9 @@
     <Compile Include="General\ReportManager.cs" />
     <Compile Include="Misc\ReportsSchema.cs" />
     <Compile Include="General\ReportPresenter.cs" />
+    <EmbeddedResource Include="Controls\Edits\DiagnosisEdit.resx">
+      <DependentUpon>DiagnosisEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Edits\FloatPeriodEdit.resx">
       <DependentUpon>FloatPeriodEdit.cs</DependentUpon>
     </EmbeddedResource>

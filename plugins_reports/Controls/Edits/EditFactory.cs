@@ -59,6 +59,8 @@ namespace Reports.Controls
                     };
                     comboBoxEdit.SetObjects(list);
                     return comboBoxEdit;
+                case ReportParameterType.Diagn:
+                    return new DiagnosisEdit();
             }
 
             throw new InvalidOperationException(

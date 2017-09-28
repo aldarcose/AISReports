@@ -72,6 +72,15 @@ namespace Reports.Controls
                     parameterCollection.Where(p => p.GroupName == parameterGroup.Caption),
                     parameterGroupNode);
             }
+
+            TreeNode fieldTreeNode;
+            foreach (var field in parameterCollection.Where(p => 
+                string.IsNullOrEmpty(p.GroupName) && !string.IsNullOrEmpty(p.ComparisonExpression)))
+            {
+                fieldTreeNode = new TreeNode(field.Caption);
+                fieldTreeNode.Tag = field;
+                parametersTreeView.Nodes.Add(fieldTreeNode);
+            }
         }
 
         private void PopulateParametersTreeView(
