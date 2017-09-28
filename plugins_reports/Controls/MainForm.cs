@@ -31,6 +31,8 @@ namespace Reports
                     schema = ReportManager.Instance.LoadDbReportSchema();
                 })
             };
+            ReportSchema.Instance = schema;
+
             lf.ShowDialog();
             if (schema == null) return;
             foreach (var folder in schema.Folders)

@@ -56,9 +56,8 @@
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(156, 9);
+            this.label2.Location = new System.Drawing.Point(154, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(24, 17);
             this.label2.TabIndex = 2;
@@ -66,9 +65,10 @@
             // 
             // cbCodeOut
             // 
-            this.cbCodeOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbCodeOut.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbCodeOut.FormattingEnabled = true;
-            this.cbCodeOut.Location = new System.Drawing.Point(190, 6);
+            this.cbCodeOut.Location = new System.Drawing.Point(189, 6);
             this.cbCodeOut.Name = "cbCodeOut";
             this.cbCodeOut.Size = new System.Drawing.Size(121, 24);
             this.cbCodeOut.TabIndex = 3;

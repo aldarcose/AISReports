@@ -5,6 +5,8 @@ namespace Reports
 {
     public class ReportSchema
     {
+        public static ReportSchema Instance { get; set; }
+
         public ReportSchema()
         {
             Reports = new List<Report>();
@@ -14,6 +16,15 @@ namespace Reports
         public List<Report> Reports { get; set; }
 
         public List<Folder> Folders { get; set; }
+
+        public List<Report> GetAllReports()
+        {
+            var result = new List<Report>();
+            result.AddRange(Reports);
+            foreach (var folder in Folders)
+                result.AddRange(folder.GetReports());
+            return result;
+        }
     }
 
     public class Folder
@@ -38,6 +49,15 @@ namespace Reports
         public List<Report> Reports { get; set; }
 
         public List<Folder> Folders { get; set; }
+
+        public List<Report> GetReports()
+        {
+            List<Report> result = new List<Report>();
+            result.AddRange(result);
+            foreach (var folder in Folders) 
+                result.AddRange(folder.GetReports());
+            return result;
+        }
     }
 
     public class Report

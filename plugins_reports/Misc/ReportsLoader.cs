@@ -133,7 +133,6 @@ namespace Reports
     public class ReportDesignerLoader : ReportLoaderBase<ReportDesignerQuery>
     {
         private const string querySQL = "select excel_xml, def_xml, poles_xml from public.stat_tab where stat_id = {0}";
-        private Dictionary<string, ReportDesignerQuery> queriesDict;
         private List<ReportField> fields;
 
         public ReportDesignerLoader(ExcelEngine excelEngine)
@@ -204,7 +203,12 @@ namespace Reports
             // todo: 
             // В запросах мастера отчета могут быть ссылки на другие отчеты.
             // В таком случае параметры и поля этих отчетов автоматом добавляются в 
-            // текущий отчет. fucking logic
+            // текущий отчет.
+
+            foreach (XElement xReport in queriesDoc.Root.Elements("otchet"))
+            {
+                int reportId = int.Parse(xReport.Attribute("prikOtchetId").Value);
+            }
 
             return result;
         }

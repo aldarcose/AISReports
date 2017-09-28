@@ -17,7 +17,6 @@ namespace Reports.Controls
     {
         private List<GroupBox> groupList = new List<GroupBox>();
         private int index;
-        private ReportParameterCollection parameterCollection;
         private IList<ReportField> reportFields;
         private IList<ReportDesignerQuery> reportQueries;
 
@@ -26,15 +25,14 @@ namespace Reports.Controls
         BindingList<FieldViewModel> fieldsVM = new BindingList<FieldViewModel>();
         #endregion
 
-        public ReportDesignerForm(ReportParameterCollection parameterCollection)
+        public ReportDesignerForm(ReportParameterCollection parametersCollection)
         {
             InitializeComponent();
-            this.parameterCollection = parameterCollection;
             // bindings
             parametersGridView.DataSource = parametersVM;
             fieldsGridView.DataSource = fieldsVM;
 
-            InitParametersTreeView();
+            InitParametersTreeView(parametersCollection);
         }
 
         /// <contentfrom cref="IReportDesignerForm.SetReportFields" />
@@ -62,19 +60,19 @@ namespace Reports.Controls
 
         #region Init Tree Views
 
-        private void InitParametersTreeView()
+        private void InitParametersTreeView(ReportParameterCollection parametersCollection)
         {
-            foreach (var parameterGroup in parameterCollection.Where(p => string.IsNullOrEmpty(p.Name)))
+            foreach (var parameterGroup in parametersCollection.Where(p => string.IsNullOrEmpty(p.Name)))
             {
                 TreeNode parameterGroupNode = new TreeNode(parameterGroup.Caption);
                 parametersTreeView.Nodes.Add(parameterGroupNode);
                 PopulateParametersTreeView(parameterGroup.Caption,
-                    parameterCollection.Where(p => p.GroupName == parameterGroup.Caption),
+                    parametersCollection.Where(p => p.GroupName == parameterGroup.Caption),
                     parameterGroupNode);
             }
 
             TreeNode fieldTreeNode;
-            foreach (var field in parameterCollection.Where(p => 
+            foreach (var field in parametersCollection.Where(p => 
                 string.IsNullOrEmpty(p.GroupName) && !string.IsNullOrEmpty(p.ComparisonExpression)))
             {
                 fieldTreeNode = new TreeNode(field.Caption);
@@ -120,6 +118,11 @@ namespace Reports.Controls
         }
 
         #endregion
+
+        public void AddParameters(IList<ReportParameter> parameters)
+        {
+            InitParametersTreeView(new ReportParameterCollection(parameters));
+        }
 
         private void nextButton_Click(object sender, EventArgs e)
         {
@@ -501,5 +504,7 @@ namespace Reports.Controls
         void SetReportQueries(IList<ReportDesignerQuery> reportQueries);
 
         event EventHandler<ReportDesignerEventArgs> CreateReport;
+
+        void AddParameters(IList<ReportParameter> parameters);
     }
 }
