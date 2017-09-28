@@ -89,11 +89,24 @@ namespace Reports
         {
             progressForm.Close();
             conn.Dispose();
-            IWorkbook workBook = (IWorkbook)e.Result;
+
+            var result = (Tuple<string, IWorkbook>)e.Result;
+            string errorMessage = result.Item1;
+            IWorkbook workBook = result.Item2;
+            
             mainForm.Enable();
 
-            openSaveFileForm = new OpenSaveFileForm(workBook);
-            openSaveFileForm.ShowDialog((Form)mainForm);
+            if (!string.IsNullOrEmpty(errorMessage))
+            {
+                var errorMessageForm = new QueryForm(errorMessage);
+                errorMessageForm.Text = "Ошибки при выполнении запроса";
+                errorMessageForm.ShowDialog();
+            } 
+            else if (workBook != null)
+            {
+                openSaveFileForm = new OpenSaveFileForm(workBook);
+                openSaveFileForm.ShowDialog((Form)mainForm);
+            }
 
             loader.Dispose();
         }

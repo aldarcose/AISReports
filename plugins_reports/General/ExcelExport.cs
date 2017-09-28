@@ -280,13 +280,13 @@ namespace Reports
         }
         
         /// <inheritdoc/>
-        public virtual IWorkbook Execute(IProgressControl pc)
+        public virtual Tuple<string, IWorkbook> Execute(IProgressControl pc)
         {
             foreach (IWorksheet sheet in workBook.Worksheets)
                 if (sheet.UsedCells.Length != 0)
                     ProcessWorkSheet(pc, sheet);
 
-            return workBook;
+            return new Tuple<string, IWorkbook>(null, workBook);
         }
     }
 }

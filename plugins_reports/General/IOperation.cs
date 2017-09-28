@@ -7,7 +7,7 @@ namespace Reports
 {
     public interface IOperation
     {
-        IWorkbook Execute(IProgressControl pc);
+        Tuple<string, IWorkbook> Execute(IProgressControl pc);
 
         void SetQueries(List<ReportQuery> list);
 

@@ -80,7 +80,8 @@ namespace Reports
         {
             progressForm.Close();
             conn.Dispose();
-            IWorkbook workBook = (IWorkbook)e.Result;
+            var result = (Tuple<string, IWorkbook>)e.Result;
+            IWorkbook workBook = result.Item2;
 
             mainForm.Enable();
 

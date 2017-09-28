@@ -1,6 +1,7 @@
 ﻿using SharedDbWorker;
 using SharedDbWorker.Classes;
 using Syncfusion.XlsIO;
+using System;
 using System.Collections.Generic;
 
 namespace Reports
@@ -37,21 +38,36 @@ namespace Reports
         }
 
         /// <inheritdoc/>
-        public override IWorkbook Execute(IProgressControl pc)
+        public override Tuple<string, IWorkbook> Execute(IProgressControl pc)
         {
             if (fields.Count != 0)
             {
-                List<DbResult> dbData = PrepareData(pc);
+                List<DbResult> dbData = null;
+                try
+                {
+                    dbData = LoadData(pc);
+                }
+                catch(Exception ex)
+                {
+                    if (ex.GetType().FullName == "Npgsql.NpgsqlException")
+                    {
+                        return new Tuple<string, IWorkbook>(sqlQuery + Environment.NewLine + ex.Message, null);
+                    }
+                    else
+                        throw ex;
+                }
+
                 IWorksheet sheet = PrepareWorkSheet();
                 SetWorkSheetHeader(sheet);
                 int rowIndex = SetWorkSheetParameters(sheet);
                 SetColumnNames(sheet, ++rowIndex);
-                FillTable(sheet, ++rowIndex, dbData);
+                FillTable(pc, sheet, ++rowIndex, dbData);
 
                 // Auto Column Width
                 sheet.UsedRange.AutofitColumns();
             }
-            return workBook;
+
+            return new Tuple<string, IWorkbook>(null, workBook);
         }
 
         private IWorksheet PrepareWorkSheet()
@@ -80,7 +96,7 @@ namespace Reports
         private int SetWorkSheetParameters(IWorksheet sheet)
         {
             int i = 2; // Номер строки
-            string colName = GetExcelColumnName(fields.Count);
+            string colName = GetCachedColumnName(fields.Count);
             foreach (var paramStringValue in paramsStringValues)
             {
                 sheet[string.Format("A{0}:{1}{0}", i, colName)].Merge();
@@ -96,7 +112,7 @@ namespace Reports
         {
             for (int colIndex = 1; colIndex <= fields.Count; colIndex++)
             {
-                string colName = GetExcelColumnName(colIndex);
+                string colName = GetCachedColumnName(colIndex);
                 string index = string.Format("{0}{1}", colName, rowIndex);
                 sheet[index].Text = fields[colIndex - 1].Caption;
                 sheet[index].BorderAround(ExcelLineStyle.Thin);
@@ -112,8 +128,11 @@ namespace Reports
         }
 
         // Данные
-        private void FillTable(IWorksheet sheet, int startRowIndex, List<DbResult> dbData)
+        private void FillTable(IProgressControl pc, IWorksheet sheet, int startRowIndex, List<DbResult> dbData)
         {
+            pc.SetStatus("Обработка данных...");
+            pc.SetProgress(0);
+            int progress = 0;
             int rowIndex = startRowIndex;
             foreach (DbResult dbResult in dbData)
             {
@@ -126,12 +145,15 @@ namespace Reports
                     sheet[index].BorderAround(ExcelLineStyle.Thin);
                     j++;
                 }
+
+                pc.SetProgress(progress++);
                 rowIndex++;
             }
         }
 
-        private List<DbResult> PrepareData(IProgressControl pc)
+        private List<DbResult> LoadData(IProgressControl pc)
         {
+            pc.SetStatus("Инициализация запроса...");
             var dbQuery = new DbQuery("");
             dbQuery.Sql = sqlQuery;
             return conn.GetResults(dbQuery, pc);
