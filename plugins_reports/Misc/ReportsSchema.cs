@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace Reports
 {
     public class ReportSchema
     {
+        private List<Report> allReports;
+
         public static ReportSchema Instance { get; set; }
 
         public ReportSchema()
@@ -17,7 +20,15 @@ namespace Reports
 
         public List<Folder> Folders { get; set; }
 
-        public List<Report> GetAllReports()
+        public Report FindReport(int id)
+        {
+            if (allReports == null)
+                allReports = GetAllReports();
+
+            return allReports.SingleOrDefault(r => r.Id == id);
+        }
+
+        private List<Report> GetAllReports()
         {
             var result = new List<Report>();
             result.AddRange(Reports);
@@ -50,10 +61,10 @@ namespace Reports
 
         public List<Folder> Folders { get; set; }
 
-        public List<Report> GetReports()
+        internal List<Report> GetReports()
         {
             List<Report> result = new List<Report>();
-            result.AddRange(result);
+            result.AddRange(Reports);
             foreach (var folder in Folders) 
                 result.AddRange(folder.GetReports());
             return result;

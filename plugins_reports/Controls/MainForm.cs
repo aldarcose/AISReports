@@ -31,10 +31,11 @@ namespace Reports
                     schema = ReportManager.Instance.LoadDbReportSchema();
                 })
             };
-            ReportSchema.Instance = schema;
-
+            
             lf.ShowDialog();
             if (schema == null) return;
+
+            ReportSchema.Instance = schema;
             foreach (var folder in schema.Folders)
             {
                 TreeNode treeNode = new TreeNode(folder.Name, 0, 0);

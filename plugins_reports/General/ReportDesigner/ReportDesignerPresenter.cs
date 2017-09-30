@@ -69,6 +69,12 @@ namespace Reports
             loader.Load(reportData.Id);
             view.SetReportFields(loader.ReportFields);
             view.SetReportQueries(loader.ReportQueries);
+
+            if (loader.AttachedFields != null)
+                view.AddFields(loader.AttachedFields);
+            if (loader.AttachedtParameters != null)
+                view.AddParameters(loader.AttachedtParameters);
+
             export = new ExcelRDExport(conn, loader.WorkBook, reportData.Name);
         }
 

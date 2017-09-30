@@ -17,7 +17,6 @@ namespace Reports.Controls
     {
         private List<GroupBox> groupList = new List<GroupBox>();
         private int index;
-        private IList<ReportField> reportFields;
         private IList<ReportDesignerQuery> reportQueries;
 
         #region Bindings
@@ -38,7 +37,6 @@ namespace Reports.Controls
         /// <contentfrom cref="IReportDesignerForm.SetReportFields" />
         public void SetReportFields(IList<ReportField> reportFields)
         {
-            this.reportFields = reportFields;
             if (reportFields.Count == 0)
             {
                 groupBox2.Hide();
@@ -46,7 +44,7 @@ namespace Reports.Controls
                 nextButton.Click -= nextButton_Click;
                 nextButton.Click += buttonOK_Click;
             }
-            InitFieldsTreeView();
+            InitFieldsTreeView(reportFields);
         }
 
         /// <contentfrom cref="IReportDesignerForm.SetReportQueries" />
@@ -93,7 +91,7 @@ namespace Reports.Controls
             }
         }
 
-        private void InitFieldsTreeView()
+        private void InitFieldsTreeView(IList<ReportField> reportFields)
         {
             foreach (var fieldGroup in reportFields.Where(f => string.IsNullOrEmpty(f.Name)))
             {
@@ -122,6 +120,11 @@ namespace Reports.Controls
         public void AddParameters(IList<ReportParameter> parameters)
         {
             InitParametersTreeView(new ReportParameterCollection(parameters));
+        }
+
+        public void AddFields(IList<ReportField> fields)
+        {
+            InitFieldsTreeView(fields);
         }
 
         private void nextButton_Click(object sender, EventArgs e)
@@ -506,5 +509,7 @@ namespace Reports.Controls
         event EventHandler<ReportDesignerEventArgs> CreateReport;
 
         void AddParameters(IList<ReportParameter> parameters);
+
+        void AddFields(IList<ReportField> fields);
     }
 }

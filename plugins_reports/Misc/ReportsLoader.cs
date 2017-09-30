@@ -14,10 +14,10 @@ namespace Reports
         where T : ReportQuery
     {
         private IWorkbook workBook;
-        private ExcelEngine excelEngine;
-        private List<T> queries;
+        protected ExcelEngine excelEngine;
         protected XDocument queriesDoc;
         protected DbResult dbResult;
+        protected List<T> queries;
 
         public ReportLoaderBase(ExcelEngine excelEngine)
         {
@@ -34,7 +34,7 @@ namespace Reports
             }
 
             this.workBook = LoadExcelReport(dbResult.Fields[0]);
-            this.queries = ParseQueries(dbResult.Fields[1]);
+            ParseQueries(dbResult.Fields[1]);
         }
 
         public IWorkbook WorkBook
@@ -49,13 +49,13 @@ namespace Reports
 
         protected abstract string QuerySql { get; }
 
-        protected virtual List<T> ParseQueries(object queriesData)
+        protected virtual void ParseQueries(object queriesData)
         {
             var result = new List<T>();
-            if (queriesData == DBNull.Value) return null;
+            if (queriesData == DBNull.Value) return;
             var byteArray = (byte[])queriesData;
             string queriesText = Encoding.UTF8.GetString(byteArray);
-            if (queriesText == "NULL") return null;
+            if (queriesText == "NULL") return;
 
             try
             {
@@ -73,7 +73,7 @@ namespace Reports
             foreach (XElement el in queriesDoc.Root.Elements("def"))
                 result.Add(GetQueryObject(el.Value, result));
 
-            return result;
+            queries = result;
         }
 
         private T GetQueryObject(string rawSql, List<T> previousQueries)
@@ -134,6 +134,8 @@ namespace Reports
     {
         private const string querySQL = "select excel_xml, def_xml, poles_xml from public.stat_tab where stat_id = {0}";
         private List<ReportField> fields;
+        private List<ReportParameter> attachedParameters;
+        private List<ReportField> attachedFields;
 
         public ReportDesignerLoader(ExcelEngine excelEngine)
             : base(excelEngine)
@@ -151,20 +153,30 @@ namespace Reports
             get { return fields; }
         }
 
+        public List<ReportParameter> AttachedtParameters
+        {
+            get { return attachedParameters; }
+        }
+
+        public List<ReportField> AttachedFields
+        {
+            get { return attachedFields; }
+        }
+
         /// <inheritdoc>
         public override void Load(int id)
         {
             base.Load(id);
-            this.fields = ParseFields(dbResult.Fields[2]);
+            ParseFields(dbResult.Fields[2]);
         }
 
-        private List<ReportField> ParseFields(object fieldsData)
+        private void ParseFields(object fieldsData)
         {
             var result = new List<ReportField>();
-            if (fieldsData == DBNull.Value) return null;
+            if (fieldsData == DBNull.Value) return;
             var byteArray = (byte[])fieldsData;
             string text = Encoding.UTF8.GetString(byteArray);
-            if (text == "NULL") return null;
+            if (text == "NULL") return;
 
             XDocument fieldsDoc = null; 
             try
@@ -192,25 +204,37 @@ namespace Reports
                     el.Attribute("sections").Value));
             }
 
-            return result;
+            fields = result;
         }
 
         /// <inheritdoc>
-        protected override List<ReportDesignerQuery> ParseQueries(object queriesData)
+        protected override void ParseQueries(object queriesData)
         {
-            var result = base.ParseQueries(queriesData);
+            base.ParseQueries(queriesData);
 
-            // todo: 
             // В запросах мастера отчета могут быть ссылки на другие отчеты.
             // В таком случае параметры и поля этих отчетов автоматом добавляются в 
             // текущий отчет.
 
+            // Прикрепленные отчеты
+            ReportDesignerLoader attachedReportLoader = new ReportDesignerLoader(excelEngine);
             foreach (XElement xReport in queriesDoc.Root.Elements("otchet"))
             {
-                int reportId = int.Parse(xReport.Attribute("prikOtchetId").Value);
-            }
+                int attachedReportId = int.Parse(xReport.Attribute("prikOtchetId").Value);
+                string attachedLeftJoinQuery = xReport.Attribute("prikZapros").Value;
 
-            return result;
+                queries.Add(new ReportDesignerQuery(attachedLeftJoinQuery));
+                Report attachedReport = ReportSchema.Instance.FindReport(attachedReportId);
+                // Запросы
+                attachedReportLoader.Load(attachedReportId);
+                queries.AddRange(attachedReportLoader.ReportQueries.Where(q => q.IsJoinExpression));
+                // Параметры
+                attachedParameters = new List<ReportParameter>();
+                attachedParameters.AddRange(attachedReport.Parameters);
+                // Поля
+                attachedFields = new List<ReportField>();
+                attachedFields.AddRange(attachedReportLoader.ReportFields);
+            }
         }
     }
 }
