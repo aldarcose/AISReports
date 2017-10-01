@@ -19,7 +19,7 @@ namespace Reports
         private IReportParametersForm parameters;
         private BackgroundWorker worker;
         private ReportLoader reportLoader;
-        private IOperation export;
+        private ExcelExport export;
         private ExcelEngine excelEngine;
         private ProgressForm progressForm;
         private OpenSaveFileForm openSaveFileForm;

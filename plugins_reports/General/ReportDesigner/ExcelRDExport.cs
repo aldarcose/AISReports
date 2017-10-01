@@ -6,13 +6,12 @@ using System.Collections.Generic;
 
 namespace Reports
 {
-    public class ExcelRDExport : ExcelExport
+    public class ExcelRDExport : ExcelExportBase<ReportDesignerQuery>
     {
         private string sqlQuery;
         private IList<ReportField> fields;
         private IDictionary<string, string> paramsStringValues;
         private IDictionary<int, string> columnNames;
-        private List<ReportDesignerQuery> queries;
         private IDictionary<string, string> paramValues2;
         private string name;
 
@@ -39,11 +38,6 @@ namespace Reports
             this.paramsStringValues = paramsStringValues;
         }
 
-        public void SetQueries(IList<ReportDesignerQuery> list)
-        {
-            this.queries = new List<ReportDesignerQuery>(list);
-        }
-
         public void InitParameters(IDictionary<string, string> paramValues2)
         {
             if (queries == null)
@@ -54,8 +48,14 @@ namespace Reports
                 if (string.IsNullOrEmpty(eQuery.InnerSql)) continue;
                 foreach (var pair in paramValues2)
                     eQuery.SetParameter(pair.Key, pair.Value);
+
+                eQuery.SetTrueForAllParameters();
             }
             this.paramValues2 = paramValues2;
+        }
+
+        protected override void ReplaceWithParameterValues(IRange cell)
+        {
         }
 
         /// <inheritdoc/>
@@ -89,6 +89,7 @@ namespace Reports
             }
             else
             {
+                base.Execute(pc);
             }
 
             return new Tuple<string, IWorkbook>(null, workBook);

@@ -3,6 +3,7 @@ using System.Linq;
 using SharedDbWorker;
 using System.Collections.Generic;
 using SharedDbWorker.Classes;
+using System.Text.RegularExpressions;
 
 namespace Reports
 {
@@ -77,6 +78,20 @@ namespace Reports
             else
                 this.globalParameters[key] = value;
             this.innerSQL = innerSQL.Replace(key, value);
+        }
+
+        public void SetTrueForAllParameters()
+        {
+            string pattern = @":(.*?):";
+            innerSQL = Regex.Replace(innerSQL,
+                pattern,
+                me =>
+                {
+                    if (me.Value.StartsWith(":"))
+                        return "true";
+                    return me.Value;
+                },
+                RegexOptions.Singleline);
         }
 
         private string NormalizeSQL(string sql)

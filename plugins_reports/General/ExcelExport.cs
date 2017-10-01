@@ -9,25 +9,29 @@ using System.Text.RegularExpressions;
 
 namespace Reports
 {
-    /// <summary>
-    /// Экспорт в Excel
-    /// </summary>
-    public class ExcelExport : IOperation
+    public abstract class ExcelExportBase<T> : IOperation
+        where T : ReportQuery
     {
         protected Connection conn;
         protected IWorkbook workBook;
-        private List<ReportQuery> queries;
+        protected List<T> queries;
         private Dictionary<string, Tuple<string, object>> paramValues;
 
-        public ExcelExport(Connection conn, IWorkbook workBook)
+        public ExcelExportBase(Connection conn, IWorkbook workBook)
         {
             this.conn = conn;
             this.workBook = workBook;
         }
 
-        public void SetQueries(List<ReportQuery> list)
+        public virtual void SetQueries(List<T> list)
         {
-            queries = new List<ReportQuery>(list);
+            queries = new List<T>(list);
+        }
+
+        protected virtual T FindQuery(string text)
+        {
+            var chuncks = text.TrimStart('#').Split('(');
+            return queries.FirstOrDefault(q => q.Name.Equals(chuncks[0]));
         }
 
         public void InitParameters(Dictionary<string, Tuple<string, object>> paramValues)
@@ -43,7 +47,7 @@ namespace Reports
             this.paramValues = paramValues;
         }
 
-        private void ReplaceWithParameterValues(IRange cell)
+        protected virtual void ReplaceWithParameterValues(IRange cell)
         {
             string result = cell.Value.TrimStart('#');
             if (result.StartsWith("=")) return;
@@ -53,19 +57,13 @@ namespace Reports
             cell.Value = result;
         }
 
-        private ReportQuery FindQuery(string text)
-        {
-            var chuncks = text.TrimStart('#').Split('(');
-            return queries.FirstOrDefault(q => q.Name.Equals(chuncks[0]));
-        }
-
         private string[] ExtractParameterValues(string text)
         {
             HashSet<string> hashSet = new HashSet<string>();
 
             string paramsText = text.Contains("(") ?
-                            text.Substring(text.IndexOf("(") + 1, 
-                            text.LastIndexOf(")") - text.IndexOf("(") - 1) 
+                            text.Substring(text.IndexOf("(") + 1,
+                            text.LastIndexOf(")") - text.IndexOf("(") - 1)
                             : null;
 
             if (paramsText == null) return null;
@@ -89,7 +87,7 @@ namespace Reports
                 IRange cell = sheet.UsedCells[i]; string cellValue = cell.Value;
                 if (!string.IsNullOrEmpty(cellValue) && cellValue.StartsWith("#"))
                 {
-                    if (cellValue.StartsWith("#=")) 
+                    if (cellValue.StartsWith("#="))
                         cell.Value2 = EvaluateFormula(cell.Column, cell.Row, cellValue);
 
                     var query = FindQuery(cellValue);
@@ -128,7 +126,7 @@ namespace Reports
         }
 
         private int ProcessWorkSheetList(
-            IProgressControl pc, IWorksheet sheet, ReportQuery query,
+            IProgressControl pc, IWorksheet sheet, T query,
             params string[] localParameterValues)
         {
             pc.SetStatus("Инициализация запроса...");
@@ -140,9 +138,9 @@ namespace Reports
             foreach (var cell in sheet.UsedCells)
             {
                 string value = cell.Value;
-                
+
                 if (string.IsNullOrEmpty(value)) continue;
-                
+
                 if (value.Equals(string.Format("#{0}", query.Name)) ||
                     value.IndexOf(string.Format("#{0}(", query.Name)) >= 0)
                 {
@@ -159,8 +157,8 @@ namespace Reports
             string xlFieldValue;
             Dictionary<int, string> fieldPositions = new Dictionary<int, string>();
             int j = 0;
-            while (j < sheet.Rows[firstRowNum-1].Columns.Length && 
-                sheet.Rows[firstRowNum-1].Columns[j].Value != string.Empty)
+            while (j < sheet.Rows[firstRowNum - 1].Columns.Length &&
+                sheet.Rows[firstRowNum - 1].Columns[j].Value != string.Empty)
             {
                 fieldPositions[j] = sheet.Rows[firstRowNum - 1].Columns[j].Value;
                 j++;
@@ -174,7 +172,7 @@ namespace Reports
             Func<DbResult, int, int, object> GetValue = (dbResult, xlRowNum, xlColNum) =>
             {
                 fieldPositions.TryGetValue(xlColNum, out xlFieldValue);
-                
+
                 // В ячейке формула
                 if (xlFieldValue.StartsWith("="))
                     return EvaluateFormula(xlFieldValue, xlRowNum);
@@ -194,7 +192,7 @@ namespace Reports
                     xlFieldValue.Equals(string.Format(searchFormat, fn)));
 
                 if (index < 0) return xlFieldValue;
-                if (dbResult.Fields[index].Equals("$id")) 
+                if (dbResult.Fields[index].Equals("$id"))
                     return xlRowNum - firstRowNum + 2;
                 return dbResult.Fields[index];
             };
@@ -213,7 +211,7 @@ namespace Reports
                 i++;
             }
 
-            for (j = 0; j < firstColNum; j++ )
+            for (j = 0; j < firstColNum; j++)
                 if (sheet.Rows[i].Columns[j].Value.StartsWith("=SUM", StringComparison.InvariantCultureIgnoreCase))
                 {
                     string addressLocal = sheet.Rows[i].Columns[j].AddressLocal;
@@ -277,7 +275,7 @@ namespace Reports
 
             return columnName;
         }
-        
+
         /// <inheritdoc/>
         public virtual Tuple<string, IWorkbook> Execute(IProgressControl pc)
         {
@@ -286,6 +284,17 @@ namespace Reports
                     ProcessWorkSheet(pc, sheet);
 
             return new Tuple<string, IWorkbook>(null, workBook);
+        }
+    }
+
+    /// <summary>
+    /// Экспорт в Excel
+    /// </summary>
+    public class ExcelExport : ExcelExportBase<ReportQuery>
+    {
+        public ExcelExport(Connection conn, IWorkbook workBook)
+            : base(conn, workBook)
+        {
         }
     }
 }

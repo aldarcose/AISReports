@@ -9,8 +9,6 @@ namespace Reports
     {
         Tuple<string, IWorkbook> Execute(IProgressControl pc);
 
-        void SetQueries(List<ReportQuery> list);
-
         void InitParameters(Dictionary<string, Tuple<string, object>> paramValues);
     }
 }
