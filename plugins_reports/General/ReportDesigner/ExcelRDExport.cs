@@ -12,6 +12,8 @@ namespace Reports
         private IList<ReportField> fields;
         private IDictionary<string, string> paramsStringValues;
         private IDictionary<int, string> columnNames;
+        private List<ReportDesignerQuery> queries;
+        private IDictionary<string, string> paramValues2;
         private string name;
 
         public ExcelRDExport(Connection conn, IWorkbook workbook, string name)
@@ -37,10 +39,29 @@ namespace Reports
             this.paramsStringValues = paramsStringValues;
         }
 
+        public void SetQueries(IList<ReportDesignerQuery> list)
+        {
+            this.queries = new List<ReportDesignerQuery>(list);
+        }
+
+        public void InitParameters(IDictionary<string, string> paramValues2)
+        {
+            if (queries == null)
+                throw new InvalidOperationException("Queries is null");
+
+            foreach (var eQuery in queries)
+            {
+                if (string.IsNullOrEmpty(eQuery.InnerSql)) continue;
+                foreach (var pair in paramValues2)
+                    eQuery.SetParameter(pair.Key, pair.Value);
+            }
+            this.paramValues2 = paramValues2;
+        }
+
         /// <inheritdoc/>
         public override Tuple<string, IWorkbook> Execute(IProgressControl pc)
         {
-            if (fields.Count != 0)
+            if (fields != null && fields.Count != 0)
             {
                 List<DbResult> dbData = null;
                 try
@@ -65,6 +86,9 @@ namespace Reports
 
                 // Auto Column Width
                 sheet.UsedRange.AutofitColumns();
+            }
+            else
+            {
             }
 
             return new Tuple<string, IWorkbook>(null, workBook);

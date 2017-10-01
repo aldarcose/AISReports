@@ -174,8 +174,9 @@ namespace Reports.Controls
                     if (parameterValues != null && parameterValues.Any())
                     {
                         var firstParameterValue = parameterValues.First();
+                        string key = firstParameterValue.Key;
                         object value = firstParameterValue.Value.Item2;
-                        parametersVM.Add(new ParameterViewModel(parameter, value));
+                        parametersVM.Add(new ParameterViewModel(parameter, value, null, key));
                     }
                 };
                 parameterForm.ShowDialog();
@@ -290,12 +291,23 @@ namespace Reports.Controls
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            if (CreateReport != null)
-                CreateReport(this, new ReportDesignerEventArgs(null,
+            if (CreateReport == null) return;
+            if (fieldsVM.Count != 0)
+            {
+                CreateReport(this, new ReportDesignerEventArgs(
                     new List<ReportField>(fieldsVM.Select(f => f.Field)),
                     new Dictionary<string, string>(parametersVM.ToDictionary(p => p.Caption, p => p.StringValue)),
                     ConstructQueryText()));
-
+            }
+            else
+            {
+                CreateReport(this, new ReportDesignerEventArgs(
+                        new Dictionary<string, string>(parametersVM.ToDictionary(
+                            p => p.Key, p => p.Expression)),
+                        new Dictionary<string, string>(parametersVM.ToDictionary(
+                            p => p.Caption, p => p.StringValue))
+                        ));
+            }
             DialogResult = DialogResult.OK;
         }
     }
@@ -348,6 +360,7 @@ namespace Reports.Controls
         private object value;
         private string stringValue;
         private string expression;
+        private string key;
 
         public ParameterViewModel(ReportParameter parameter, object value)
         {
@@ -355,10 +368,12 @@ namespace Reports.Controls
             this.value = value;
         }
 
-        public ParameterViewModel(ReportParameter parameter, object value, string stringValue)
+        public ParameterViewModel(
+            ReportParameter parameter, object value, string stringValue, string key = null)
             : this(parameter, value)
         {
             this.stringValue = stringValue;
+            this.key = key;
         }
 
         [DisplayName("Параметр")]
@@ -371,6 +386,12 @@ namespace Reports.Controls
         public object Value
         {
             get { return value; }
+        }
+
+        [Browsable(false)]
+        public string Key
+        {
+            get { return key; }
         }
 
         [DisplayName("Значение")]

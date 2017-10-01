@@ -22,7 +22,7 @@ namespace Reports.Controls
 
         public object Value
         {
-            get { return new Tuple<string,string>(CodeIn, CodeOut); }
+            get { return new Tuple<string, string>(CodeIn, CodeOut); }
         }
 
         public string CodeIn

@@ -31,17 +31,25 @@ namespace Reports
         private string sqlQuery;
         private IList<ReportField> selectedFields;
         private IDictionary<string, string> parametersStringValues;
+        private IDictionary<string, string> parametersValues2;
 
         public ReportDesignerEventArgs(
-            Dictionary<string, Tuple<string, object>> parametersValues, 
             IList<ReportField> selectedFields,
             IDictionary<string, string> parametersStringValues,
-            string sqlQuery)
-            : base(parametersValues)
+            string sqlQuery) 
+            : base(null)
         {
             this.selectedFields = selectedFields;
             this.parametersStringValues = parametersStringValues;
             this.sqlQuery = sqlQuery;
+        }
+
+        public ReportDesignerEventArgs(
+            IDictionary<string, string> parametersValues2,
+            IDictionary<string, string> parametersStringValues)
+            : this(null, parametersStringValues, null)
+        {
+            this.parametersValues2 = parametersValues2;
         }
 
         public IList<ReportField> SelectedFields
@@ -57,6 +65,11 @@ namespace Reports
         public string SqlQuery
         {
             get { return sqlQuery; }
+        }
+
+        public IDictionary<string, string> ParametersValues2
+        {
+            get { return parametersValues2; }
         }
     }
 }

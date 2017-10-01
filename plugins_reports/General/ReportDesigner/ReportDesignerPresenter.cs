@@ -56,8 +56,17 @@ namespace Reports
                 progressForm = new ProgressForm();
                 progressForm.Owner = (Form)mainForm;
                 progressForm.Show();
-                var argument = new Tuple<IList<ReportField>, IDictionary<string, string>, string>(
-                    e.SelectedFields, e.ParametersStringValues, e.SqlQuery);
+
+                object argument = null;
+                if (e.SelectedFields != null)
+                {
+                    argument = new Tuple<IList<ReportField>, IDictionary<string, string>, string>(
+                        e.SelectedFields, e.ParametersStringValues, e.SqlQuery);
+                }
+                else
+                {
+                    argument = e.ParametersValues2;
+                }
                 worker.RunWorkerAsync(argument);
             }
         }
@@ -72,22 +81,33 @@ namespace Reports
 
             if (loader.AttachedFields != null)
                 view.AddFields(loader.AttachedFields);
-            if (loader.AttachedtParameters != null)
-                view.AddParameters(loader.AttachedtParameters);
+            if (loader.AttachedParameters != null)
+                view.AddParameters(loader.AttachedParameters);
 
             export = new ExcelRDExport(conn, loader.WorkBook, reportData.Name);
+            if (loader.ReportFields.Count == 0)
+                export.SetQueries(loader.ReportQueries);
         }
 
         private void OnExecuteReport(object sender, DoWorkEventArgs e)
         {
-            var argument = (Tuple<IList<ReportField>, IDictionary<string, string>, string>)e.Argument;
-            IList<ReportField> selectedFields = argument.Item1;
-            IDictionary<string, string> paramsStringValues = argument.Item2;
-            string sqlQuery = argument.Item3;
-            export.InitParamsStringValues(paramsStringValues);
-            export.InitFields(selectedFields);
-            export.InitQuery(sqlQuery);
-            
+            object argument = e.Argument;
+            if (argument is Tuple<IList<ReportField>, IDictionary<string, string>, string>)
+            {
+                var arg = argument as Tuple<IList<ReportField>, IDictionary<string, string>, string>;
+                IList<ReportField> selectedFields = arg.Item1;
+                IDictionary<string, string> paramsStringValues = arg.Item2;
+                string sqlQuery = arg.Item3;
+                export.InitParamsStringValues(paramsStringValues);
+                export.InitFields(selectedFields);
+                export.InitQuery(sqlQuery);
+            }
+            else
+            {
+                IDictionary<string, string> paramsValues2 = 
+                    argument as IDictionary<string, string>;
+                export.InitParameters(paramsValues2);
+            }
             e.Result = export.Execute(progressForm);
         }
 

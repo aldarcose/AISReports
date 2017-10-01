@@ -153,7 +153,7 @@ namespace Reports
             get { return fields; }
         }
 
-        public List<ReportParameter> AttachedtParameters
+        public List<ReportParameter> AttachedParameters
         {
             get { return attachedParameters; }
         }

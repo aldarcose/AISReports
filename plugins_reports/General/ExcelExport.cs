@@ -27,8 +27,7 @@ namespace Reports
 
         public void SetQueries(List<ReportQuery> list)
         {
-            queries = new List<ReportQuery>();
-            queries.AddRange(list);
+            queries = new List<ReportQuery>(list);
         }
 
         public void InitParameters(Dictionary<string, Tuple<string, object>> paramValues)

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace Reports
@@ -16,7 +17,9 @@ namespace Reports
         /// <inheritdoc/>
         protected override void ParseSQL()
         {
-            if (rawSQL.IndexOf(LEFTJOINEXPR, StringComparison.InvariantCultureIgnoreCase) >= 0)
+            string[] chunks = rawSQL.Split(new [] { " " }, StringSplitOptions.RemoveEmptyEntries);
+            if (chunks.Length > 1 && 
+                chunks[1].Equals("left", StringComparison.InvariantCultureIgnoreCase))
             {
                 this.innerSQL = rawSQL.Substring(rawSQL.IndexOf(LEFTJOINEXPR,
                     StringComparison.InvariantCultureIgnoreCase));
