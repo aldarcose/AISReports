@@ -80,14 +80,15 @@ namespace Reports
             this.innerSQL = innerSQL.Replace(key, value);
         }
 
-        public void SetTrueForAllParameters()
+        public void SetTrueForAllParameters(params string[] excludeArray)
         {
             string pattern = @":(.*?):";
             innerSQL = Regex.Replace(innerSQL,
                 pattern,
                 me =>
                 {
-                    if (me.Value.StartsWith(":"))
+                    if (me.Value.StartsWith(":") && !me.Value.Equals("::") &&
+                        !excludeArray.Any(e => me.Value.IndexOf(e) > 0) )
                         return "true";
                     return me.Value;
                 },
@@ -207,7 +208,7 @@ namespace Reports
             params string[] localParameterValues)
         {
             string savedInnerSql = innerSQL;
-            if (localParameterValues != null)
+            if (localParameterValues != null && localParameterValues.Any())
             {
                 if (localParameterNames.Count == localParameterValues.Length)
                 {

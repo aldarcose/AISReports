@@ -143,6 +143,10 @@ namespace Reports.Controls
                             var varText = (Tuple<ComparisonType, string>)value;
                             result[string.Format(":{0}_1_:", par.Name)] = new Tuple<string, object>(null, varText);
                             break;
+                        case ReportParameterType.Diagn:
+                            var diagnValue = (Tuple<string, string>)value;
+                            result[string.Format(":{0}_2_:", par.Name)] = new Tuple<string, object>(null, diagnValue);
+                            break;
                     }
                 }
                 else 

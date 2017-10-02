@@ -96,6 +96,8 @@ namespace Reports
                         ReplaceWithParameterValues(cell); i++;
                         continue;
                     }
+                    // test!!!
+                    var test = query.ExecuteScalarSQL(conn, null, null);
                     // Дополнительные параметры
                     string[] localParVals = ExtractParameterValues(cellValue);
                     if (query.NonQuery)

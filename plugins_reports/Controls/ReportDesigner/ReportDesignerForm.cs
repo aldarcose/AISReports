@@ -514,6 +514,11 @@ namespace Reports.Controls
                     if (id.GetType() == typeof(String))
                         return string.Format("{0} = '{1}'", parameter.ComparisonExpression, id);
                     return string.Format("{0} = {1}", parameter.ComparisonExpression, id);
+                case ReportParameterType.Diagn:
+                    var diagnValue = (Tuple<string, string>)value;
+                    return //string.Format("select 'aa'::text, 'bb'::text, 'cc'::text, 'dd'::text" , // test!!!
+                        string.Format("select '{0}'::text, '{1}'::text, ':mkb: between ''{0}'' and ''{1}'''::text, ''::text", 
+                        diagnValue.Item1, diagnValue.Item2);
             }
             return null;
         }

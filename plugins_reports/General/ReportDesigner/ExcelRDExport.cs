@@ -49,7 +49,7 @@ namespace Reports
                 foreach (var pair in paramValues2)
                     eQuery.SetParameter(pair.Key, pair.Value);
 
-                eQuery.SetTrueForAllParameters();
+                eQuery.SetTrueForAllParameters("mkb");
             }
             this.paramValues2 = paramValues2;
         }
