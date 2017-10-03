@@ -15,12 +15,13 @@ namespace Reports
         protected Connection conn;
         protected IWorkbook workBook;
         protected List<T> queries;
-        private Dictionary<string, Tuple<string, object>> paramValues;
+        protected Dictionary<string, Tuple<string, object>> paramValues;
 
         public ExcelExportBase(Connection conn, IWorkbook workBook)
         {
             this.conn = conn;
             this.workBook = workBook;
+            this.paramValues = new Dictionary<string, Tuple<string, object>>();
         }
 
         public virtual void SetQueries(List<T> list)
@@ -96,8 +97,7 @@ namespace Reports
                         ReplaceWithParameterValues(cell); i++;
                         continue;
                     }
-                    // test!!!
-                    var test = query.ExecuteScalarSQL(conn, null, null);
+                    
                     // Дополнительные параметры
                     string[] localParVals = ExtractParameterValues(cellValue);
                     if (query.NonQuery)

@@ -34,5 +34,13 @@ namespace Reports
         {
             get { return isJoinExpression; }
         }
+
+        /// <summary>
+        /// Запрос, хранящий параметры для других запросов
+        /// </summary>
+        public bool IsParamatersQuery
+        {
+            get { return innerSQL.IndexOf("f(mkb,a,diag1,d)") > 0; }
+        }
     }
 }

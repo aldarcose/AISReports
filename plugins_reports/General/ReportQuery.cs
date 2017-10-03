@@ -87,10 +87,12 @@ namespace Reports
                 pattern,
                 me =>
                 {
-                    if (me.Value.StartsWith(":") && !me.Value.Equals("::") &&
-                        !excludeArray.Any(e => me.Value.IndexOf(e) > 0) )
+                    string word = me.Value;
+
+                    if (word.StartsWith(":") && !word.Equals("::") &&
+                        !excludeArray.Any(e => word.IndexOf(e) > 0))
                         return "true";
-                    return me.Value;
+                    return word;
                 },
                 RegexOptions.Singleline);
         }
@@ -208,7 +210,7 @@ namespace Reports
             params string[] localParameterValues)
         {
             string savedInnerSql = innerSQL;
-            if (localParameterValues != null && localParameterValues.Any())
+            if (localParameterValues != null && localParameterValues != null)
             {
                 if (localParameterNames.Count == localParameterValues.Length)
                 {
@@ -254,7 +256,7 @@ namespace Reports
             string savedInnerSql = innerSQL;
             List<DbResult> results = null;
             var q = new DbQuery(name);
-            if (localParameterValues != null)
+            if (localParameterValues != null && localParameterNames != null)
             {
                 if (localParameterNames.Count == localParameterValues.Length)
                 {

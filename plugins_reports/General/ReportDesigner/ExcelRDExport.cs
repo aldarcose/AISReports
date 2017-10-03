@@ -2,6 +2,7 @@
 using SharedDbWorker.Classes;
 using Syncfusion.XlsIO;
 using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace Reports
@@ -42,6 +43,9 @@ namespace Reports
         {
             if (queries == null)
                 throw new InvalidOperationException("Queries is null");
+            
+            // Предыиниализация параметров
+            PreInitQueries(paramValues2);
 
             foreach (var eQuery in queries)
             {
@@ -54,8 +58,45 @@ namespace Reports
             this.paramValues2 = paramValues2;
         }
 
+        private void PreInitQueries(IDictionary<string, string> paramValues2)
+        {
+            var queryWithParams = queries.SingleOrDefault(q => q.IsParamatersQuery);
+            if (queryWithParams != null)
+            {
+                foreach (var pair in paramValues2)
+                    queryWithParams.SetParameter(pair.Key, pair.Value);
+                queries.Remove(queryWithParams);
+
+                var dbResults = queryWithParams.SelectSimple(conn, null);
+                var dbResult = dbResults.FirstOrDefault();
+                if (dbResult != null)
+                {
+                    foreach (var eQuery in queries)
+                        for (int i = 0; i < dbResult.Fields.Count; i++)
+                        {
+                            string key = ":" + dbResult.FieldNames[i] + ":";
+                            string text = Utils.ToString(dbResult.Fields[i]);
+
+                            eQuery.SetParameter(key, text);
+                            if (i == 0)
+                                paramValues[queryWithParams.Name] = new Tuple<string, object>(text, null);
+                            else
+                                paramValues[key] = new Tuple<string, object>(text, null);
+                        }
+                }
+            }
+        }
+
+        /// <inheritdoc/>
         protected override void ReplaceWithParameterValues(IRange cell)
         {
+            if (cell.Text == "#:list_params:")
+            {
+                cell.Value = string.Join(", ", paramsStringValues.Select(p => 
+                        string.Format("{0}:{1}", p.Key, p.Value)));
+                return;
+            }
+            base.ReplaceWithParameterValues(cell);
         }
 
         /// <inheritdoc/>

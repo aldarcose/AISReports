@@ -65,7 +65,8 @@ namespace Reports
                 }
                 else
                 {
-                    argument = e.ParametersValues2;
+                    argument = new Tuple<IDictionary<string, string>, IDictionary<string, string>>(
+                        e.ParametersStringValues, e.ParametersValues2);
                 }
                 worker.RunWorkerAsync(argument);
             }
@@ -104,9 +105,11 @@ namespace Reports
             }
             else
             {
-                IDictionary<string, string> paramsValues2 = 
-                    argument as IDictionary<string, string>;
+                var tuple = (Tuple<IDictionary<string, string>, IDictionary<string, string>>)argument;
+                var paramStringValues = tuple.Item1;
+                var paramsValues2 = tuple.Item2;
                 export.InitParameters(paramsValues2);
+                export.InitParamsStringValues(paramStringValues);
             }
             e.Result = export.Execute(progressForm);
         }

@@ -9,10 +9,7 @@ namespace Reports.Controls
     public partial class DiagnosisEdit : UserControl, IParameter
     {
         private Connection conn;
-
-        private const string sqlQuery =
-            @"select kodname, diagn_kod_mkb from public.diagn_kod_mkb_tab
-              where kodname || diagn_kod_mkb  like '%{0}%'";
+        private const string sqlQuery = @"select kod_d, mkb from public.mkb_tab where kod_d || mkb like '%{0}%' order by kodname";
 
         public DiagnosisEdit()
         {
@@ -22,7 +19,15 @@ namespace Reports.Controls
 
         public object Value
         {
-            get { return new Tuple<string, string>(CodeIn, CodeOut); }
+            get
+            {
+                if (string.IsNullOrEmpty(CodeIn))
+                    throw new InvalidOperationException("Не выбран диагноз с");
+                if (string.IsNullOrEmpty(CodeOut))
+                    throw new InvalidOperationException("Не выбран диагноз по");
+                
+                return new Tuple<string, string>(CodeIn, CodeOut); 
+            }
         }
 
         public string CodeIn

@@ -461,6 +461,9 @@ namespace Reports.Controls
                     return string.Format("с {0:n2} по {1:n2}", floatPeriod.Item1, floatPeriod.Item2);
                 case ReportParameterType.Query:
                     return ((DbResult)value).Fields[1].ToString();
+                case ReportParameterType.Diagn:
+                    var diagnValue = (Tuple<string, string>)value;
+                    return string.Format("с {0} по {1}", diagnValue.Item1, diagnValue.Item2);
             }
             return null;
         }
@@ -516,8 +519,7 @@ namespace Reports.Controls
                     return string.Format("{0} = {1}", parameter.ComparisonExpression, id);
                 case ReportParameterType.Diagn:
                     var diagnValue = (Tuple<string, string>)value;
-                    return //string.Format("select 'aa'::text, 'bb'::text, 'cc'::text, 'dd'::text" , // test!!!
-                        string.Format("select '{0}'::text, '{1}'::text, ':mkb: between ''{0}'' and ''{1}'''::text, ''::text", 
+                    return string.Format("select '{0}-{1}'::text, 'с {0} по {1}'::text, ':mkb: between ''{0}'' and ''{1}'''::text, ''::text", 
                         diagnValue.Item1, diagnValue.Item2);
             }
             return null;

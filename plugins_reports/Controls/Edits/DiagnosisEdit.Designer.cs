@@ -39,27 +39,30 @@
             // cbCodeIn
             // 
             this.cbCodeIn.FormattingEnabled = true;
-            this.cbCodeIn.Location = new System.Drawing.Point(23, 5);
+            this.cbCodeIn.Location = new System.Drawing.Point(17, 4);
+            this.cbCodeIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbCodeIn.Name = "cbCodeIn";
-            this.cbCodeIn.Size = new System.Drawing.Size(121, 24);
+            this.cbCodeIn.Size = new System.Drawing.Size(130, 21);
             this.cbCodeIn.TabIndex = 0;
             this.cbCodeIn.TextChanged += new System.EventHandler(this.cbCodeIn_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 6);
+            this.label1.Location = new System.Drawing.Point(3, 5);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 17);
+            this.label1.Size = new System.Drawing.Size(13, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "с";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(154, 9);
+            this.label2.Location = new System.Drawing.Point(151, 8);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 17);
+            this.label2.Size = new System.Drawing.Size(19, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "по";
             // 
@@ -68,22 +71,24 @@
             this.cbCodeOut.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbCodeOut.FormattingEnabled = true;
-            this.cbCodeOut.Location = new System.Drawing.Point(189, 6);
+            this.cbCodeOut.Location = new System.Drawing.Point(171, 5);
+            this.cbCodeOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbCodeOut.Name = "cbCodeOut";
-            this.cbCodeOut.Size = new System.Drawing.Size(121, 24);
+            this.cbCodeOut.Size = new System.Drawing.Size(140, 21);
             this.cbCodeOut.TabIndex = 3;
             this.cbCodeOut.TextChanged += new System.EventHandler(this.cbCodeOut_TextChanged);
             // 
             // DiagnosisEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.cbCodeOut);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbCodeIn);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DiagnosisEdit";
-            this.Size = new System.Drawing.Size(320, 40);
+            this.Size = new System.Drawing.Size(316, 32);
             this.ResumeLayout(false);
             this.PerformLayout();
 
