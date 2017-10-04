@@ -47,13 +47,33 @@ namespace Reports
             // Предыиниализация параметров
             PreInitQueries(paramValues2);
 
-            foreach (var eQuery in queries)
+            foreach (var eQuery in queries.ToArray())
             {
                 if (string.IsNullOrEmpty(eQuery.InnerSql)) continue;
                 foreach (var pair in paramValues2)
                     eQuery.SetParameter(pair.Key, pair.Value);
 
                 eQuery.SetTrueForAllParameters("mkb");
+                // Если запрос содержит больше одного поля то
+                // переносим его в параметры
+                if (eQuery.FieldNames.Count != 1)
+                {
+                    var dbResults = eQuery.SelectSimple(conn, null);
+                    var dbResult = dbResults.FirstOrDefault();
+                    if (dbResult != null)
+                    {
+                        for (int i = 0; i < dbResult.Fields.Count; i++)
+                        {
+                            string key = ":" + dbResult.FieldNames[i] + ":";
+                            string text = Utils.ToString(dbResult.Fields[i]);
+                            if (i == 0)
+                                paramValues[eQuery.Name] = new Tuple<string, object>(text, null);
+                            else
+                                paramValues[key] = new Tuple<string, object>(text, null);
+                        }
+                    }
+                    queries.Remove(eQuery);
+                }
             }
             this.paramValues2 = paramValues2;
         }

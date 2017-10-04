@@ -281,10 +281,21 @@ namespace Reports
         /// <inheritdoc/>
         public virtual Tuple<string, IWorkbook> Execute(IProgressControl pc)
         {
-            foreach (IWorksheet sheet in workBook.Worksheets)
-                if (sheet.UsedCells.Length != 0)
-                    ProcessWorkSheet(pc, sheet);
-
+            try
+            {
+                foreach (IWorksheet sheet in workBook.Worksheets)
+                    if (sheet.UsedCells.Length != 0)
+                        ProcessWorkSheet(pc, sheet);
+            }
+            catch (Exception ex)
+            {
+                if (ex.GetType().FullName == "Npgsql.NpgsqlException")
+                {
+                    return new Tuple<string, IWorkbook>(ex.Message, null);
+                }
+                else
+                    throw ex;
+            }
             return new Tuple<string, IWorkbook>(null, workBook);
         }
     }
