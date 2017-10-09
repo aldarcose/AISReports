@@ -254,9 +254,9 @@ namespace Reports
 
             foreach (var chunk in chuncks)
             {
-                int colShift = chunk.EndsWith("C") ? 0 : Int32.Parse(Regex.Match(chunk, @"\d+").Value);
-                int rowShift = chunk.StartsWith("RC") ? 0 : Int32.Parse(Regex.Match(chunk, @"\d+").Value);
-                list.Add(string.Format("{0}{1}", GetExcelColumnName(colNum - colShift), rowNum - rowShift));
+                int colShift = chunk.EndsWith("C") ? 0 : Int32.Parse(Regex.Match(chunk, @"[\-]?\d+").Value);
+                int rowShift = chunk.StartsWith("RC") ? 0 : Int32.Parse(Regex.Match(chunk, @"[\-]?\d+").Value);
+                list.Add(string.Format("{0}{1}", GetExcelColumnName(colNum + colShift), rowNum + rowShift));
             }
 
             return "=" + string.Join("+", list);
