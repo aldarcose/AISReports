@@ -39,6 +39,10 @@ namespace Reports
         {
             if (queries == null)
                 throw new InvalidOperationException("Queries is null");
+
+            // Прединициализация параметров запросов экспорта
+            PreInitParameters();
+
             foreach (var eQuery in queries)
             {
                 if (string.IsNullOrEmpty(eQuery.InnerSql)) continue;
@@ -46,6 +50,33 @@ namespace Reports
                     eQuery.SetParameter(pair.Key, pair.Value.Item1);
             }
             this.paramValues = paramValues;
+        }
+
+        // Прединициализация параметров запросов экспорта
+        private void PreInitParameters()
+        {
+            foreach (var q in queries.Where(q => q.IsTextList))
+            {
+                for (int i = 0; i < q.TextList.Count; i++)
+                {
+                    string text = q.TextList[i];
+                    q.TextList[i] = q.TextList[i].Replace(text, GetIntTextList(text));
+                }
+
+                foreach (var qq in queries.Where(qq => qq.Name != q.Name))
+                    qq.SetParameter(q.Name, string.Join(",", q.TextList));
+            }
+        }
+
+        private string GetIntTextList(string queryName)
+        {
+            var query = FindQuery(queryName);
+            if (query.IsIntList)
+                return string.Join(", ", query.IntList);
+            if (query.IsTextList)
+                foreach (var text in query.TextList)
+                    return GetIntTextList(text);
+            return string.Empty;
         }
 
         protected virtual void ReplaceWithParameterValues(IRange cell)
@@ -68,10 +99,26 @@ namespace Reports
                             : null;
 
             if (paramsText == null) return null;
-
+            paramsText = paramsText.Trim('"');
+            
             foreach (string value in paramsText.Split(','))
-                hashSet.Add(value.Trim().TrimStart(':').TrimEnd(':'));
-
+            {
+                string trimmedValue = value.Trim().TrimStart(':').TrimEnd(':');
+                // Подстановка списочных данных
+                var query = FindQuery(trimmedValue);
+                if (query != null && query.IsTextList)
+                {
+                    hashSet.Add(string.Join(",", query.TextList));
+                }
+                else if (query != null && query.IsIntList)
+                {
+                    hashSet.Add(string.Join(",", query.IntList));
+                }
+                else
+                {
+                    hashSet.Add(trimmedValue);
+                }
+            }
             return hashSet.ToArray();
         }
 
@@ -278,11 +325,24 @@ namespace Reports
             return columnName;
         }
 
+        private void InitTempQueryData()
+        {
+            var query = FindQuery("#init_report");
+            if (query != null && query.NonQuery)
+            {
+                query.ExecuteNonQuery(conn);
+                queries.Remove(query);
+            }
+        }
+
         /// <inheritdoc/>
         public virtual Tuple<string, IWorkbook> Execute(IProgressControl pc)
         {
             try
             {
+                // Инициализация временных данных(таблиц) для запросов
+                InitTempQueryData();
+
                 foreach (IWorksheet sheet in workBook.Worksheets)
                     if (sheet.UsedCells.Length != 0)
                         ProcessWorkSheet(pc, sheet);

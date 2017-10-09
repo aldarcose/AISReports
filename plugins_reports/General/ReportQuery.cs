@@ -9,6 +9,8 @@ namespace Reports
 {
     public class ReportQuery
     {
+        // Минимальное количество элементов в простом списке строк.
+        private const int MINTEXTLISTCOUNT = 1;
         private Dictionary<string, string> globalParameters = new Dictionary<string, string>();
         private Dictionary<string, string> localParameters = new Dictionary<string, string>();
         private List<string> localParameterNames;
@@ -19,6 +21,10 @@ namespace Reports
         private string emptyValue;
         private bool isScalar;
         private bool nonQuery;
+        private bool isTextList;
+        private bool isIntList;
+        private List<string> textList;
+        private List<int> intList;
         private List<string> fieldNames;
         private List<ReportQuery> previousQueries;
 
@@ -56,6 +62,28 @@ namespace Reports
         public string EmptyValue
         {
             get { return emptyValue; }
+        }
+
+        /// <summary>Данный запрос - простой список строк</summary>
+        public bool IsTextList
+        {
+            get { return isTextList; }
+        }
+
+        /// <summary>Простой список строк</summary>
+        public List<string> TextList
+        {
+            get { return textList; }
+        }
+
+        public bool IsIntList
+        {
+            get { return isIntList; }
+        }
+
+        public List<int> IntList
+        {
+            get { return intList; }
         }
 
         /// <summary>Поля(алиасы) запроса</summary>
@@ -144,25 +172,57 @@ namespace Reports
             }
             else
             {
-                // Запрос содержит в себе другой запрос
-                this.name = GetQueryName(rawSQL, " ");
-                this.innerSQL = rawSQL.Substring(rawSQL.IndexOf(" ",
-                    StringComparison.InvariantCultureIgnoreCase));
+                this.name = rawSQL.Split(' ').First();
+                this.innerSQL = rawSQL.Replace(name, string.Empty);
 
-                foreach (var exportQuery in previousQueries ?? new List<ReportQuery>())
-                    if (innerSQL.IndexOf(exportQuery.Name, StringComparison.InvariantCultureIgnoreCase) > 0)
+                string[] stringArray = innerSQL.Split(',');
+                MatchCollection matches = Regex.Matches(innerSQL, @"[a-zA-Z]+[_]?[a-zA-Z]+,?\s*");
+                // Запрос является простым списком строк
+                if (stringArray.Length == matches.Count && stringArray.Length > MINTEXTLISTCOUNT)
+                {
+                    isTextList = true;
+                    textList = new List<string>(stringArray.Select(s => s.Trim()));
+                }
+                else if (stringArray.Length >= 1)
+                {
+                    intList = new List<int>();
+                    bool error = false;
+                    try
                     {
-                        innerSQL = innerSQL.Remove(innerSQL.IndexOf("("), innerSQL.IndexOf(")") - innerSQL.IndexOf("(") + 1);
-                        innerSQL = innerSQL.Replace(exportQuery.Name, exportQuery.InnerSql);
-                        localParameterNames = exportQuery.localParameterNames;
+                        foreach (var s in stringArray)
+                            intList.Add(int.Parse(s));
+                    }
+                    catch(Exception)
+                    {
+                        error = true;
                     }
 
-                if (innerSQL.IndexOf("select", StringComparison.InvariantCultureIgnoreCase) < 0)
-                {
-                    this.isEmpty = true;
-                    this.emptyValue = innerSQL.Trim();
+                    if (!error)
+                        isIntList = true;
+
                 }
-                this.isScalar = true;
+                else
+                {
+                    // Запрос содержит в себе другой запрос
+                    this.name = GetQueryName(rawSQL, " ");
+                    this.innerSQL = rawSQL.Substring(rawSQL.IndexOf(" ",
+                        StringComparison.InvariantCultureIgnoreCase));
+
+                    foreach (var exportQuery in previousQueries ?? new List<ReportQuery>())
+                        if (innerSQL.IndexOf(exportQuery.Name, StringComparison.InvariantCultureIgnoreCase) > 0)
+                        {
+                            innerSQL = innerSQL.Remove(innerSQL.IndexOf("("), innerSQL.IndexOf(")") - innerSQL.IndexOf("(") + 1);
+                            innerSQL = innerSQL.Replace(exportQuery.Name, exportQuery.InnerSql);
+                            localParameterNames = exportQuery.localParameterNames;
+                        }
+
+                    if (innerSQL.IndexOf("select", StringComparison.InvariantCultureIgnoreCase) < 0)
+                    {
+                        this.isEmpty = true;
+                        this.emptyValue = innerSQL.Trim();
+                    }
+                    this.isScalar = true;
+                }
             }
         }
 
@@ -192,8 +252,9 @@ namespace Reports
             var pairs = new Dictionary<string, string>();
             for (int i = 0; i < localParameterNames.Count; i++)
             {
-                string pameterKey = localParameterNames[i];
-                pairs[pameterKey] = localParameterValues[i].Trim('"');
+                string parameterKey = localParameterNames[i];
+                string parameterValue = localParameterValues[i].Trim('"');
+                pairs[parameterKey] = parameterValue;
             }
 
             foreach (KeyValuePair<string, string> pair in pairs)
