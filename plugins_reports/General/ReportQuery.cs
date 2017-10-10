@@ -151,7 +151,6 @@ namespace Reports
                     StringComparison.InvariantCultureIgnoreCase));
                 this.name = GetQueryName(rawSQL, "select");
                 this.fieldNames = SqlParser.ParseSqlFields(innerSQL);
-
                 if (fieldNames.Count > 1)
                 {
                     // Первое поле запроса имеет название самого запроса

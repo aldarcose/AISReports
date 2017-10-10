@@ -6,10 +6,21 @@ namespace Reports
 {
     public static class SqlParser
     {
+        public const string ENDSASPROPERTY = @"as [\w_]*$";
+
         public static List<string> ParseSqlFields(string sql)
         {
             Dictionary<string, string> map = new Dictionary<string, string>();
             List<string> list = new List<string>();
+
+            // парсинг sql: select (...) as f1, (...) as f2, (...) as f3
+            /*
+            if (Regex.IsMatch(sql, ENDSASPROPERTY, RegexOptions.IgnoreCase))
+            {
+                foreach (Match match in Regex.Matches(sql, @" as [\w_]*,?", RegexOptions.IgnoreCase))
+                    list.Add(match.Value.TrimStart('a', 's', 'A', 'S', ' ').TrimEnd(','));
+                return list;
+            }*/
 
             int indexOfFromClause = IndexOfFromClause(sql);
             

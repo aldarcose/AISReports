@@ -160,6 +160,16 @@ namespace Reports
                     {
                         cell.Value2 = query.ExecuteScalarSQL(conn, null, null, localParVals);
                     }
+                    else if (query.FieldNames.Count == 0)
+                    {
+                        // sql: select (...) as f1, (...) as f2, (...) as f3, 
+                        var dbResults = query.SelectSimple(conn, null, localParVals);
+                        var dbResult = dbResults.FirstOrDefault();
+                        cell.Value2 = dbResult != null ? dbResult.Fields[0] : null;
+
+                        for (int j = 1; j < dbResult.FieldNames.Count; j++)
+                            paramValues[string.Format(":{0}:", dbResult.FieldNames[j])] = new Tuple<string,object>(Utils.ToString(dbResult.Fields[j]), null);
+                    }
                     else
                     {
                         // Иначе списочный тип
@@ -349,12 +359,7 @@ namespace Reports
             }
             catch (Exception ex)
             {
-                if (ex.GetType().FullName == "Npgsql.NpgsqlException")
-                {
-                    return new Tuple<string, IWorkbook>(ex.Message, null);
-                }
-                else
-                    throw ex;
+                return new Tuple<string, IWorkbook>(ex.Message, null);
             }
             return new Tuple<string, IWorkbook>(null, workBook);
         }
